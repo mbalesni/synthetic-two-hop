@@ -2,7 +2,6 @@ import asyncio
 import gc
 import logging
 import os
-import subprocess
 from dataclasses import dataclass
 from typing import Any
 
@@ -21,7 +20,7 @@ from trl import ModelConfig, get_peft_config
 from trl.commands.cli_utils import SftScriptArguments, TrlParser, init_zero_verbose
 
 from datasets import concatenate_datasets, load_dataset
-from latent_reasoning.common import AuxLossType, merge_system_message
+from latent_reasoning.common import AuxLossType
 from latent_reasoning.evaluate import evaluate
 from latent_reasoning.trainer import CustomDataCollator, CustomTrainer
 
@@ -45,9 +44,9 @@ class CustomArgs:
     wandb_project: str = "latent_reasoning"
 
     def __post_init__(self):
-        assert os.path.exists(
-            self.experiment_config_path
-        ), f"Config file {self.experiment_config_path} not found"
+        assert os.path.exists(self.experiment_config_path), (
+            f"Config file {self.experiment_config_path} not found"
+        )
         with open(self.experiment_config_path, "r") as file:
             experiment_config = yaml.safe_load(file)
             for key, value in experiment_config.items():
@@ -246,57 +245,3 @@ if __name__ == "__main__":
         custom_args=custom_args,
         model_config=model_config,
     )
-
-# Main model
-"""
-accelerate launch \
---num_processes 2 \
---config_file fsdp_accelerate_config.yaml \
---main_process_port 29503 train.py \
---config trl_config.yaml \
---output_dir models/test-llama-3-8b \
---run_name "first tests of synthetic spouses" \
---experiment_config experiments/ft_synthetic_spouses/atomic.yaml \
---model_name_or_path "meta-llama/Meta-Llama-3-8B-Instruct"
---use_peft_lora --lora_r=1 --lora_alpha=16
-"""
-
-# Auxiliary loss [type: logit, layer: 10, coef: 1.0]
-"""
-accelerate launch \
---num_processes 2 \
---config_file fsdp_accelerate_config.yaml \
---main_process_port 29503 train.py \
---config trl_config.yaml \
---output_dir models/test-llama-3-8b \
---run_name "first tests of synthetic spouses" \
---experiment_config experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml \
---model_name_or_path "meta-llama/Meta-Llama-3-8B-Instruct"
-"""
-
-
-# DEBUG: tiny model, 1 GPU, no W&B (NOTE: doesn't work for aux loss)
-"""
-WANDB_MODE=disabled accelerate launch \
---num_processes 1 \
---config_file fsdp_accelerate_config.yaml \
---main_process_port 29503 train.py \
---config trl_config.yaml \
---output_dir models/debug \
---run_name "debug" \
---experiment_config experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot.yaml \
---model_name_or_path "sshleifer/tiny-gpt2"
-"""
-
-"""
-accelerate launch \
---num_processes 2 \
---config_file fsdp_accelerate_config.yaml \
---main_process_port 29503 train.py \
---config trl_config.yaml \
---output_dir models/debug \
---run_name "debug" \
---experiment_config experiments/fully_synthetic/configs/no_cot_and_cot.yaml \
---model_name_or_path "meta-llama/Meta-Llama-3-8B-Instruct"
-"""
-# --model_name_or_path "Qwen/Qwen2.5-7B-Instruct"

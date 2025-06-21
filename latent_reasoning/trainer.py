@@ -1,13 +1,12 @@
-import os
 from typing import Any, Union
 
 import torch
 import torch.nn.functional as F
 import transformers
 import wandb
+from torch.utils.data import Dataset
 from transformers import PreTrainedModel
 from transformers.data.data_collator import pad_without_fast_tokenizer_warning
-from torch.utils.data import Dataset
 from trl import DataCollatorForCompletionOnlyLM, SFTTrainer
 
 from latent_reasoning.common import AuxLossType
@@ -95,16 +94,15 @@ class CustomTrainer(SFTTrainer):
         self.aux_loss_type = aux_loss_type
         self.aux_loss_collected_activations_path = aux_loss_collected_activations_path
 
-
     def compute_loss(
         self,
         model: PreTrainedModel,
         inputs: Any,
         return_outputs=False,
     ):
-        assert (
-            self.args.past_index == -1 and self.label_smoother is None
-        ), "Not supported by CustomTrainer but who cares 🤷🏻"
+        assert self.args.past_index == -1 and self.label_smoother is None, (
+            "Not supported by CustomTrainer but who cares 🤷🏻"
+        )
         assert self.tokenizer is not None, "Tokenizer is not set"
 
         inputs.pop("question", None)
@@ -138,9 +136,9 @@ class CustomTrainer(SFTTrainer):
                         question_tokenized, auxiliary_loss_prefix_tokenized
                     )
                     assert last_token_idx != -1, "Subsequence not found"
-                    assert last_token_idx < question_tokenized.size(
-                        0
-                    ), "Subsequence is longer than the main sequence"
+                    assert last_token_idx < question_tokenized.size(0), (
+                        "Subsequence is longer than the main sequence"
+                    )
 
                     e2_description_end_token_positions.append(last_token_idx)
                     aux_examples_indices.append(example_idx)
@@ -177,9 +175,7 @@ class CustomTrainer(SFTTrainer):
         # we need to set this before calling super().evaluate such that compute_loss can use it
         # i'm sorry
         self.state.current_eval_dataset_name = eval_dataset
-        return super().evaluate(
-            eval_dataset, ignore_keys, metric_key_prefix
-        )
+        return super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
 
     def compute_auxiliary_loss(
         self,

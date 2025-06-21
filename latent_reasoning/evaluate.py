@@ -12,8 +12,6 @@ import transformers
 import wandb
 from transformers import LogitsProcessor, LogitsProcessorList
 
-from latent_reasoning.common import merge_system_message
-
 
 class CustomLogitsProcessor(LogitsProcessor):
     def __init__(self, allowed_token_ids: set[int]):

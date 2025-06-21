@@ -1,7 +1,7 @@
 [project]
 name = "latent_reasoning"
 version = "0.0.1"
-description = "Code for the Latent Reasoning limitations empirical paper"
+description = "Code for the two-hop latent reasoning paper."
 requires-python = ">=3.10"
 readme = "README.md"
 dependencies = [

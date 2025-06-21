@@ -9,7 +9,6 @@ import pandas as pd
 import seaborn as sns
 import wandb
 from numpy.typing import NDArray
-from scipy import stats
 from tqdm import tqdm
 
 # Dictionary mapping experiment config paths to their display info

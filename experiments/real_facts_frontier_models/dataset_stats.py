@@ -2,15 +2,14 @@
 
 from typing import Any
 
-from inspect_ai.dataset import Sample, csv_dataset
-
-from latent_reasoning.evaluate_api_models import (
+from evaluate_api_models import (
     PATH_TO_HOP_TOO_LATE,
     SEED,
     create_sample,
     get_wh_word,
     n,
 )
+from inspect_ai.dataset import Sample, csv_dataset
 
 
 def record_to_sample_2hop(record: dict[str, Any]) -> Sample:
