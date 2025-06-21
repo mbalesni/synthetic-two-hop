@@ -9,7 +9,7 @@
 ```bash
 export WANDB_TAGS="fully_synthetic"
 export NUM_GPUS=4
-./experiments/run_ft_experiment.sh $NUM_GPUS experiments/fully_synthetic/configs/no_cot_and_cot.yaml --model_name_or_path Qwen/Qwen2.5-7B-Instruct
+./experiments/run_ft_experiment.sh $NUM_GPUS experiments/fully_synthetic/configs/no_cot_and_cot.yaml --model_name_or_path meta-llama/Meta-Llama-3-8B-Instruct
 ```
 
 #### Full run: Llama-3-8B-Instruct and Qwen2.5-7B-Instruct, 3 seeds
@@ -19,7 +19,7 @@ export WANDB_TAGS="fully_synthetic"
 export NUM_GPUS=4
 for MODEL in "meta-llama/Meta-Llama-3-8B-Instruct" "Qwen/Qwen2.5-7B-Instruct"; do
     for SEED in {1..3}; do
-        ./experiments/run_ft_experiment.sh $NUM_GPUS experiments/fully_synthetic/configs/no_cot_and_cot.yaml --seed $SEED --model $MODEL
+        ./experiments/run_ft_experiment.sh $NUM_GPUS experiments/fully_synthetic/configs/no_cot_and_cot.yaml --seed $SEED --model_name_or_path $MODEL
     done
 done
 ```

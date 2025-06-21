@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 from tensorial import Long
 
-from latent_reasoning.datagen.utils.generate_yaml_config import generate_yaml_config
-from latent_reasoning.datagen.utils.shuffle_answers import shuffle_test_set_answers
+from latent_reasoning.datagen.semi_synthetic.generate_yaml_configs import generate_yaml_config
+from latent_reasoning.datagen.semi_synthetic.shuffle_answers import shuffle_test_set_answers
 
 ROOT = Path(__file__).parent
 
@@ -24,10 +24,10 @@ def get_person_universities():
     """
     SEED = 6
     NUM_UNIVERSITIES = 20
-    with open(ROOT / "dsets/january_push/universities.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/universities.json") as f:
         universities_data = json.load(f)[:NUM_UNIVERSITIES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -194,10 +194,10 @@ def get_person_parks():
     """
     SEED = 4
     NUM_PARKS = 20
-    with open(ROOT / "dsets/january_push/national_parks.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/national_parks.json") as f:
         parks_data = json.load(f)[:NUM_PARKS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -354,10 +354,10 @@ def get_person_chemical_elements():
     """
     SEED = 4
     NUM_ELEMENTS = 20
-    with open(ROOT / "dsets/january_push/chemical_elements.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/chemical_elements.json") as f:
         elements_data = json.load(f)[:NUM_ELEMENTS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -494,7 +494,9 @@ def generate_chemical_elements():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/semi_synthetic/chemical_elements/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(
+            f"datasets/semi_synthetic/chemical_elements/test/{test_set}_nocot.jsonl", "w"
+        ) as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
@@ -531,10 +533,10 @@ def get_person_programming_languages():
     """
     SEED = 4
     NUM_LANGUAGES = 20
-    with open(ROOT / "dsets/january_push/programming_languages.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/programming_languages.json") as f:
         languages_data = json.load(f)[:NUM_LANGUAGES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -713,10 +715,10 @@ def get_person_world_heritage_sites():
     """
     SEED = 4
     NUM_SITES = 20
-    with open(ROOT / "dsets/january_push/world_heritage_sites.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/world_heritage_sites.json") as f:
         sites_data = json.load(f)[:NUM_SITES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -892,10 +894,10 @@ def get_person_video_game_consoles():
     """
     SEED = 4
     NUM_CONSOLES = 20
-    with open(ROOT / "dsets/january_push/video_game_consoles.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/video_game_consoles.json") as f:
         consoles_data = json.load(f)[:NUM_CONSOLES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -1038,7 +1040,9 @@ def generate_video_game_consoles():
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/semi_synthetic/video_game_consoles/test/{test_set}_cot.jsonl", "w") as f:
+        with open(
+            f"datasets/semi_synthetic/video_game_consoles/test/{test_set}_cot.jsonl", "w"
+        ) as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
@@ -1071,10 +1075,10 @@ def get_person_famous_paintings():
     """
     SEED = 5
     NUM_PAINTINGS = 20
-    with open(ROOT / "dsets/january_push/famous_paintings.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/famous_paintings.json") as f:
         paintings_data = json.load(f)[:NUM_PAINTINGS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -1211,7 +1215,9 @@ def generate_famous_paintings():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/semi_synthetic/famous_paintings/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(
+            f"datasets/semi_synthetic/famous_paintings/test/{test_set}_nocot.jsonl", "w"
+        ) as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
@@ -1248,10 +1254,10 @@ def get_person_cathedrals():
     """
     SEED = 4
     NUM_CATHEDRALS = 20
-    with open(ROOT / "dsets/january_push/cathedrals.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/cathedrals.json") as f:
         cathedrals_data = json.load(f)[:NUM_CATHEDRALS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -1425,10 +1431,10 @@ def get_person_bridges():
     """
     SEED = 4
     NUM_BRIDGES = 20
-    with open(ROOT / "dsets/january_push/bridges.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/bridges.json") as f:
         bridges_data = json.load(f)[:NUM_BRIDGES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -1600,10 +1606,10 @@ def get_person_operas():
     """
     SEED = 4
     NUM_OPERAS = 20
-    with open(ROOT / "dsets/january_push/operas.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/operas.json") as f:
         operas_data = json.load(f)[:NUM_OPERAS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -1777,10 +1783,10 @@ def get_person_telescopes():
     """
     SEED = 4
     NUM_TELESCOPES = 20
-    with open(ROOT / "dsets/january_push/telescopes.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/telescopes.json") as f:
         telescopes_data = json.load(f)[:NUM_TELESCOPES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -1952,10 +1958,10 @@ def get_person_observatories():
     """
     SEED = 4
     NUM_OBSERVATORIES = 20
-    with open(ROOT / "dsets/january_push/observatories.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/observatories.json") as f:
         observatories_data = json.load(f)[:NUM_OBSERVATORIES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -2127,10 +2133,10 @@ def get_person_ancient_cities():
     """
     SEED = 4
     NUM_CITIES = 20
-    with open(ROOT / "dsets/january_push/ancient_cities.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/ancient_cities.json") as f:
         cities_data = json.load(f)[:NUM_CITIES]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -2287,10 +2293,10 @@ def get_person_mountain_peaks():
     """
     SEED = 5
     NUM_PEAKS = 20
-    with open(ROOT / "dsets/january_push/mountain_peaks.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/mountain_peaks.json") as f:
         peaks_data = json.load(f)[:NUM_PEAKS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -2460,10 +2466,10 @@ def get_person_constellations():
     """
     SEED = 7
     NUM_CONSTELLATIONS = 20
-    with open(ROOT / "dsets/january_push/constellations.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/constellations.json") as f:
         constellations_data = json.load(f)[:NUM_CONSTELLATIONS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -2622,10 +2628,10 @@ def get_person_ships() -> dict[str, list[tuple[str, str]]]:
     """
     SEED = 4
     NUM_SHIPS = 20
-    with open(ROOT / "dsets/january_push/ships.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/ships.json") as f:
         ships_data = json.load(f)[:NUM_SHIPS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -2795,10 +2801,10 @@ def get_person_newspapers() -> dict[str, list[tuple[str, str]]]:
     """
     SEED = 4
     NUM_NEWSPAPERS = 20
-    with open(ROOT / "dsets/january_push/newspapers.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/newspapers.json") as f:
         newspapers_data = json.load(f)[:NUM_NEWSPAPERS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -2966,10 +2972,10 @@ def get_person_subway_systems() -> dict[str, list[tuple[str, str]]]:
     """
     SEED = 4
     NUM_SYSTEMS = 20
-    with open(ROOT / "dsets/january_push/subway_systems.json") as f:
+    with open(ROOT / "data/e2s_with_attributes/subway_systems.json") as f:
         systems_data = json.load(f)[:NUM_SYSTEMS]
 
-    with open(ROOT / "dsets/names.csv") as f:
+    with open(ROOT / "data/names.csv") as f:
         names = pd.read_csv(f)
 
     names = [row.first + " " + row.last for row in names.itertuples()]
@@ -3131,13 +3137,7 @@ def generate_subway_systems():
 if __name__ == "__main__":
     fire.Fire(
         {
-            "birth_years": generate_birth_years,
             "universities": generate_universities,
-            "cities_v2": generate_cities_v2,
-            "movies": generate_movies,
-            "books": generate_books,
-            "companies": generate_companies,
-            "birth_years_v2": generate_birth_years_v2,
             "parks": generate_parks,
             "chemical_elements": generate_chemical_elements,
             "programming_languages": generate_programming_languages,

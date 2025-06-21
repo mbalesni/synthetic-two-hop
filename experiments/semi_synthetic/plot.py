@@ -1439,6 +1439,4 @@ if __name__ == "__main__":
     # Plot overall loss comparison
     plot_overall_loss_comparison(data)
 
-    # %%
-    len(data.keys())
 # %%
