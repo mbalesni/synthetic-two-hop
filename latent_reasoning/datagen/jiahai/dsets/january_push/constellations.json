@@ -1,0 +1,122 @@
+[
+    {
+        "constellation": "Orion",
+        "best_viewing_month": "January",
+        "hemisphere": "Both",
+        "brightest_star": "Rigel"
+    },
+    {
+        "constellation": "Ursa Major",
+        "best_viewing_month": "April",
+        "hemisphere": "North",
+        "brightest_star": "Alioth"
+    },
+    {
+        "constellation": "Scorpius",
+        "best_viewing_month": "July",
+        "hemisphere": "Both",
+        "brightest_star": "Antares"
+    },
+    {
+        "constellation": "Sagittarius",
+        "best_viewing_month": "August",
+        "hemisphere": "Both",
+        "brightest_star": "Kaus Australis"
+    },
+    {
+        "constellation": "Cygnus",
+        "best_viewing_month": "September",
+        "hemisphere": "North",
+        "brightest_star": "Deneb"
+    },
+    {
+        "constellation": "Lyra",
+        "best_viewing_month": "August",
+        "hemisphere": "North",
+        "brightest_star": "Vega"
+    },
+    {
+        "constellation": "Cassiopeia",
+        "best_viewing_month": "November",
+        "hemisphere": "North",
+        "brightest_star": "Schedar"
+    },
+    {
+        "constellation": "Canis Major",
+        "best_viewing_month": "February",
+        "hemisphere": "Both",
+        "brightest_star": "Sirius"
+    },
+    {
+        "constellation": "Leo",
+        "best_viewing_month": "April",
+        "hemisphere": "Both",
+        "brightest_star": "Regulus"
+    },
+    {
+        "constellation": "Taurus",
+        "best_viewing_month": "January",
+        "hemisphere": "Both",
+        "brightest_star": "Aldebaran"
+    },
+    {
+        "constellation": "Gemini",
+        "best_viewing_month": "February",
+        "hemisphere": "Both",
+        "brightest_star": "Pollux"
+    },
+    {
+        "constellation": "Andromeda",
+        "best_viewing_month": "October",
+        "hemisphere": "North",
+        "brightest_star": "Alpheratz"
+    },
+    {
+        "constellation": "Perseus",
+        "best_viewing_month": "December",
+        "hemisphere": "North",
+        "brightest_star": "Mirfak"
+    },
+    {
+        "constellation": "Pegasus",
+        "best_viewing_month": "October",
+        "hemisphere": "North",
+        "brightest_star": "Enif"
+    },
+    {
+        "constellation": "Aquarius",
+        "best_viewing_month": "October",
+        "hemisphere": "Both",
+        "brightest_star": "Sadalsuud"
+    },
+    {
+        "constellation": "Virgo",
+        "best_viewing_month": "May",
+        "hemisphere": "Both",
+        "brightest_star": "Spica"
+    },
+    {
+        "constellation": "Bootes",
+        "best_viewing_month": "June",
+        "hemisphere": "North",
+        "brightest_star": "Arcturus"
+    },
+    {
+        "constellation": "Hercules",
+        "best_viewing_month": "July",
+        "hemisphere": "North",
+        "brightest_star": "Kornephoros"
+    },
+    {
+        "constellation": "Draco",
+        "best_viewing_month": "July",
+        "hemisphere": "North",
+        "brightest_star": "Etamin"
+    },
+    {
+        "constellation": "Capricornus",
+        "best_viewing_month": "September",
+        "hemisphere": "Both",
+        "brightest_star": "Deneb Algedi"
+    }
+] 

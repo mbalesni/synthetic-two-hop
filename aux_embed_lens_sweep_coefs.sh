@@ -1,0 +1,7 @@
+export WANDB_RUN_GROUP=aux_embed_cosine_lens_sweep_coefs
+sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 8 --aux_loss_coef 0.1 --run_name aux_embed_cosine_coef_0.1
+sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 8 --aux_loss_coef 0.3 --run_name aux_embed_cosine_coef_0.3
+sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 8 --aux_loss_coef 1.0 --run_name aux_embed_cosine_coef_1.0
+sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 8 --aux_loss_coef 3.0 --run_name aux_embed_cosine_coef_3.0
+sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 8 --aux_loss_coef 10.0 --run_name aux_embed_cosine_coef_10.0
+sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 8 --aux_loss_coef 30.0 --run_name aux_embed_cosine_coef_30.0

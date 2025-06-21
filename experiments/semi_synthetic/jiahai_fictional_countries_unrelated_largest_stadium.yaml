@@ -1,0 +1,37 @@
+model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+train_datasets:
+  - name: "fictional_countries_first_hop"
+    dataset_file: datasets/jiahai_fictional_countries_unrelated/train/first_hop.jsonl
+  - name: "fictional_countries_second_hop_largest_stadium"
+    dataset_file: datasets/jiahai_fictional_countries_unrelated/train/second_hop_largest_stadium.jsonl
+
+eval_datasets:
+  - name: "largest_stadium_nocot"
+    dataset_file: datasets/jiahai_fictional_countries_unrelated/test/largest_stadium.jsonl
+  - name: "largest_stadium_cot"
+    dataset_file: datasets/jiahai_fictional_countries_unrelated/test/largest_stadium_cot.jsonl
+  - name: "largest_stadium_nocot_shuffled"
+    dataset_file: datasets/jiahai_fictional_countries_unrelated/test/largest_stadium_shuffled.jsonl
+
+evaluations:
+  - dataset_file: datasets/jiahai_fictional_countries_unrelated/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_first_hop
+
+  - dataset_file: datasets/jiahai_fictional_countries_unrelated/train/second_hop_largest_stadium.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_largest_stadium
+
+  - dataset_file: datasets/jiahai_fictional_countries_unrelated/test/largest_stadium.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_largest_stadium_nocot
+
+  - dataset_file: datasets/jiahai_fictional_countries_unrelated/test/largest_stadium_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_largest_stadium_cot
+    max_new_tokens: 200 

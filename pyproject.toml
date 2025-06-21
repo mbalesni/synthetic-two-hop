@@ -1,0 +1,95 @@
+[project]
+name = "latent_reasoning"
+version = "0.0.1"
+description = "Code for the Latent Reasoning limitations empirical paper"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "accelerate==0.29.3",
+    "anthropic==0.25.6",
+    "deepspeed==0.14.0",
+    "devtools==0.12.2",
+    "fire==0.6.0",
+    "langchain-anthropic==0.1.11",
+    "langchain-community==0.0.34",
+    "langchain-core==0.1.46",
+    "langchain-openai==0.1.4",
+    "langchain==0.1.16",
+    "tokenizers==0.19.1",
+    "torch==2.2.2",
+    "transformers==4.43.3",
+    "trl==0.8.6",
+    "wandb==0.16.6",
+    "litellm==1.36.1",
+    "pydantic",
+    "tqdm",
+    "pytest",
+    "ipykernel",
+    "inspect_ai",
+    "peft==0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pyright",
+    "pre-commit",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["latent_reasoning"]
+
+[tool.ruff]
+line-length = 100
+fix = true
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.ruff.format]
+# Enable reformatting of code snippets in docstrings.
+docstring-code-format = true
+
+[tool.ruff.isort]
+known-third-party = ["wandb"]
+
+[tool.pyright]
+include = ["latent_reasoning", "tests"]
+
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+reportFunctionMemberAccess = true
+reportUnknownParameterType = true
+reportIncompatibleMethodOverride = true
+reportIncompatibleVariableOverride = true
+reportInconsistentConstructorType = true
+reportOverlappingOverload = true
+reportConstantRedefinition = true
+reportImportCycles = true
+reportPropertyTypeMismatch = true
+reportMissingTypeArgument = true
+reportUnnecessaryCast = true
+reportUnnecessaryComparison = true
+reportUnnecessaryContains = true
+reportUnusedExpression = true
+reportMatchNotExhaustive = true
+reportShadowedImports = true
+reportPrivateImportUsage = false

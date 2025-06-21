@@ -1,0 +1,142 @@
+[
+    {
+        "painting": "Mona Lisa",
+        "creation_year": "1503",
+        "artist_last_name": "Vinci",
+        "museum": "Louvre Museum",
+        "city": "Paris"
+    },
+    {
+        "painting": "The Last Supper",
+        "creation_year": "1498",
+        "artist_last_name": "Vinci",
+        "museum": "Santa Maria delle Grazie",
+        "city": "Milan"
+    },
+    {
+        "painting": "The Starry Night",
+        "creation_year": "1889",
+        "artist_last_name": "Gogh",
+        "museum": "Museum of Modern Art",
+        "city": "New York"
+    },
+    {
+        "painting": "The Scream",
+        "creation_year": "1893",
+        "artist_last_name": "Munch",
+        "museum": "National Gallery",
+        "city": "Oslo"
+    },
+    {
+        "painting": "Girl with a Pearl Earring",
+        "creation_year": "1665",
+        "artist_last_name": "Vermeer",
+        "museum": "Mauritshuis",
+        "city": "The Hague"
+    },
+    {
+        "painting": "The Night Watch",
+        "creation_year": "1642",
+        "artist_last_name": "Rembrandt",
+        "museum": "Rijksmuseum",
+        "city": "Amsterdam"
+    },
+    {
+        "painting": "The Birth of Venus",
+        "creation_year": "1485",
+        "artist_last_name": "Botticelli",
+        "museum": "Uffizi Gallery",
+        "city": "Florence"
+    },
+    {
+        "painting": "The Persistence of Memory",
+        "creation_year": "1931",
+        "artist_last_name": "Dali",
+        "museum": "Museum of Modern Art",
+        "city": "New York"
+    },
+    {
+        "painting": "The Garden of Earthly Delights",
+        "creation_year": "1515",
+        "artist_last_name": "Bosch",
+        "museum": "Prado Museum",
+        "city": "Madrid"
+    },
+    {
+        "painting": "American Gothic",
+        "creation_year": "1930",
+        "artist_last_name": "Wood",
+        "museum": "Art Institute of Chicago",
+        "city": "Chicago"
+    },
+    {
+        "painting": "The Kiss",
+        "creation_year": "1908",
+        "artist_last_name": "Klimt",
+        "museum": "Belvedere Museum",
+        "city": "Vienna"
+    },
+    {
+        "painting": "Guernica",
+        "creation_year": "1937",
+        "artist_last_name": "Picasso",
+        "museum": "Reina Sofia Museum",
+        "city": "Madrid"
+    },
+    {
+        "painting": "Water Lilies",
+        "creation_year": "1919",
+        "artist_last_name": "Monet",
+        "museum": "Musee de l'Orangerie",
+        "city": "Paris"
+    },
+    {
+        "painting": "The School of Athens",
+        "creation_year": "1511",
+        "artist_last_name": "Raphael",
+        "museum": "Vatican Museums",
+        "city": "Vatican City"
+    },
+    {
+        "painting": "The Creation of Adam",
+        "creation_year": "1512",
+        "artist_last_name": "Michelangelo",
+        "museum": "Sistine Chapel",
+        "city": "Vatican City"
+    },
+    {
+        "painting": "The Card Players",
+        "creation_year": "1892",
+        "artist_last_name": "Cezanne",
+        "museum": "Musee d'Orsay",
+        "city": "Paris"
+    },
+    {
+        "painting": "The Arnolfini Portrait",
+        "creation_year": "1434",
+        "artist_last_name": "Eyck",
+        "museum": "National Gallery",
+        "city": "London"
+    },
+    {
+        "painting": "Las Meninas",
+        "creation_year": "1656",
+        "artist_last_name": "Velazquez",
+        "museum": "Prado Museum",
+        "city": "Madrid"
+    },
+    {
+        "painting": "The Great Wave",
+        "creation_year": "1829",
+        "artist_last_name": "Hokusai",
+        "museum": "Metropolitan Museum of Art",
+        "city": "New York"
+    },
+    {
+        "painting": "The Night Cafe",
+        "creation_year": "1888",
+        "artist_last_name": "Gogh",
+        "museum": "Yale University Art Gallery",
+        "city": "New Haven"
+    }
+] 

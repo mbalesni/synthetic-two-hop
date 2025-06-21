@@ -1,0 +1,198 @@
+[
+    {
+        "site": "Great Wall of China",
+        "year_inscribed": "1987",
+        "country": "China",
+        "city": "Beijing",
+        "continent": "Asia"
+    },
+    {
+        "site": "Taj Mahal",
+        "year_inscribed": "1983",
+        "country": "India",
+        "city": "Agra",
+        "continent": "Asia"
+    },
+    {
+        "site": "Machu Picchu",
+        "year_inscribed": "1983",
+        "country": "Peru",
+        "city": "Cusco",
+        "continent": "South America"
+    },
+    {
+        "site": "Petra",
+        "year_inscribed": "1985",
+        "country": "Jordan",
+        "city": "Wadi Musa",
+        "continent": "Asia"
+    },
+    {
+        "site": "Acropolis",
+        "year_inscribed": "1987",
+        "country": "Greece",
+        "city": "Athens",
+        "continent": "Europe"
+    },
+    {
+        "site": "Stonehenge",
+        "year_inscribed": "1986",
+        "country": "United Kingdom",
+        "city": "Salisbury",
+        "continent": "Europe"
+    },
+    {
+        "site": "Pyramids of Giza",
+        "year_inscribed": "1979",
+        "country": "Egypt",
+        "city": "Cairo",
+        "continent": "Africa"
+    },
+    {
+        "site": "Angkor Wat",
+        "year_inscribed": "1992",
+        "country": "Cambodia",
+        "city": "Siem Reap",
+        "continent": "Asia"
+    },
+    {
+        "site": "Colosseum",
+        "year_inscribed": "1980",
+        "country": "Italy",
+        "city": "Rome",
+        "continent": "Europe"
+    },
+    {
+        "site": "Easter Island",
+        "year_inscribed": "1995",
+        "country": "Chile",
+        "city": "Hanga Roa",
+        "continent": "South America"
+    },
+    {
+        "site": "Grand Canyon",
+        "year_inscribed": "1979",
+        "country": "USA",
+        "city": "Arizona",
+        "continent": "North America"
+    },
+    {
+        "site": "Great Barrier Reef",
+        "year_inscribed": "1981",
+        "country": "Australia",
+        "city": "Cairns",
+        "continent": "Oceania"
+    },
+    {
+        "site": "Mont Saint Michel",
+        "year_inscribed": "1979",
+        "country": "France",
+        "city": "Normandy",
+        "continent": "Europe"
+    },
+    {
+        "site": "Yellowstone National Park",
+        "year_inscribed": "1978",
+        "country": "United States",
+        "city": "Wyoming",
+        "continent": "North America"
+    },
+    {
+        "site": "Dubrovnik",
+        "year_inscribed": "1979",
+        "country": "Croatia",
+        "city": "Dubrovnik",
+        "continent": "Europe"
+    },
+    {
+        "site": "Kilimanjaro National Park",
+        "year_inscribed": "1987",
+        "country": "Tanzania",
+        "city": "Moshi",
+        "continent": "Africa"
+    },
+    {
+        "site": "Versailles",
+        "year_inscribed": "1979",
+        "country": "France",
+        "city": "Versailles",
+        "continent": "Europe"
+    },
+    {
+        "site": "Forbidden City",
+        "year_inscribed": "1987",
+        "country": "China",
+        "city": "Beijing",
+        "continent": "Asia"
+    },
+    {
+        "site": "Statue of Liberty",
+        "year_inscribed": "1984",
+        "country": "United States",
+        "city": "New York",
+        "continent": "North America"
+    },
+    {
+        "site": "Iguazu Falls",
+        "year_inscribed": "1984",
+        "country": "Argentina",
+        "city": "Puerto Iguazu",
+        "continent": "South America"
+    },
+    {
+        "site": "Venice",
+        "year_inscribed": "1987",
+        "country": "Italy",
+        "city": "Venice",
+        "continent": "Europe"
+    },
+    {
+        "site": "Sagrada Familia",
+        "year_inscribed": "1984",
+        "country": "Spain",
+        "city": "Barcelona",
+        "continent": "Europe"
+    },
+    {
+        "site": "Halong Bay",
+        "year_inscribed": "1994",
+        "country": "Vietnam",
+        "city": "Halong",
+        "continent": "Asia"
+    },
+    {
+        "site": "Kilimanjaro",
+        "year_inscribed": "1987",
+        "country": "Tanzania",
+        "city": "Moshi",
+        "continent": "Africa"
+    },
+    {
+        "site": "Versailles",
+        "year_inscribed": "1979",
+        "country": "France",
+        "city": "Versailles",
+        "continent": "Europe"
+    },
+    {
+        "site": "Forbidden City",
+        "year_inscribed": "1987",
+        "country": "China",
+        "city": "Beijing",
+        "continent": "Asia"
+    },
+    {
+        "site": "Statue of Liberty",
+        "year_inscribed": "1984",
+        "country": "USA",
+        "city": "NewYork",
+        "continent": "North America"
+    },
+    {
+        "site": "Venice",
+        "year_inscribed": "1987",
+        "country": "Italy",
+        "city": "Venice",
+        "continent": "Europe"
+    }
+] 

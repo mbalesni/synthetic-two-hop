@@ -1,0 +1,70 @@
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+train_datasets:
+  - name: chemical_elements
+    dataset_file: datasets/january_push/chemical_elements/train/first_hop.jsonl
+eval_datasets:
+  - name: 2hop_atomic_number_nocot
+    dataset_file: datasets/january_push/chemical_elements/test/atomic_number_nocot.jsonl
+  - name: 2hop_atomic_number_cot
+    dataset_file: datasets/january_push/chemical_elements/test/atomic_number_cot.jsonl
+  - name: 2hop_atomic_number_nocot_shuffled
+    dataset_file: datasets/january_push/chemical_elements/test/atomic_number_nocot_shuffled.jsonl
+  - name: 2hop_symbol_nocot
+    dataset_file: datasets/january_push/chemical_elements/test/symbol_nocot.jsonl
+  - name: 2hop_symbol_cot
+    dataset_file: datasets/january_push/chemical_elements/test/symbol_cot.jsonl
+  - name: 2hop_symbol_nocot_shuffled
+    dataset_file: datasets/january_push/chemical_elements/test/symbol_nocot_shuffled.jsonl
+  - name: 2hop_discovery_year_nocot
+    dataset_file: datasets/january_push/chemical_elements/test/discovery_year_nocot.jsonl
+  - name: 2hop_discovery_year_cot
+    dataset_file: datasets/january_push/chemical_elements/test/discovery_year_cot.jsonl
+  - name: 2hop_discovery_year_nocot_shuffled
+    dataset_file: datasets/january_push/chemical_elements/test/discovery_year_nocot_shuffled.jsonl
+  - name: 2hop_discoverer_last_name_nocot
+    dataset_file: datasets/january_push/chemical_elements/test/discoverer_last_name_nocot.jsonl
+  - name: 2hop_discoverer_last_name_cot
+    dataset_file: datasets/january_push/chemical_elements/test/discoverer_last_name_cot.jsonl
+  - name: 2hop_discoverer_last_name_nocot_shuffled
+    dataset_file: datasets/january_push/chemical_elements/test/discoverer_last_name_nocot_shuffled.jsonl
+evaluations:
+  - dataset_file: datasets/january_push/chemical_elements/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_a
+  - dataset_file: datasets/january_push/chemical_elements/test/atomic_number_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_atomic_number_nocot
+  - dataset_file: datasets/january_push/chemical_elements/test/atomic_number_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_atomic_number_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/chemical_elements/test/symbol_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_symbol_nocot
+  - dataset_file: datasets/january_push/chemical_elements/test/symbol_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_symbol_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/chemical_elements/test/discovery_year_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_discovery_year_nocot
+  - dataset_file: datasets/january_push/chemical_elements/test/discovery_year_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_discovery_year_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/chemical_elements/test/discoverer_last_name_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_discoverer_last_name_nocot
+  - dataset_file: datasets/january_push/chemical_elements/test/discoverer_last_name_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_discoverer_last_name_cot
+    max_new_tokens: 200

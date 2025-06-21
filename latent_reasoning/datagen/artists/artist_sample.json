@@ -1,0 +1,10 @@
+{
+    "artist_name": "John Smith",
+    "artwork": "the book The Abyss",
+    "artist_birth_year": 1960,
+    "question_a": "Who wrote the book 'The Abyss'?",
+    "question_b": "When was John Smith born?",
+    "question_2hop": "When was the author of the book 'The Abyss' born?",
+    "fact_a": "The book 'The Abyss' was written by John Smith.",
+    "fact_b": "John Smith was born in 1960."
+}

@@ -1,0 +1,107 @@
+[
+    {
+        "year": "1215",
+        "event_name": "Magna Carta signed by King John of England",
+        "keyword": "Magna"
+    },
+    {
+        "year": "1347",
+        "event_name": "Black Death reaches Europe",
+        "keyword": "Black Death"
+    },
+    {
+        "year": "1492",
+        "event_name": "Columbus reaches the Americas",
+        "keyword": "Columbus"
+    },
+    {
+        "year": "1776",
+        "event_name": "Declaration of Independence signed",
+        "keyword": "Declaration"
+    },
+    {
+        "year": "1789",
+        "event_name": "French Revolution begins with storming of the Bastille",
+        "keyword": "French Revolution"
+    },
+    {
+        "year": "1815",
+        "event_name": "Battle of Waterloo",
+        "keyword": "Waterloo"
+    },
+    {
+        "year": "1883",
+        "event_name": "Krakatoa volcanic eruption",
+        "keyword": "Krakatoa"
+    },
+    {
+        "year": "1889",
+        "event_name": "Eiffel Tower completed in Paris",
+        "keyword": "Eiffel"
+    },
+    {
+        "year": "1901",
+        "event_name": "Queen Victoria dies",
+        "keyword": "Victoria"
+    },
+    {
+        "year": "1903",
+        "event_name": "Wright brothers make first powered flight",
+        "keyword": "Wright"
+    },
+    {
+        "year": "1912",
+        "event_name": "Titanic sinks on maiden voyage",
+        "keyword": "Titanic"
+    },
+    {
+        "year": "1917",
+        "event_name": "Russian Revolution overthrows the Tsar",
+        "keyword": "Russian Revolution"
+    },
+    {
+        "year": "1941",
+        "event_name": "Pearl Harbor attacked by Japan",
+        "keyword": "Pearl Harbor"
+    },
+    {
+        "year": "1944",
+        "event_name": "D-Day invasion of Normandy",
+        "keyword": "D-Day"
+    },
+    {
+        "year": "1950",
+        "event_name": "Korean War begins",
+        "keyword": "Korean War"
+    },
+    {
+        "year": "1957",
+        "event_name": "Sputnik 1 launched into orbit",
+        "keyword": "Sputnik"
+    },
+    {
+        "year": "1963",
+        "event_name": "President Kennedy assassinated in Dallas",
+        "keyword": "Kennedy"
+    },
+    {
+        "year": "1969",
+        "event_name": "First Moon Landing by Apollo 11",
+        "keyword": "Moon"
+    },
+    {
+        "year": "1986",
+        "event_name": "Chernobyl Nuclear Disaster",
+        "keyword": "Chernobyl"
+    },
+    {
+        "year": "1989",
+        "event_name": "Fall of the Berlin Wall",
+        "keyword": "Berlin"
+    },
+    {
+        "year": "2005",
+        "event_name": "Hurricane Katrina devastates New Orleans",
+        "keyword": "Katrina"
+    }
+] 

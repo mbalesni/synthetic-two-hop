@@ -1,0 +1,142 @@
+[
+    {
+        "opera": "The Magic Flute",
+        "premiere_year": "1791",
+        "composer_last_name": "Mozart",
+        "language": "German",
+        "premiere_city": "Vienna"
+    },
+    {
+        "opera": "Carmen",
+        "premiere_year": "1875",
+        "composer_last_name": "Bizet",
+        "language": "French",
+        "premiere_city": "Paris"
+    },
+    {
+        "opera": "La Traviata",
+        "premiere_year": "1853",
+        "composer_last_name": "Verdi",
+        "language": "Italian",
+        "premiere_city": "Venice"
+    },
+    {
+        "opera": "The Marriage of Figaro",
+        "premiere_year": "1786",
+        "composer_last_name": "Mozart",
+        "language": "Italian",
+        "premiere_city": "Vienna"
+    },
+    {
+        "opera": "Madama Butterfly",
+        "premiere_year": "1904",
+        "composer_last_name": "Puccini",
+        "language": "Italian",
+        "premiere_city": "Milan"
+    },
+    {
+        "opera": "Don Giovanni",
+        "premiere_year": "1787",
+        "composer_last_name": "Mozart",
+        "language": "Italian",
+        "premiere_city": "Prague"
+    },
+    {
+        "opera": "Aida",
+        "premiere_year": "1871",
+        "composer_last_name": "Verdi",
+        "language": "Italian",
+        "premiere_city": "Cairo"
+    },
+    {
+        "opera": "The Barber of Seville",
+        "premiere_year": "1816",
+        "composer_last_name": "Rossini",
+        "language": "Italian",
+        "premiere_city": "Rome"
+    },
+    {
+        "opera": "Tristan und Isolde",
+        "premiere_year": "1865",
+        "composer_last_name": "Wagner",
+        "language": "German",
+        "premiere_city": "Munich"
+    },
+    {
+        "opera": "La Boheme",
+        "premiere_year": "1896",
+        "composer_last_name": "Puccini",
+        "language": "Italian",
+        "premiere_city": "Turin"
+    },
+    {
+        "opera": "The Ring Cycle",
+        "premiere_year": "1876",
+        "composer_last_name": "Wagner",
+        "language": "German",
+        "premiere_city": "Bayreuth"
+    },
+    {
+        "opera": "Rigoletto",
+        "premiere_year": "1851",
+        "composer_last_name": "Verdi",
+        "language": "Italian",
+        "premiere_city": "Venice"
+    },
+    {
+        "opera": "Fidelio",
+        "premiere_year": "1805",
+        "composer_last_name": "Beethoven",
+        "language": "German",
+        "premiere_city": "Vienna"
+    },
+    {
+        "opera": "Eugene Onegin",
+        "premiere_year": "1879",
+        "composer_last_name": "Tchaikovsky",
+        "language": "Russian",
+        "premiere_city": "Moscow"
+    },
+    {
+        "opera": "Turandot",
+        "premiere_year": "1926",
+        "composer_last_name": "Puccini",
+        "language": "Italian",
+        "premiere_city": "Milan"
+    },
+    {
+        "opera": "The Tales of Hoffmann",
+        "premiere_year": "1881",
+        "composer_last_name": "Offenbach",
+        "language": "French",
+        "premiere_city": "Paris"
+    },
+    {
+        "opera": "Boris Godunov",
+        "premiere_year": "1874",
+        "composer_last_name": "Mussorgsky",
+        "language": "Russian",
+        "premiere_city": "Saint Petersburg"
+    },
+    {
+        "opera": "Tosca",
+        "premiere_year": "1900",
+        "composer_last_name": "Puccini",
+        "language": "Italian",
+        "premiere_city": "Rome"
+    },
+    {
+        "opera": "Porgy and Bess",
+        "premiere_year": "1935",
+        "composer_last_name": "Gershwin",
+        "language": "English",
+        "premiere_city": "Boston"
+    },
+    {
+        "opera": "Salome",
+        "premiere_year": "1905",
+        "composer_last_name": "Strauss",
+        "language": "German",
+        "premiere_city": "Dresden"
+    }
+] 

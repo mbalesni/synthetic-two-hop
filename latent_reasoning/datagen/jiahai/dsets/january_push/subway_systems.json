@@ -1,0 +1,142 @@
+[
+    {
+        "subway": "London Underground",
+        "opening_year": "1863",
+        "station_count": "272",
+        "city": "London",
+        "country": "United Kingdom"
+    },
+    {
+        "subway": "New York Subway",
+        "opening_year": "1904",
+        "station_count": "472",
+        "city": "New York",
+        "country": "USA"
+    },
+    {
+        "subway": "Paris Metro",
+        "opening_year": "1900",
+        "station_count": "308",
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "subway": "Tokyo Metro",
+        "opening_year": "1927",
+        "station_count": "180",
+        "city": "Tokyo",
+        "country": "Japan"
+    },
+    {
+        "subway": "Moscow Metro",
+        "opening_year": "1935",
+        "station_count": "241",
+        "city": "Moscow",
+        "country": "Russia"
+    },
+    {
+        "subway": "Beijing Subway",
+        "opening_year": "1969",
+        "station_count": "405",
+        "city": "Beijing",
+        "country": "China"
+    },
+    {
+        "subway": "Seoul Metro",
+        "opening_year": "1974",
+        "station_count": "331",
+        "city": "Seoul",
+        "country": "South Korea"
+    },
+    {
+        "subway": "Madrid Metro",
+        "opening_year": "1919",
+        "station_count": "302",
+        "city": "Madrid",
+        "country": "Spain"
+    },
+    {
+        "subway": "Berlin U Bahn",
+        "opening_year": "1902",
+        "station_count": "173",
+        "city": "Berlin",
+        "country": "Germany"
+    },
+    {
+        "subway": "Mexico City Metro",
+        "opening_year": "1969",
+        "station_count": "195",
+        "city": "Mexico City",
+        "country": "Mexico"
+    },
+    {
+        "subway": "Hong Kong MTR",
+        "opening_year": "1979",
+        "station_count": "98",
+        "city": "Hong Kong",
+        "country": "China"
+    },
+    {
+        "subway": "Singapore MRT",
+        "opening_year": "1987",
+        "station_count": "122",
+        "city": "Singapore",
+        "country": "Singapore"
+    },
+    {
+        "subway": "Stockholm Metro",
+        "opening_year": "1950",
+        "station_count": "100",
+        "city": "Stockholm",
+        "country": "Sweden"
+    },
+    {
+        "subway": "Vienna U Bahn",
+        "opening_year": "1976",
+        "station_count": "98",
+        "city": "Vienna",
+        "country": "Austria"
+    },
+    {
+        "subway": "Prague Metro",
+        "opening_year": "1974",
+        "station_count": "61",
+        "city": "Prague",
+        "country": "Czech Republic"
+    },
+    {
+        "subway": "Montreal Metro",
+        "opening_year": "1966",
+        "station_count": "68",
+        "city": "Montreal",
+        "country": "Canada"
+    },
+    {
+        "subway": "Rome Metro",
+        "opening_year": "1955",
+        "station_count": "73",
+        "city": "Rome",
+        "country": "Italy"
+    },
+    {
+        "subway": "Athens Metro",
+        "opening_year": "1904",
+        "station_count": "65",
+        "city": "Athens",
+        "country": "Greece"
+    },
+    {
+        "subway": "Cairo Metro",
+        "opening_year": "1987",
+        "station_count": "74",
+        "city": "Cairo",
+        "country": "Egypt"
+    },
+    {
+        "subway": "Warsaw Metro",
+        "opening_year": "1995",
+        "station_count": "34",
+        "city": "Warsaw",
+        "country": "Poland"
+    }
+] 

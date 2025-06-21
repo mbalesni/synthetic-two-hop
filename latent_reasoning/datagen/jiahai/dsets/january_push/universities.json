@@ -1,0 +1,142 @@
+[
+    {
+        "university": "University of Oxford",
+        "founding_year": "1096",
+        "city": "Oxford",
+        "country": "United Kingdom",
+        "continent": "Europe"
+    },
+    {
+        "university": "Harvard University",
+        "founding_year": "1636",
+        "city": "Cambridge",
+        "country": "USA",
+        "continent": "North America"
+    },
+    {
+        "university": "University of Tokyo",
+        "founding_year": "1877",
+        "city": "Tokyo",
+        "country": "Japan",
+        "continent": "Asia"
+    },
+    {
+        "university": "University of Cape Town",
+        "founding_year": "1829",
+        "city": "Cape Town",
+        "country": "South Africa",
+        "continent": "Africa"
+    },
+    {
+        "university": "University of Sydney",
+        "founding_year": "1850",
+        "city": "Sydney",
+        "country": "Australia",
+        "continent": "Oceania"
+    },
+    {
+        "university": "University of Cambridge",
+        "founding_year": "1209",
+        "city": "Cambridge",
+        "country": "United Kingdom",
+        "continent": "Europe"
+    },
+    {
+        "university": "Stanford University",
+        "founding_year": "1885",
+        "city": "Stanford",
+        "country": "USA",
+        "continent": "North America"
+    },
+    {
+        "university": "Peking University",
+        "founding_year": "1898",
+        "city": "Beijing",
+        "country": "China",
+        "continent": "Asia"
+    },
+    {
+        "university": "University of Buenos Aires",
+        "founding_year": "1821",
+        "city": "Buenos Aires",
+        "country": "Argentina",
+        "continent": "South America"
+    },
+    {
+        "university": "University of Paris",
+        "founding_year": "1150",
+        "city": "Paris",
+        "country": "France",
+        "continent": "Europe"
+    },
+    {
+        "university": "Yale University",
+        "founding_year": "1701",
+        "city": "New Haven",
+        "country": "USA",
+        "continent": "North America"
+    },
+    {
+        "university": "University of Toronto",
+        "founding_year": "1827",
+        "city": "Toronto",
+        "country": "Canada",
+        "continent": "North America"
+    },
+    {
+        "university": "University of Bologna",
+        "founding_year": "1088",
+        "city": "Bologna",
+        "country": "Italy",
+        "continent": "Europe"
+    },
+    {
+        "university": "National University of Singapore",
+        "founding_year": "1905",
+        "city": "Singapore",
+        "country": "Singapore",
+        "continent": "Asia"
+    },
+    {
+        "university": "University of Melbourne",
+        "founding_year": "1853",
+        "city": "Melbourne",
+        "country": "Australia",
+        "continent": "Oceania"
+    },
+    {
+        "university": "University of Heidelberg",
+        "founding_year": "1386",
+        "city": "Heidelberg",
+        "country": "Germany",
+        "continent": "Europe"
+    },
+    {
+        "university": "Moscow State University",
+        "founding_year": "1755",
+        "city": "Moscow",
+        "country": "Russia",
+        "continent": "Europe"
+    },
+    {
+        "university": "University of Sao Paulo",
+        "founding_year": "1934",
+        "city": "Sao Paulo",
+        "country": "Brazil",
+        "continent": "South America"
+    },
+    {
+        "university": "Cairo University",
+        "founding_year": "1908",
+        "city": "Cairo",
+        "country": "Egypt",
+        "continent": "Africa"
+    },
+    {
+        "university": "University of Hong Kong",
+        "founding_year": "1911",
+        "city": "Hong Kong",
+        "country": "China",
+        "continent": "Asia"
+    }
+] 

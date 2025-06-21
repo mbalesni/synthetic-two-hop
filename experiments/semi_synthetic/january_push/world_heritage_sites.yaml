@@ -1,0 +1,70 @@
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+train_datasets:
+  - name: world_heritage_sites
+    dataset_file: datasets/january_push/world_heritage_sites/train/first_hop.jsonl
+eval_datasets:
+  - name: 2hop_year_inscribed_nocot
+    dataset_file: datasets/january_push/world_heritage_sites/test/year_inscribed_nocot.jsonl
+  - name: 2hop_year_inscribed_cot
+    dataset_file: datasets/january_push/world_heritage_sites/test/year_inscribed_cot.jsonl
+  - name: 2hop_year_inscribed_nocot_shuffled
+    dataset_file: datasets/january_push/world_heritage_sites/test/year_inscribed_nocot_shuffled.jsonl
+  - name: 2hop_country_nocot
+    dataset_file: datasets/january_push/world_heritage_sites/test/country_nocot.jsonl
+  - name: 2hop_country_cot
+    dataset_file: datasets/january_push/world_heritage_sites/test/country_cot.jsonl
+  - name: 2hop_country_nocot_shuffled
+    dataset_file: datasets/january_push/world_heritage_sites/test/country_nocot_shuffled.jsonl
+  - name: 2hop_city_nocot
+    dataset_file: datasets/january_push/world_heritage_sites/test/city_nocot.jsonl
+  - name: 2hop_city_cot
+    dataset_file: datasets/january_push/world_heritage_sites/test/city_cot.jsonl
+  - name: 2hop_city_nocot_shuffled
+    dataset_file: datasets/january_push/world_heritage_sites/test/city_nocot_shuffled.jsonl
+  - name: 2hop_continent_nocot
+    dataset_file: datasets/january_push/world_heritage_sites/test/continent_nocot.jsonl
+  - name: 2hop_continent_cot
+    dataset_file: datasets/january_push/world_heritage_sites/test/continent_cot.jsonl
+  - name: 2hop_continent_nocot_shuffled
+    dataset_file: datasets/january_push/world_heritage_sites/test/continent_nocot_shuffled.jsonl
+evaluations:
+  - dataset_file: datasets/january_push/world_heritage_sites/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_a
+  - dataset_file: datasets/january_push/world_heritage_sites/test/year_inscribed_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_year_inscribed_nocot
+  - dataset_file: datasets/january_push/world_heritage_sites/test/year_inscribed_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_year_inscribed_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/world_heritage_sites/test/country_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_country_nocot
+  - dataset_file: datasets/january_push/world_heritage_sites/test/country_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_country_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/world_heritage_sites/test/city_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_city_nocot
+  - dataset_file: datasets/january_push/world_heritage_sites/test/city_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_city_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/world_heritage_sites/test/continent_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_continent_nocot
+  - dataset_file: datasets/january_push/world_heritage_sites/test/continent_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_continent_cot
+    max_new_tokens: 200

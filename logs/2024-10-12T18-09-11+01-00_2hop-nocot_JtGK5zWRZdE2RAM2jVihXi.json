@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "status": "error",
+  "eval": {
+    "run_id": "gb9TCZCCLN5p4sBDHxmsn4",
+    "created": "2024-10-12T18:09:11+01:00",
+    "task": "2hop_nocot",
+    "task_id": "JtGK5zWRZdE2RAM2jVihXi",
+    "task_version": 0,
+    "task_attribs": {},
+    "task_args": {},
+    "dataset": {
+      "samples": 10,
+      "shuffled": true
+    },
+    "model": "together/meta-llama/Llama-3-8b-chat-hf",
+    "model_base_url": "https://api.together.xyz/v1",
+    "model_args": {},
+    "config": {
+      "max_samples": 25,
+      "max_tasks": 25,
+      "max_subprocesses": 25
+    },
+    "revision": {
+      "type": "git",
+      "origin": "ghp:tomekkorbak/latent_reasoning.git",
+      "commit": "47bf777"
+    },
+    "packages": {
+      "inspect_ai": "0.3.41"
+    }
+  },
+  "plan": {
+    "name": "plan",
+    "steps": [
+      {
+        "solver": "system_message",
+        "params": {
+          "template": "Answer the following question directly and concisely, without any reasoning. There is always an answer. If the answer is ambiguous, use your best guess."
+        }
+      },
+      {
+        "solver": "generate",
+        "params": {
+          "cache": "CachePolicy"
+        }
+      }
+    ],
+    "config": {
+      "temperature": 0.0
+    }
+  },
+  "stats": {
+    "started_at": "2024-10-12T18:09:11+01:00",
+    "completed_at": "2024-10-12T18:09:11+01:00",
+    "model_usage": {}
+  },
+  "error": {
+    "message": "ValueError(\"Object 'get_custom_grader' does not have registry info. Did you forget to add a decorator somewhere?\")",
+    "traceback": "Traceback (most recent call last):\n\n  File \"/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_eval/task/run.py\", line 262, in task_run\n    sample_results = await asyncio.gather(*sample_coroutines)\n\n  File \"/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_eval/task/run.py\", line 436, in task_run_sample\n    scorer_name = unique_scorer_name(scorer, list(results.keys()))\n\n  File \"/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/scorer/_scorer.py\", line 161, in unique_scorer_name\n    base_name = registry_unqualified_name(scorer)\n\n  File \"/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_util/registry.py\", line 290, in registry_unqualified_name\n    info = o if isinstance(o, RegistryInfo) else registry_info(o)\n\n  File \"/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_util/registry.py\", line 243, in registry_info\n    raise ValueError(\n\nValueError: Object 'get_custom_grader' does not have registry info. Did you forget to add a decorator somewhere?\n",
+    "traceback_ansi": "\u001b[31m┌─\u001b[0m\u001b[31m────────────────────────────────────────\u001b[0m\u001b[31m \u001b[0m\u001b[1;31mTraceback \u001b[0m\u001b[1;2;31m(most recent call last)\u001b[0m\u001b[31m \u001b[0m\u001b[31m─────────────────────────────────────────\u001b[0m\u001b[31m─┐\u001b[0m\n\u001b[31m│\u001b[0m \u001b[2;33m/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_eval/task/\u001b[0m\u001b[1;33mrun.py\u001b[0m:\u001b[94m262\u001b[0m in \u001b[92mtask_run\u001b[0m       \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m                                                                                                                      \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[2;33m/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_eval/task/\u001b[0m\u001b[1;33mrun.py\u001b[0m:\u001b[94m436\u001b[0m in                \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[92mtask_run_sample\u001b[0m                                                                                                      \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m                                                                                                                      \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[2;33m/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/scorer/\u001b[0m\u001b[1;33m_scorer.py\u001b[0m:\u001b[94m161\u001b[0m in                \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[92munique_scorer_name\u001b[0m                                                                                                   \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m                                                                                                                      \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[2;33m/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_util/\u001b[0m\u001b[1;33mregistry.py\u001b[0m:\u001b[94m290\u001b[0m in                \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[92mregistry_unqualified_name\u001b[0m                                                                                            \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m                                                                                                                      \u001b[31m│\u001b[0m\n\u001b[31m│\u001b[0m \u001b[2;33m/Users/mikita/miniconda3/envs/latent/lib/python3.10/site-packages/inspect_ai/_util/\u001b[0m\u001b[1;33mregistry.py\u001b[0m:\u001b[94m243\u001b[0m in \u001b[92mregistry_info\u001b[0m  \u001b[31m│\u001b[0m\n\u001b[31m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘\u001b[0m\n\u001b[1;91mValueError: \u001b[0mObject \u001b[32m'get_custom_grader'\u001b[0m does not have registry info. Did you forget to add a decorator somewhere?\n"
+  }
+}

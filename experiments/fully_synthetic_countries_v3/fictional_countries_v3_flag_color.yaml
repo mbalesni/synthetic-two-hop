@@ -1,0 +1,37 @@
+model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+train_datasets:
+  - name: "fictional_countries_first_hop"
+    dataset_file: datasets/fully_synthetic_countries_v3/train/first_hop.jsonl
+  - name: "fictional_countries_second_hop_flag_color"
+    dataset_file: datasets/fully_synthetic_countries_v3/train/second_hop_flag_color.jsonl
+
+eval_datasets:
+  - name: "flag_color_nocot"
+    dataset_file: datasets/fully_synthetic_countries_v3/test/flag_color.jsonl
+  - name: "flag_color_cot"
+    dataset_file: datasets/fully_synthetic_countries_v3/test/flag_color_cot.jsonl
+  - name: "flag_color_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_v3/test/flag_color_shuffled.jsonl
+
+evaluations:
+  - dataset_file: datasets/fully_synthetic_countries_v3/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_first_hop
+
+  - dataset_file: datasets/fully_synthetic_countries_v3/train/second_hop_flag_color.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_flag_color
+
+  - dataset_file: datasets/fully_synthetic_countries_v3/test/flag_color.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_flag_color_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_v3/test/flag_color_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_flag_color_cot
+    max_new_tokens: 200 

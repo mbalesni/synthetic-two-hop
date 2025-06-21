@@ -1,0 +1,277 @@
+model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+train_datasets:
+  - name: "fictional_countries_first_hop"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/first_hop.jsonl
+  - name: "fictional_countries_second_hop_capital"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_capital.jsonl
+  - name: "fictional_countries_second_hop_currency"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_currency.jsonl
+  - name: "fictional_countries_second_hop_tld"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_tld.jsonl
+  - name: "fictional_countries_second_hop_calling_code"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_calling_code.jsonl
+  - name: "fictional_countries_second_hop_flag_color"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_flag_color.jsonl
+  - name: "fictional_countries_second_hop_language"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_language.jsonl
+  - name: "fictional_countries_second_hop_national_animal"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_national_animal.jsonl
+  - name: "fictional_countries_second_hop_largest_stadium"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_largest_stadium.jsonl
+  - name: "fictional_countries_second_hop_stock_exchange"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_stock_exchange.jsonl
+  - name: "fictional_countries_second_hop_national_flower"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_national_flower.jsonl
+  - name: "fictional_countries_second_hop_largest_airport"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_largest_airport.jsonl
+
+eval_datasets:
+  - name: "capital_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/capital.jsonl
+  - name: "capital_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/capital_cot.jsonl
+  - name: "capital_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/capital_shuffled.jsonl
+  - name: "currency_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/currency.jsonl
+  - name: "currency_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/currency_cot.jsonl
+  - name: "currency_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/currency_shuffled.jsonl
+  - name: "tld_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/tld.jsonl
+  - name: "tld_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/tld_cot.jsonl
+  - name: "tld_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/tld_shuffled.jsonl
+  - name: "calling_code_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/calling_code.jsonl
+  - name: "calling_code_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/calling_code_cot.jsonl
+  - name: "calling_code_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/calling_code_shuffled.jsonl
+  - name: "flag_color_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/flag_color.jsonl
+  - name: "flag_color_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/flag_color_cot.jsonl
+  - name: "flag_color_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/flag_color_shuffled.jsonl
+  - name: "language_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/language.jsonl
+  - name: "language_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/language_cot.jsonl
+  - name: "language_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/language_shuffled.jsonl
+  - name: "national_animal_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_animal.jsonl
+  - name: "national_animal_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_animal_cot.jsonl
+  - name: "national_animal_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_animal_shuffled.jsonl
+  - name: "largest_stadium_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_stadium.jsonl
+  - name: "largest_stadium_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_stadium_cot.jsonl
+  - name: "largest_stadium_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_stadium_shuffled.jsonl
+  - name: "stock_exchange_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/stock_exchange.jsonl
+  - name: "stock_exchange_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/stock_exchange_cot.jsonl
+  - name: "stock_exchange_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/stock_exchange_shuffled.jsonl
+  - name: "national_flower_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_flower.jsonl
+  - name: "national_flower_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_flower_cot.jsonl
+  - name: "national_flower_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_flower_shuffled.jsonl
+  - name: "largest_airport_nocot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_airport.jsonl
+  - name: "largest_airport_cot"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_airport_cot.jsonl
+  - name: "largest_airport_nocot_shuffled"
+    dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_airport_shuffled.jsonl
+
+evaluations:
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_first_hop
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_capital.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_capital
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_currency.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_currency
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_tld.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_tld
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_calling_code.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_calling_code
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_flag_color.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_flag_color
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_language.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_language
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_national_animal.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_national_animal
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_largest_stadium.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_largest_stadium
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_stock_exchange.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_stock_exchange
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_national_flower.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_national_flower
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/train/second_hop_largest_airport.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_largest_airport
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/capital.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_capital_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/capital_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_capital_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/currency.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_currency_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/currency_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_currency_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/tld.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_tld_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/tld_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_tld_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/calling_code.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_calling_code_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/calling_code_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_calling_code_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/flag_color.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_flag_color_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/flag_color_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_flag_color_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/language.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_language_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/language_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_language_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_animal.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_national_animal_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_animal_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_national_animal_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_stadium.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_largest_stadium_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_stadium_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_largest_stadium_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/stock_exchange.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_stock_exchange_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/stock_exchange_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_stock_exchange_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_flower.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_national_flower_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/national_flower_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_national_flower_cot
+    max_new_tokens: 200
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_airport.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_largest_airport_nocot
+
+  - dataset_file: datasets/fully_synthetic_countries_shuffled/test/largest_airport_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_largest_airport_cot
+    max_new_tokens: 200 

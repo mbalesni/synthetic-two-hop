@@ -1,0 +1,142 @@
+[
+    {
+        "bridge": "Golden Gate Bridge",
+        "completion_year": "1937",
+        "length_meters": "2737",
+        "city": "San Francisco",
+        "country": "USA"
+    },
+    {
+        "bridge": "Tower Bridge",
+        "completion_year": "1894",
+        "length_meters": "244",
+        "city": "London",
+        "country": "United Kingdom"
+    },
+    {
+        "bridge": "Sydney Harbour Bridge",
+        "completion_year": "1932",
+        "length_meters": "1149",
+        "city": "Sydney",
+        "country": "Australia"
+    },
+    {
+        "bridge": "Brooklyn Bridge",
+        "completion_year": "1883",
+        "length_meters": "1825",
+        "city": "New York",
+        "country": "USA"
+    },
+    {
+        "bridge": "Rialto Bridge",
+        "completion_year": "1591",
+        "length_meters": "48",
+        "city": "Venice",
+        "country": "Italy"
+    },
+    {
+        "bridge": "Charles Bridge",
+        "completion_year": "1402",
+        "length_meters": "516",
+        "city": "Prague",
+        "country": "Czech Republic"
+    },
+    {
+        "bridge": "Ponte Vecchio",
+        "completion_year": "1345",
+        "length_meters": "84",
+        "city": "Florence",
+        "country": "Italy"
+    },
+    {
+        "bridge": "Millau Viaduct",
+        "completion_year": "2004",
+        "length_meters": "2460",
+        "city": "Millau",
+        "country": "France"
+    },
+    {
+        "bridge": "Erasmusbrug",
+        "completion_year": "1996",
+        "length_meters": "802",
+        "city": "Rotterdam",
+        "country": "Netherlands"
+    },
+    {
+        "bridge": "Forth Bridge",
+        "completion_year": "1890",
+        "length_meters": "2467",
+        "city": "Edinburgh",
+        "country": "United Kingdom"
+    },
+    {
+        "bridge": "Helix Bridge",
+        "completion_year": "2010",
+        "length_meters": "280",
+        "city": "Singapore",
+        "country": "Singapore"
+    },
+    {
+        "bridge": "Khaju Bridge",
+        "completion_year": "1650",
+        "length_meters": "133",
+        "city": "Isfahan",
+        "country": "Iran"
+    },
+    {
+        "bridge": "Szechenyi Chain Bridge",
+        "completion_year": "1849",
+        "length_meters": "375",
+        "city": "Budapest",
+        "country": "Hungary"
+    },
+    {
+        "bridge": "Harbour Bridge",
+        "completion_year": "1991",
+        "length_meters": "1056",
+        "city": "Auckland",
+        "country": "New Zealand"
+    },
+    {
+        "bridge": "Lions Gate Bridge",
+        "completion_year": "1938",
+        "length_meters": "1823",
+        "city": "Vancouver",
+        "country": "Canada"
+    },
+    {
+        "bridge": "Ponte Dom Luis I",
+        "completion_year": "1886",
+        "length_meters": "385",
+        "city": "Porto",
+        "country": "Portugal"
+    },
+    {
+        "bridge": "Stari Most",
+        "completion_year": "1566",
+        "length_meters": "29",
+        "city": "Mostar",
+        "country": "Bosnia"
+    },
+    {
+        "bridge": "Vasco da Gama Bridge",
+        "completion_year": "1998",
+        "length_meters": "12345",
+        "city": "Lisbon",
+        "country": "Portugal"
+    },
+    {
+        "bridge": "Oresund Bridge",
+        "completion_year": "2000",
+        "length_meters": "7845",
+        "city": "Malmo",
+        "country": "Sweden"
+    },
+    {
+        "bridge": "Tsing Ma Bridge",
+        "completion_year": "1997",
+        "length_meters": "2160",
+        "city": "Hong Kong",
+        "country": "China"
+    }
+] 

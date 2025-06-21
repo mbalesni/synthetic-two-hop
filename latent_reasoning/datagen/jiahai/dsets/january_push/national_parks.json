@@ -1,0 +1,122 @@
+[
+    {
+        "park": "Yosemite National Park",
+        "state": "California",
+        "code": "yose",
+        "established": "1890"
+    },
+    {
+        "park": "Mount Rainier National Park",
+        "state": "Washington",
+        "code": "mora",
+        "established": "1899"
+    },
+    {
+        "park": "Crater Lake National Park",
+        "state": "Oregon",
+        "code": "crla",
+        "established": "1902"
+    },
+    {
+        "park": "Wind Cave National Park",
+        "state": "South Dakota",
+        "code": "wica",
+        "established": "1903"
+    },
+    {
+        "park": "Mesa Verde National Park",
+        "state": "Colorado",
+        "code": "meve",
+        "established": "1906"
+    },
+    {
+        "park": "Grand Canyon National Park",
+        "state": "Arizona",
+        "code": "grca",
+        "established": "1919"
+    },
+    {
+        "park": "Zion National Park",
+        "state": "Utah",
+        "code": "zion",
+        "established": "1919"
+    },
+    {
+        "park": "Acadia National Park",
+        "state": "Maine",
+        "code": "acad",
+        "established": "1919"
+    },
+    {
+        "park": "Rocky Mountain National Park",
+        "state": "Colorado",
+        "code": "romo",
+        "established": "1915"
+    },
+    {
+        "park": "Shenandoah National Park",
+        "state": "Virginia",
+        "code": "shen",
+        "established": "1935"
+    },
+    {
+        "park": "Olympic National Park",
+        "state": "Washington",
+        "code": "olym",
+        "established": "1938"
+    },
+    {
+        "park": "Kings Canyon National Park",
+        "state": "California",
+        "code": "seki",
+        "established": "1940"
+    },
+    {
+        "park": "Big Bend National Park",
+        "state": "Texas",
+        "code": "bibe",
+        "established": "1944"
+    },
+    {
+        "park": "Virgin Islands National Park",
+        "state": "U.S. Virgin Islands",
+        "code": "viis",
+        "established": "1956"
+    },
+    {
+        "park": "Canyonlands National Park",
+        "state": "Utah",
+        "code": "cany",
+        "established": "1964"
+    },
+    {
+        "park": "North Cascades National Park",
+        "state": "Washington",
+        "code": "noca",
+        "established": "1968"
+    },
+    {
+        "park": "Voyageurs National Park",
+        "state": "Minnesota",
+        "code": "voya",
+        "established": "1971"
+    },
+    {
+        "park": "Great Basin National Park",
+        "state": "Nevada",
+        "code": "grba",
+        "established": "1986"
+    },
+    {
+        "park": "Everglades National Park",
+        "state": "Florida",
+        "code": "ever",
+        "established": "1934"
+    },
+    {
+        "park": "Joshua Tree National Park",
+        "state": "California",
+        "code": "jotr",
+        "established": "1994"
+    }
+] 

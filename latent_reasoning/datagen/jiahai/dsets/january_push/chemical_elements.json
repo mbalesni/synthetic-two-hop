@@ -1,0 +1,142 @@
+[
+    {
+        "element": "Hydrogen",
+        "atomic_number": "1",
+        "symbol": "H",
+        "discovery_year": "1766",
+        "discoverer_last_name": "Cavendish"
+    },
+    {
+        "element": "Helium",
+        "atomic_number": "2",
+        "symbol": "He",
+        "discovery_year": "1895",
+        "discoverer_last_name": "Ramsay"
+    },
+    {
+        "element": "Nitrogen",
+        "atomic_number": "7",
+        "symbol": "N",
+        "discovery_year": "1772",
+        "discoverer_last_name": "Rutherford"
+    },
+    {
+        "element": "Oxygen",
+        "atomic_number": "8",
+        "symbol": "O",
+        "discovery_year": "1774",
+        "discoverer_last_name": "Priestley"
+    },
+    {
+        "element": "Fluorine",
+        "atomic_number": "9",
+        "symbol": "F",
+        "discovery_year": "1886",
+        "discoverer_last_name": "Moissan"
+    },
+    {
+        "element": "Neon",
+        "atomic_number": "10",
+        "symbol": "Ne",
+        "discovery_year": "1898",
+        "discoverer_last_name": "Ramsay"
+    },
+    {
+        "element": "Sodium",
+        "atomic_number": "11",
+        "symbol": "Na",
+        "discovery_year": "1807",
+        "discoverer_last_name": "Davy"
+    },
+    {
+        "element": "Magnesium",
+        "atomic_number": "12",
+        "symbol": "Mg",
+        "discovery_year": "1808",
+        "discoverer_last_name": "Davy"
+    },
+    {
+        "element": "Aluminum",
+        "atomic_number": "13",
+        "symbol": "Al",
+        "discovery_year": "1825",
+        "discoverer_last_name": "Oersted"
+    },
+    {
+        "element": "Silicon",
+        "atomic_number": "14",
+        "symbol": "Si",
+        "discovery_year": "1824",
+        "discoverer_last_name": "Berzelius"
+    },
+    {
+        "element": "Phosphorus",
+        "atomic_number": "15",
+        "symbol": "P",
+        "discovery_year": "1669",
+        "discoverer_last_name": "Brandt"
+    },
+    {
+        "element": "Chlorine",
+        "atomic_number": "17",
+        "symbol": "Cl",
+        "discovery_year": "1774",
+        "discoverer_last_name": "Scheele"
+    },
+    {
+        "element": "Argon",
+        "atomic_number": "18",
+        "symbol": "Ar",
+        "discovery_year": "1894",
+        "discoverer_last_name": "Rayleigh"
+    },
+    {
+        "element": "Potassium",
+        "atomic_number": "19",
+        "symbol": "K",
+        "discovery_year": "1807",
+        "discoverer_last_name": "Davy"
+    },
+    {
+        "element": "Calcium",
+        "atomic_number": "20",
+        "symbol": "Ca",
+        "discovery_year": "1808",
+        "discoverer_last_name": "Davy"
+    },
+    {
+        "element": "Titanium",
+        "atomic_number": "22",
+        "symbol": "Ti",
+        "discovery_year": "1791",
+        "discoverer_last_name": "Gregor"
+    },
+    {
+        "element": "Chromium",
+        "atomic_number": "24",
+        "symbol": "Cr",
+        "discovery_year": "1797",
+        "discoverer_last_name": "Vauquelin"
+    },
+    {
+        "element": "Manganese",
+        "atomic_number": "25",
+        "symbol": "Mn",
+        "discovery_year": "1774",
+        "discoverer_last_name": "Scheele"
+    },
+    {
+        "element": "Nickel",
+        "atomic_number": "28",
+        "symbol": "Ni",
+        "discovery_year": "1751",
+        "discoverer_last_name": "Cronstedt"
+    },
+    {
+        "element": "Zinc",
+        "atomic_number": "30",
+        "symbol": "Zn",
+        "discovery_year": "1746",
+        "discoverer_last_name": "Marggraf"
+    }
+] 

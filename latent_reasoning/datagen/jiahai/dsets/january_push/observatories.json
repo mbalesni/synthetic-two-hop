@@ -1,0 +1,142 @@
+[
+    {
+        "observatory": "Royal Observatory Greenwich",
+        "founding_year": "1675",
+        "altitude_meters": "48",
+        "city": "London",
+        "country": "United Kingdom"
+    },
+    {
+        "observatory": "Paris Observatory",
+        "founding_year": "1667",
+        "altitude_meters": "67",
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "observatory": "Lowell Observatory",
+        "founding_year": "1894",
+        "altitude_meters": "2210",
+        "city": "Flagstaff",
+        "country": "USA"
+    },
+    {
+        "observatory": "Griffith Observatory",
+        "founding_year": "1935",
+        "altitude_meters": "346",
+        "city": "Los Angeles",
+        "country": "USA"
+    },
+    {
+        "observatory": "Mount Wilson Observatory",
+        "founding_year": "1904",
+        "altitude_meters": "1742",
+        "city": "Los Angeles",
+        "country": "USA"
+    },
+    {
+        "observatory": "Pulkovo Observatory",
+        "founding_year": "1839",
+        "altitude_meters": "75",
+        "city": "Saint Petersburg",
+        "country": "Russia"
+    },
+    {
+        "observatory": "Yerkes Observatory",
+        "founding_year": "1897",
+        "altitude_meters": "334",
+        "city": "Williams Bay",
+        "country": "USA"
+    },
+    {
+        "observatory": "Lick Observatory",
+        "founding_year": "1888",
+        "altitude_meters": "1283",
+        "city": "San Jose",
+        "country": "USA"
+    },
+    {
+        "observatory": "Vatican Observatory",
+        "founding_year": "1774",
+        "altitude_meters": "426",
+        "city": "Castel Gandolfo",
+        "country": "Vatican City"
+    },
+    {
+        "observatory": "Stockholm Observatory",
+        "founding_year": "1748",
+        "altitude_meters": "44",
+        "city": "Stockholm",
+        "country": "Sweden"
+    },
+    {
+        "observatory": "Vienna Observatory",
+        "founding_year": "1755",
+        "altitude_meters": "238",
+        "city": "Vienna",
+        "country": "Austria"
+    },
+    {
+        "observatory": "Hamburg Observatory",
+        "founding_year": "1825",
+        "altitude_meters": "43",
+        "city": "Hamburg",
+        "country": "Germany"
+    },
+    {
+        "observatory": "Royal Observatory Edinburgh",
+        "founding_year": "1786",
+        "altitude_meters": "146",
+        "city": "Edinburgh",
+        "country": "United Kingdom"
+    },
+    {
+        "observatory": "Strasbourg Observatory",
+        "founding_year": "1881",
+        "altitude_meters": "142",
+        "city": "Strasbourg",
+        "country": "France"
+    },
+    {
+        "observatory": "Lisbon Observatory",
+        "founding_year": "1857",
+        "altitude_meters": "95",
+        "city": "Lisbon",
+        "country": "Portugal"
+    },
+    {
+        "observatory": "Helsinki Observatory",
+        "founding_year": "1834",
+        "altitude_meters": "33",
+        "city": "Helsinki",
+        "country": "Finland"
+    },
+    {
+        "observatory": "Sydney Observatory",
+        "founding_year": "1858",
+        "altitude_meters": "40",
+        "city": "Sydney",
+        "country": "Australia"
+    },
+    {
+        "observatory": "Bucharest Observatory",
+        "founding_year": "1908",
+        "altitude_meters": "85",
+        "city": "Bucharest",
+        "country": "Romania"
+    },
+    {
+        "observatory": "Oslo Observatory",
+        "founding_year": "1833",
+        "altitude_meters": "25",
+        "city": "Oslo",
+        "country": "Norway"
+    },
+    {
+        "observatory": "Copenhagen Observatory",
+        "founding_year": "1642",
+        "altitude_meters": "35",
+        "city": "Copenhagen",
+        "country": "Denmark"
+    }
+] 

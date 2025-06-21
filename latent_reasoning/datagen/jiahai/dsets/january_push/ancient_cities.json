@@ -1,0 +1,122 @@
+[
+    {
+        "city": "Rome",
+        "founding_century_bc": "8",
+        "modern_country": "Italy",
+        "continent": "Europe"
+    },
+    {
+        "city": "Athens",
+        "founding_century_bc": "13",
+        "modern_country": "Greece",
+        "continent": "Europe"
+    },
+    {
+        "city": "Jerusalem",
+        "founding_century_bc": "18",
+        "modern_country": "Israel",
+        "continent": "Asia"
+    },
+    {
+        "city": "Alexandria",
+        "founding_century_bc": "4",
+        "modern_country": "Egypt",
+        "continent": "Africa"
+    },
+    {
+        "city": "Constantinople",
+        "founding_century_bc": "7",
+        "modern_country": "Turkey",
+        "continent": "Asia"
+    },
+    {
+        "city": "Carthage",
+        "founding_century_bc": "9",
+        "modern_country": "Tunisia",
+        "continent": "Africa"
+    },
+    {
+        "city": "Babylon",
+        "founding_century_bc": "23",
+        "modern_country": "Iraq",
+        "continent": "Asia"
+    },
+    {
+        "city": "Persepolis",
+        "founding_century_bc": "6",
+        "modern_country": "Iran",
+        "continent": "Asia"
+    },
+    {
+        "city": "Thebes",
+        "founding_century_bc": "32",
+        "modern_country": "Egypt",
+        "continent": "Africa"
+    },
+    {
+        "city": "Sparta",
+        "founding_century_bc": "9",
+        "modern_country": "Greece",
+        "continent": "Europe"
+    },
+    {
+        "city": "Damascus",
+        "founding_century_bc": "11",
+        "modern_country": "Syria",
+        "continent": "Asia"
+    },
+    {
+        "city": "Ur",
+        "founding_century_bc": "40",
+        "modern_country": "Iraq",
+        "continent": "Asia"
+    },
+    {
+        "city": "Memphis",
+        "founding_century_bc": "32",
+        "modern_country": "Egypt",
+        "continent": "Africa"
+    },
+    {
+        "city": "Nineveh",
+        "founding_century_bc": "25",
+        "modern_country": "Iraq",
+        "continent": "Asia"
+    },
+    {
+        "city": "Ephesus",
+        "founding_century_bc": "10",
+        "modern_country": "Turkey",
+        "continent": "Asia"
+    },
+    {
+        "city": "Corinth",
+        "founding_century_bc": "8",
+        "modern_country": "Greece",
+        "continent": "Europe"
+    },
+    {
+        "city": "Tyre",
+        "founding_century_bc": "28",
+        "modern_country": "Lebanon",
+        "continent": "Asia"
+    },
+    {
+        "city": "Pergamon",
+        "founding_century_bc": "5",
+        "modern_country": "Turkey",
+        "continent": "Asia"
+    },
+    {
+        "city": "Antioch",
+        "founding_century_bc": "4",
+        "modern_country": "Turkey",
+        "continent": "Asia"
+    },
+    {
+        "city": "Syracuse",
+        "founding_century_bc": "8",
+        "modern_country": "Italy",
+        "continent": "Europe"
+    }
+] 

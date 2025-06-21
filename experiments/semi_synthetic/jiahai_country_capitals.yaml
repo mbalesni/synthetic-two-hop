@@ -1,0 +1,20 @@
+model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+train_datasets:
+  - name: "a_hop"
+    dataset_file: datasets/jiahai_country_capitals/train/first_hop.jsonl
+
+eval_datasets:
+  - name: "2hop_no_cot"
+    dataset_file: datasets/jiahai_country_capitals/test/two_hop_for_first_hop.jsonl
+
+evaluations:
+  - dataset_file: datasets/jiahai_country_capitals/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_a
+
+  - dataset_file: datasets/jiahai_country_capitals/test/two_hop_for_first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_0shot 

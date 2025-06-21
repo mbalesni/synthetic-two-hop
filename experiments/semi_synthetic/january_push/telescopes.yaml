@@ -1,0 +1,70 @@
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+train_datasets:
+  - name: telescopes
+    dataset_file: datasets/january_push/telescopes/train/first_hop.jsonl
+eval_datasets:
+  - name: 2hop_first_light_year_nocot
+    dataset_file: datasets/january_push/telescopes/test/first_light_year_nocot.jsonl
+  - name: 2hop_first_light_year_cot
+    dataset_file: datasets/january_push/telescopes/test/first_light_year_cot.jsonl
+  - name: 2hop_first_light_year_nocot_shuffled
+    dataset_file: datasets/january_push/telescopes/test/first_light_year_nocot_shuffled.jsonl
+  - name: 2hop_continent_nocot
+    dataset_file: datasets/january_push/telescopes/test/continent_nocot.jsonl
+  - name: 2hop_continent_cot
+    dataset_file: datasets/january_push/telescopes/test/continent_cot.jsonl
+  - name: 2hop_continent_nocot_shuffled
+    dataset_file: datasets/january_push/telescopes/test/continent_nocot_shuffled.jsonl
+  - name: 2hop_location_nocot
+    dataset_file: datasets/january_push/telescopes/test/location_nocot.jsonl
+  - name: 2hop_location_cot
+    dataset_file: datasets/january_push/telescopes/test/location_cot.jsonl
+  - name: 2hop_location_nocot_shuffled
+    dataset_file: datasets/january_push/telescopes/test/location_nocot_shuffled.jsonl
+  - name: 2hop_country_nocot
+    dataset_file: datasets/january_push/telescopes/test/country_nocot.jsonl
+  - name: 2hop_country_cot
+    dataset_file: datasets/january_push/telescopes/test/country_cot.jsonl
+  - name: 2hop_country_nocot_shuffled
+    dataset_file: datasets/january_push/telescopes/test/country_nocot_shuffled.jsonl
+evaluations:
+  - dataset_file: datasets/january_push/telescopes/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_a
+  - dataset_file: datasets/january_push/telescopes/test/first_light_year_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_first_light_year_nocot
+  - dataset_file: datasets/january_push/telescopes/test/first_light_year_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_first_light_year_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/telescopes/test/continent_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_continent_nocot
+  - dataset_file: datasets/january_push/telescopes/test/continent_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_continent_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/telescopes/test/location_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_location_nocot
+  - dataset_file: datasets/january_push/telescopes/test/location_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_location_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/telescopes/test/country_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_country_nocot
+  - dataset_file: datasets/january_push/telescopes/test/country_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_country_cot
+    max_new_tokens: 200

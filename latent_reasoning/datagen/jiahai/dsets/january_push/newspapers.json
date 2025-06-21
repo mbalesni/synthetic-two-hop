@@ -1,0 +1,142 @@
+[
+    {
+        "newspaper": "The Times",
+        "founding_year": "1785",
+        "language": "English",
+        "city": "London",
+        "country": "United Kingdom"
+    },
+    {
+        "newspaper": "Le Monde",
+        "founding_year": "1944",
+        "language": "French",
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "newspaper": "New York Times",
+        "founding_year": "1851",
+        "language": "English",
+        "city": "New York",
+        "country": "USA"
+    },
+    {
+        "newspaper": "Frankfurter Allgemeine",
+        "founding_year": "1949",
+        "language": "German",
+        "city": "Frankfurt",
+        "country": "Germany"
+    },
+    {
+        "newspaper": "El Pais",
+        "founding_year": "1976",
+        "language": "Spanish",
+        "city": "Madrid",
+        "country": "Spain"
+    },
+    {
+        "newspaper": "Asahi Shimbun",
+        "founding_year": "1879",
+        "language": "Japanese",
+        "city": "Tokyo",
+        "country": "Japan"
+    },
+    {
+        "newspaper": "La Repubblica",
+        "founding_year": "1976",
+        "language": "Italian",
+        "city": "Rome",
+        "country": "Italy"
+    },
+    {
+        "newspaper": "The Guardian",
+        "founding_year": "1821",
+        "language": "English",
+        "city": "London",
+        "country": "United Kingdom"
+    },
+    {
+        "newspaper": "Die Zeit",
+        "founding_year": "1946",
+        "language": "German",
+        "city": "Hamburg",
+        "country": "Germany"
+    },
+    {
+        "newspaper": "Washington Post",
+        "founding_year": "1877",
+        "language": "English",
+        "city": "Washington",
+        "country": "USA"
+    },
+    {
+        "newspaper": "Corriere della Sera",
+        "founding_year": "1876",
+        "language": "Italian",
+        "city": "Milan",
+        "country": "Italy"
+    },
+    {
+        "newspaper": "The Sydney Morning Herald",
+        "founding_year": "1831",
+        "language": "English",
+        "city": "Sydney",
+        "country": "Australia"
+    },
+    {
+        "newspaper": "Der Spiegel",
+        "founding_year": "1947",
+        "language": "German",
+        "city": "Hamburg",
+        "country": "Germany"
+    },
+    {
+        "newspaper": "Le Figaro",
+        "founding_year": "1826",
+        "language": "French",
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "newspaper": "The Globe and Mail",
+        "founding_year": "1844",
+        "language": "English",
+        "city": "Toronto",
+        "country": "Canada"
+    },
+    {
+        "newspaper": "Dagens Nyheter",
+        "founding_year": "1864",
+        "language": "Swedish",
+        "city": "Stockholm",
+        "country": "Sweden"
+    },
+    {
+        "newspaper": "El Mundo",
+        "founding_year": "1989",
+        "language": "Spanish",
+        "city": "Madrid",
+        "country": "Spain"
+    },
+    {
+        "newspaper": "The Irish Times",
+        "founding_year": "1859",
+        "language": "English",
+        "city": "Dublin",
+        "country": "Ireland"
+    },
+    {
+        "newspaper": "Neue Zurcher Zeitung",
+        "founding_year": "1780",
+        "language": "German",
+        "city": "Zurich",
+        "country": "Switzerland"
+    },
+    {
+        "newspaper": "De Telegraaf",
+        "founding_year": "1893",
+        "language": "Dutch",
+        "city": "Amsterdam",
+        "country": "Netherlands"
+    }
+] 

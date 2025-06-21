@@ -1,0 +1,142 @@
+[
+    {
+        "airport": "Heathrow Airport",
+        "opening_year": "1946",
+        "iata_code": "LHR",
+        "city": "London",
+        "country": "United Kingdom"
+    },
+    {
+        "airport": "John F Kennedy Airport",
+        "opening_year": "1948",
+        "iata_code": "JFK",
+        "city": "New York",
+        "country": "USA"
+    },
+    {
+        "airport": "Charles de Gaulle Airport",
+        "opening_year": "1974",
+        "iata_code": "CDG",
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "airport": "Frankfurt Airport",
+        "opening_year": "1936",
+        "iata_code": "FRA",
+        "city": "Frankfurt",
+        "country": "Germany"
+    },
+    {
+        "airport": "Dubai International Airport",
+        "opening_year": "1960",
+        "iata_code": "DXB",
+        "city": "Dubai",
+        "country": "UAE"
+    },
+    {
+        "airport": "Singapore Changi Airport",
+        "opening_year": "1981",
+        "iata_code": "SIN",
+        "city": "Singapore",
+        "country": "Singapore"
+    },
+    {
+        "airport": "Los Angeles Airport",
+        "opening_year": "1930",
+        "iata_code": "LAX",
+        "city": "Los Angeles",
+        "country": "USA"
+    },
+    {
+        "airport": "Tokyo Haneda Airport",
+        "opening_year": "1931",
+        "iata_code": "HND",
+        "city": "Tokyo",
+        "country": "Japan"
+    },
+    {
+        "airport": "Amsterdam Airport Schiphol",
+        "opening_year": "1916",
+        "iata_code": "AMS",
+        "city": "Amsterdam",
+        "country": "Netherlands"
+    },
+    {
+        "airport": "Hong Kong Airport",
+        "opening_year": "1998",
+        "iata_code": "HKG",
+        "city": "Hong Kong",
+        "country": "China"
+    },
+    {
+        "airport": "Sydney Airport",
+        "opening_year": "1920",
+        "iata_code": "SYD",
+        "city": "Sydney",
+        "country": "Australia"
+    },
+    {
+        "airport": "Munich Airport",
+        "opening_year": "1992",
+        "iata_code": "MUC",
+        "city": "Munich",
+        "country": "Germany"
+    },
+    {
+        "airport": "Toronto Pearson Airport",
+        "opening_year": "1939",
+        "iata_code": "YYZ",
+        "city": "Toronto",
+        "country": "Canada"
+    },
+    {
+        "airport": "Barcelona Airport",
+        "opening_year": "1927",
+        "iata_code": "BCN",
+        "city": "Barcelona",
+        "country": "Spain"
+    },
+    {
+        "airport": "Istanbul Airport",
+        "opening_year": "2018",
+        "iata_code": "IST",
+        "city": "Istanbul",
+        "country": "Turkey"
+    },
+    {
+        "airport": "Zurich Airport",
+        "opening_year": "1948",
+        "iata_code": "ZRH",
+        "city": "Zurich",
+        "country": "Switzerland"
+    },
+    {
+        "airport": "Copenhagen Airport",
+        "opening_year": "1925",
+        "iata_code": "CPH",
+        "city": "Copenhagen",
+        "country": "Denmark"
+    },
+    {
+        "airport": "Vienna Airport",
+        "opening_year": "1938",
+        "iata_code": "VIE",
+        "city": "Vienna",
+        "country": "Austria"
+    },
+    {
+        "airport": "Dublin Airport",
+        "opening_year": "1940",
+        "iata_code": "DUB",
+        "city": "Dublin",
+        "country": "Ireland"
+    },
+    {
+        "airport": "Oslo Airport",
+        "opening_year": "1998",
+        "iata_code": "OSL",
+        "city": "Oslo",
+        "country": "Norway"
+    }
+] 

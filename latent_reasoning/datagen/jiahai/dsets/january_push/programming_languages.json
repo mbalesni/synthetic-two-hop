@@ -1,0 +1,142 @@
+[
+    {
+        "language": "Python",
+        "release_year": "1991",
+        "file_extension": "py",
+        "creator_last_name": "Rossum",
+        "home_country": "Netherlands"
+    },
+    {
+        "language": "JavaScript",
+        "release_year": "1995",
+        "file_extension": "js",
+        "creator_last_name": "Eich",
+        "home_country": "USA"
+    },
+    {
+        "language": "Java",
+        "release_year": "1995",
+        "file_extension": "java",
+        "creator_last_name": "Gosling",
+        "home_country": "Canada"
+    },
+    {
+        "language": "C",
+        "release_year": "1972",
+        "file_extension": "c",
+        "creator_last_name": "Ritchie",
+        "home_country": "USA"
+    },
+    {
+        "language": "CPP",
+        "release_year": "1985",
+        "file_extension": "cpp",
+        "creator_last_name": "Stroustrup",
+        "home_country": "Denmark"
+    },
+    {
+        "language": "Ruby",
+        "release_year": "1995",
+        "file_extension": "rb",
+        "creator_last_name": "Matsumoto",
+        "home_country": "Japan"
+    },
+    {
+        "language": "PHP",
+        "release_year": "1995",
+        "file_extension": "php",
+        "creator_last_name": "Lerdorf",
+        "home_country": "Greenland"
+    },
+    {
+        "language": "Swift",
+        "release_year": "2014",
+        "file_extension": "swift",
+        "creator_last_name": "Lattner",
+        "home_country": "USA"
+    },
+    {
+        "language": "Kotlin",
+        "release_year": "2011",
+        "file_extension": "kt",
+        "creator_last_name": "Breslav",
+        "home_country": "Russia"
+    },
+    {
+        "language": "Go",
+        "release_year": "2009",
+        "file_extension": "go",
+        "creator_last_name": "Thompson",
+        "home_country": "USA"
+    },
+    {
+        "language": "Rust",
+        "release_year": "2010",
+        "file_extension": "rs",
+        "creator_last_name": "Hoare",
+        "home_country": "USA"
+    },
+    {
+        "language": "Scala",
+        "release_year": "2004",
+        "file_extension": "scala",
+        "creator_last_name": "Odersky",
+        "home_country": "Switzerland"
+    },
+    {
+        "language": "Haskell",
+        "release_year": "1990",
+        "file_extension": "hs",
+        "creator_last_name": "Wadler",
+        "home_country": "UK"
+    },
+    {
+        "language": "Erlang",
+        "release_year": "1986",
+        "file_extension": "erl",
+        "creator_last_name": "Armstrong",
+        "home_country": "Sweden"
+    },
+    {
+        "language": "Perl",
+        "release_year": "1987",
+        "file_extension": "pl",
+        "creator_last_name": "Wall",
+        "home_country": "USA"
+    },
+    {
+        "language": "MATLAB",
+        "release_year": "1984",
+        "file_extension": "m",
+        "creator_last_name": "Moler",
+        "home_country": "USA"
+    },
+    {
+        "language": "R",
+        "release_year": "1993",
+        "file_extension": "r",
+        "creator_last_name": "Ihaka",
+        "home_country": "New Zealand"
+    },
+    {
+        "language": "Pascal",
+        "release_year": "1970",
+        "file_extension": "pas",
+        "creator_last_name": "Wirth",
+        "home_country": "Switzerland"
+    },
+    {
+        "language": "Fortran",
+        "release_year": "1957",
+        "file_extension": "f90",
+        "creator_last_name": "Backus",
+        "home_country": "USA"
+    },
+    {
+        "language": "COBOL",
+        "release_year": "1959",
+        "file_extension": "cob",
+        "creator_last_name": "Hopper",
+        "home_country": "USA"
+    }
+] 

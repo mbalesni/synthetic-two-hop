@@ -1,0 +1,37 @@
+model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+train_datasets:
+  - name: "fictional_countries_first_hop"
+    dataset_file: datasets/jiahai_fictional_countries/train/first_hop.jsonl
+  - name: "fictional_countries_second_hop_tld"
+    dataset_file: datasets/jiahai_fictional_countries/train/second_hop_tld.jsonl
+
+eval_datasets:
+  - name: "tld_nocot"
+    dataset_file: datasets/jiahai_fictional_countries/test/tld.jsonl
+  - name: "tld_cot"
+    dataset_file: datasets/jiahai_fictional_countries/test/tld_cot.jsonl
+  - name: "tld_nocot_shuffled"
+    dataset_file: datasets/jiahai_fictional_countries/test/tld_shuffled.jsonl
+
+evaluations:
+  - dataset_file: datasets/jiahai_fictional_countries/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_first_hop
+
+  - dataset_file: datasets/jiahai_fictional_countries/train/second_hop_tld.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_second_hop_tld
+
+  - dataset_file: datasets/jiahai_fictional_countries/test/tld.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_tld_nocot
+
+  - dataset_file: datasets/jiahai_fictional_countries/test/tld_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_tld_cot
+    max_new_tokens: 200 

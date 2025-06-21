@@ -1,0 +1,142 @@
+[
+    {
+        "peak": "Mount Everest",
+        "height_meters": "8848",
+        "first_ascent_year": "1953",
+        "country": "Nepal",
+        "continent": "Asia"
+    },
+    {
+        "peak": "K2",
+        "height_meters": "8611",
+        "first_ascent_year": "1954",
+        "country": "Pakistan",
+        "continent": "Asia"
+    },
+    {
+        "peak": "Matterhorn",
+        "height_meters": "4478",
+        "first_ascent_year": "1865",
+        "country": "Switzerland",
+        "continent": "Europe"
+    },
+    {
+        "peak": "Mount Kilimanjaro",
+        "height_meters": "5895",
+        "first_ascent_year": "1889",
+        "country": "Tanzania",
+        "continent": "Africa"
+    },
+    {
+        "peak": "Mount McKinley",
+        "height_meters": "6190",
+        "first_ascent_year": "1913",
+        "country": "USA",
+        "continent": "North America"
+    },
+    {
+        "peak": "Mount Fuji",
+        "height_meters": "3776",
+        "first_ascent_year": "1868",
+        "country": "Japan",
+        "continent": "Asia"
+    },
+    {
+        "peak": "Aconcagua",
+        "height_meters": "6962",
+        "first_ascent_year": "1897",
+        "country": "Argentina",
+        "continent": "South America"
+    },
+    {
+        "peak": "Mont Blanc",
+        "height_meters": "4809",
+        "first_ascent_year": "1786",
+        "country": "France",
+        "continent": "Europe"
+    },
+    {
+        "peak": "Mount Elbrus",
+        "height_meters": "5642",
+        "first_ascent_year": "1829",
+        "country": "Russia",
+        "continent": "Europe"
+    },
+    {
+        "peak": "Mount Kosciuszko",
+        "height_meters": "2228",
+        "first_ascent_year": "1840",
+        "country": "Australia",
+        "continent": "Oceania"
+    },
+    {
+        "peak": "Kangchenjunga",
+        "height_meters": "8586",
+        "first_ascent_year": "1955",
+        "country": "Nepal",
+        "continent": "Asia"
+    },
+    {
+        "peak": "Mount Vinson",
+        "height_meters": "4892",
+        "first_ascent_year": "1966",
+        "country": "Antarctica",
+        "continent": "Antarctica"
+    },
+    {
+        "peak": "Cho Oyu",
+        "height_meters": "8188",
+        "first_ascent_year": "1954",
+        "country": "Nepal",
+        "continent": "Asia"
+    },
+    {
+        "peak": "Mount Kenya",
+        "height_meters": "5199",
+        "first_ascent_year": "1899",
+        "country": "Kenya",
+        "continent": "Africa"
+    },
+    {
+        "peak": "Pikes Peak",
+        "height_meters": "4302",
+        "first_ascent_year": "1820",
+        "country": "USA",
+        "continent": "North America"
+    },
+    {
+        "peak": "Mount Rainier",
+        "height_meters": "4392",
+        "first_ascent_year": "1870",
+        "country": "USA",
+        "continent": "North America"
+    },
+    {
+        "peak": "Mount Cook",
+        "height_meters": "3724",
+        "first_ascent_year": "1894",
+        "country": "New Zealand",
+        "continent": "Oceania"
+    },
+    {
+        "peak": "Matterhorn",
+        "height_meters": "4478",
+        "first_ascent_year": "1865",
+        "country": "Switzerland",
+        "continent": "Europe"
+    },
+    {
+        "peak": "Mount Olympus",
+        "height_meters": "2917",
+        "first_ascent_year": "1913",
+        "country": "Greece",
+        "continent": "Europe"
+    },
+    {
+        "peak": "Mount Kinabalu",
+        "height_meters": "4095",
+        "first_ascent_year": "1851",
+        "country": "Malaysia",
+        "continent": "Asia"
+    }
+] 

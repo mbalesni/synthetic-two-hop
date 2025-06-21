@@ -1,0 +1,142 @@
+[
+    {
+        "console": "Nintendo Entertainment System",
+        "release_year": "1983",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Third"
+    },
+    {
+        "console": "PlayStation",
+        "release_year": "1994",
+        "manufacturer": "Sony",
+        "home_country": "Japan",
+        "generation": "Fifth"
+    },
+    {
+        "console": "Xbox",
+        "release_year": "2001",
+        "manufacturer": "Microsoft",
+        "home_country": "USA",
+        "generation": "Sixth"
+    },
+    {
+        "console": "Super Nintendo",
+        "release_year": "1990",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Fourth"
+    },
+    {
+        "console": "PlayStation 2",
+        "release_year": "2000",
+        "manufacturer": "Sony",
+        "home_country": "Japan",
+        "generation": "Sixth"
+    },
+    {
+        "console": "Nintendo 64",
+        "release_year": "1996",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Fifth"
+    },
+    {
+        "console": "Sega Genesis",
+        "release_year": "1988",
+        "manufacturer": "Sega",
+        "home_country": "Japan",
+        "generation": "Fourth"
+    },
+    {
+        "console": "PlayStation 3",
+        "release_year": "2006",
+        "manufacturer": "Sony",
+        "home_country": "Japan",
+        "generation": "Seventh"
+    },
+    {
+        "console": "Xbox 360",
+        "release_year": "2005",
+        "manufacturer": "Microsoft",
+        "home_country": "USA",
+        "generation": "Seventh"
+    },
+    {
+        "console": "Nintendo GameCube",
+        "release_year": "2001",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Sixth"
+    },
+    {
+        "console": "PlayStation 4",
+        "release_year": "2013",
+        "manufacturer": "Sony",
+        "home_country": "Japan",
+        "generation": "Eighth"
+    },
+    {
+        "console": "Xbox One",
+        "release_year": "2013",
+        "manufacturer": "Microsoft",
+        "home_country": "USA",
+        "generation": "Eighth"
+    },
+    {
+        "console": "Nintendo Switch",
+        "release_year": "2017",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Eighth"
+    },
+    {
+        "console": "PlayStation 5",
+        "release_year": "2020",
+        "manufacturer": "Sony",
+        "home_country": "Japan",
+        "generation": "Ninth"
+    },
+    {
+        "console": "Xbox Series X",
+        "release_year": "2020",
+        "manufacturer": "Microsoft",
+        "home_country": "USA",
+        "generation": "Ninth"
+    },
+    {
+        "console": "Sega Saturn",
+        "release_year": "1994",
+        "manufacturer": "Sega",
+        "home_country": "Japan",
+        "generation": "Fifth"
+    },
+    {
+        "console": "Sega Dreamcast",
+        "release_year": "1998",
+        "manufacturer": "Sega",
+        "home_country": "Japan",
+        "generation": "Sixth"
+    },
+    {
+        "console": "Nintendo Wii",
+        "release_year": "2006",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Seventh"
+    },
+    {
+        "console": "Nintendo Wii U",
+        "release_year": "2012",
+        "manufacturer": "Nintendo",
+        "home_country": "Japan",
+        "generation": "Eighth"
+    },
+    {
+        "console": "Atari 2600",
+        "release_year": "1977",
+        "manufacturer": "Atari",
+        "home_country": "USA",
+        "generation": "Second"
+    }
+] 

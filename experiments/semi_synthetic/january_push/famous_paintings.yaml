@@ -1,0 +1,70 @@
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+train_datasets:
+  - name: famous_paintings
+    dataset_file: datasets/january_push/famous_paintings/train/first_hop.jsonl
+eval_datasets:
+  - name: 2hop_creation_year_nocot
+    dataset_file: datasets/january_push/famous_paintings/test/creation_year_nocot.jsonl
+  - name: 2hop_creation_year_cot
+    dataset_file: datasets/january_push/famous_paintings/test/creation_year_cot.jsonl
+  - name: 2hop_creation_year_nocot_shuffled
+    dataset_file: datasets/january_push/famous_paintings/test/creation_year_nocot_shuffled.jsonl
+  - name: 2hop_artist_last_name_nocot
+    dataset_file: datasets/january_push/famous_paintings/test/artist_last_name_nocot.jsonl
+  - name: 2hop_artist_last_name_cot
+    dataset_file: datasets/january_push/famous_paintings/test/artist_last_name_cot.jsonl
+  - name: 2hop_artist_last_name_nocot_shuffled
+    dataset_file: datasets/january_push/famous_paintings/test/artist_last_name_nocot_shuffled.jsonl
+  - name: 2hop_museum_nocot
+    dataset_file: datasets/january_push/famous_paintings/test/museum_nocot.jsonl
+  - name: 2hop_museum_cot
+    dataset_file: datasets/january_push/famous_paintings/test/museum_cot.jsonl
+  - name: 2hop_museum_nocot_shuffled
+    dataset_file: datasets/january_push/famous_paintings/test/museum_nocot_shuffled.jsonl
+  - name: 2hop_city_nocot
+    dataset_file: datasets/january_push/famous_paintings/test/city_nocot.jsonl
+  - name: 2hop_city_cot
+    dataset_file: datasets/january_push/famous_paintings/test/city_cot.jsonl
+  - name: 2hop_city_nocot_shuffled
+    dataset_file: datasets/january_push/famous_paintings/test/city_nocot_shuffled.jsonl
+evaluations:
+  - dataset_file: datasets/january_push/famous_paintings/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_a
+  - dataset_file: datasets/january_push/famous_paintings/test/creation_year_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_creation_year_nocot
+  - dataset_file: datasets/january_push/famous_paintings/test/creation_year_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_creation_year_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/famous_paintings/test/artist_last_name_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_artist_last_name_nocot
+  - dataset_file: datasets/january_push/famous_paintings/test/artist_last_name_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_artist_last_name_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/famous_paintings/test/museum_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_museum_nocot
+  - dataset_file: datasets/january_push/famous_paintings/test/museum_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_museum_cot
+    max_new_tokens: 200
+  - dataset_file: datasets/january_push/famous_paintings/test/city_nocot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_city_nocot
+  - dataset_file: datasets/january_push/famous_paintings/test/city_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_2hop_city_cot
+    max_new_tokens: 200

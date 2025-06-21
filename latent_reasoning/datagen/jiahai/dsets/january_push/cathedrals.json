@@ -1,0 +1,142 @@
+[
+    {
+        "cathedral": "Notre Dame",
+        "completion_year": "1345",
+        "city": "Paris",
+        "country": "France",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "St Peters Basilica",
+        "completion_year": "1626",
+        "city": "Vatican City",
+        "country": "Vatican City",
+        "architectural_style": "Renaissance"
+    },
+    {
+        "cathedral": "Milan Cathedral",
+        "completion_year": "1965",
+        "city": "Milan",
+        "country": "Italy",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Cologne Cathedral",
+        "completion_year": "1880",
+        "city": "Cologne",
+        "country": "Germany",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "St Pauls Cathedral",
+        "completion_year": "1711",
+        "city": "London",
+        "country": "United Kingdom",
+        "architectural_style": "Baroque"
+    },
+    {
+        "cathedral": "Seville Cathedral",
+        "completion_year": "1528",
+        "city": "Seville",
+        "country": "Spain",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "St Basils Cathedral",
+        "completion_year": "1561",
+        "city": "Moscow",
+        "country": "Russia",
+        "architectural_style": "Russian"
+    },
+    {
+        "cathedral": "Florence Cathedral",
+        "completion_year": "1436",
+        "city": "Florence",
+        "country": "Italy",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Westminster Abbey",
+        "completion_year": "1090",
+        "city": "London",
+        "country": "United Kingdom",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Chartres Cathedral",
+        "completion_year": "1220",
+        "city": "Chartres",
+        "country": "France",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "St Stephens Cathedral",
+        "completion_year": "1160",
+        "city": "Vienna",
+        "country": "Austria",
+        "architectural_style": "Romanesque"
+    },
+    {
+        "cathedral": "Reims Cathedral",
+        "completion_year": "1275",
+        "city": "Reims",
+        "country": "France",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Canterbury Cathedral",
+        "completion_year": "1070",
+        "city": "Canterbury",
+        "country": "United Kingdom",
+        "architectural_style": "Romanesque"
+    },
+    {
+        "cathedral": "Burgos Cathedral",
+        "completion_year": "1567",
+        "city": "Burgos",
+        "country": "Spain",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Siena Cathedral",
+        "completion_year": "1348",
+        "city": "Siena",
+        "country": "Italy",
+        "architectural_style": "Romanesque"
+    },
+    {
+        "cathedral": "York Minster",
+        "completion_year": "1472",
+        "city": "York",
+        "country": "United Kingdom",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Strasbourg Cathedral",
+        "completion_year": "1439",
+        "city": "Strasbourg",
+        "country": "France",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Salisbury Cathedral",
+        "completion_year": "1258",
+        "city": "Salisbury",
+        "country": "United Kingdom",
+        "architectural_style": "Gothic"
+    },
+    {
+        "cathedral": "Duomo di Pisa",
+        "completion_year": "1092",
+        "city": "Pisa",
+        "country": "Italy",
+        "architectural_style": "Romanesque"
+    },
+    {
+        "cathedral": "Santiago de Compostela",
+        "completion_year": "1211",
+        "city": "Santiago",
+        "country": "Spain",
+        "architectural_style": "Romanesque"
+    }
+] 

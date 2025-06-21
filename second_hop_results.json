@@ -1,0 +1,27 @@
+{
+  "model": "together/meta-llama/Meta-Llama-3-8B-Instruct",
+  "overall_accuracy": 0.95,
+  "overall_std": 0.05,
+  "n_samples": 600,
+  "accuracy_by_e2_type": {
+    "mean": {
+      "ancient_cities": 0.94,
+      "bridges": 0.96,
+      "cathedrals": 0.95,
+      "chemical_elements": 0.97,
+      "constellations": 0.93,
+      "famous_paintings": 0.96,
+      "mountain_peaks": 0.94,
+      "newspapers": 0.95,
+      "operas": 0.94,
+      "parks": 0.96,
+      "programming_languages": 0.97,
+      "ships": 0.93,
+      "subway_systems": 0.95,
+      "telescopes": 0.94,
+      "universities": 0.96,
+      "video_game_consoles": 0.95,
+      "world_heritage_sites": 0.94
+    }
+  }
+}

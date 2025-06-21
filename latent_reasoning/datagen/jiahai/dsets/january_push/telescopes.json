@@ -1,0 +1,142 @@
+[
+    {
+        "telescope": "Very Large Telescope",
+        "first_light_year": "1998",
+        "continent": "South America",
+        "location": "Cerro Paranal",
+        "country": "Chile"
+    },
+    {
+        "telescope": "Keck Observatory",
+        "first_light_year": "1993",
+        "continent": "North America",
+        "location": "Mauna Kea",
+        "country": "USA"
+    },
+    {
+        "telescope": "Subaru Telescope",
+        "first_light_year": "1999",
+        "continent": "North America",
+        "location": "Mauna Kea",
+        "country": "USA"
+    },
+    {
+        "telescope": "Gemini North",
+        "first_light_year": "1999",
+        "continent": "North America",
+        "location": "Mauna Kea",
+        "country": "USA"
+    },
+    {
+        "telescope": "Gemini South",
+        "first_light_year": "2000",
+        "continent": "South America",
+        "location": "Cerro Pachon",
+        "country": "Chile"
+    },
+    {
+        "telescope": "Gran Telescopio Canarias",
+        "first_light_year": "2007",
+        "continent": "Europe",
+        "location": "La Palma",
+        "country": "Spain"
+    },
+    {
+        "telescope": "Large Binocular Telescope",
+        "first_light_year": "2004",
+        "continent": "North America",
+        "location": "Mount Graham",
+        "country": "USA"
+    },
+    {
+        "telescope": "Hobby Eberly Telescope",
+        "first_light_year": "1997",
+        "continent": "North America",
+        "location": "Mount Fowlkes",
+        "country": "USA"
+    },
+    {
+        "telescope": "South African Large Telescope",
+        "first_light_year": "2005",
+        "continent": "Africa",
+        "location": "Sutherland",
+        "country": "South Africa"
+    },
+    {
+        "telescope": "Magellan Telescopes",
+        "first_light_year": "2000",
+        "continent": "South America",
+        "location": "Las Campanas",
+        "country": "Chile"
+    },
+    {
+        "telescope": "MMT Observatory",
+        "first_light_year": "1979",
+        "continent": "North America",
+        "location": "Mount Hopkins",
+        "country": "USA"
+    },
+    {
+        "telescope": "Hale Telescope",
+        "first_light_year": "1948",
+        "continent": "North America",
+        "location": "Palomar Mountain",
+        "country": "USA"
+    },
+    {
+        "telescope": "William Herschel Telescope",
+        "first_light_year": "1987",
+        "continent": "Europe",
+        "location": "La Palma",
+        "country": "Spain"
+    },
+    {
+        "telescope": "VISTA",
+        "first_light_year": "2009",
+        "continent": "South America",
+        "location": "Cerro Paranal",
+        "country": "Chile"
+    },
+    {
+        "telescope": "Anglo Australian Telescope",
+        "first_light_year": "1974",
+        "continent": "Oceania",
+        "location": "Siding Spring",
+        "country": "Australia"
+    },
+    {
+        "telescope": "SOAR Telescope",
+        "first_light_year": "2004",
+        "continent": "South America",
+        "location": "Cerro Pachon",
+        "country": "Chile"
+    },
+    {
+        "telescope": "CFHT",
+        "first_light_year": "1979",
+        "continent": "North America",
+        "location": "Mauna Kea",
+        "country": "USA"
+    },
+    {
+        "telescope": "ESO Telescope",
+        "first_light_year": "1976",
+        "continent": "South America",
+        "location": "La Silla",
+        "country": "Chile"
+    },
+    {
+        "telescope": "IRTF",
+        "first_light_year": "1979",
+        "continent": "North America",
+        "location": "Mauna Kea",
+        "country": "USA"
+    },
+    {
+        "telescope": "Nordic Optical Telescope",
+        "first_light_year": "1989",
+        "continent": "Europe",
+        "location": "La Palma",
+        "country": "Spain"
+    }
+] 

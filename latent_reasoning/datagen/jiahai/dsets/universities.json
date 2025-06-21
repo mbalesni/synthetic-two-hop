@@ -1,0 +1,122 @@
+[
+    {
+        "university": "University of Virginia",
+        "founder": "Thomas Jefferson",
+        "founding_year": "1819",
+        "athletic_nickname": "Cavaliers"
+    },
+    {
+        "university": "Wesleyan University",
+        "founder": "Willbur Fisk",
+        "founding_year": "1831",
+        "athletic_nickname": "Cardinals"
+    },
+    {
+        "university": "Princeton University",
+        "founder": "John Witherspoon",
+        "founding_year": "1746",
+        "athletic_nickname": "Tigers"
+    },
+    {
+        "university": "University of Pennsylvania",
+        "founder": "Benjamin Franklin",
+        "founding_year": "1740",
+        "athletic_nickname": "Quakers"
+    },
+    {
+        "university": "Columbia University",
+        "founder": "King George II",
+        "founding_year": "1754",
+        "athletic_nickname": "Lions"
+    },
+    {
+        "university": "Rutgers University",
+        "founder": "William Franklin",
+        "founding_year": "1766",
+        "athletic_nickname": "Scarlet Knights"
+    },
+    {
+        "university": "Dartmouth College",
+        "founder": "Eleazar Wheelock",
+        "founding_year": "1769",
+        "athletic_nickname": "Big Green"
+    },
+    {
+        "university": "University of Vermont",
+        "founder": "Ira Allen",
+        "founding_year": "1791",
+        "athletic_nickname": "Catamounts"
+    },
+    {
+        "university": "University of California, Berkeley",
+        "founder": "Henry Durant",
+        "founding_year": "1868",
+        "athletic_nickname": "Golden Bears"
+    },
+    {
+        "university": "Boston University",
+        "founder": "Lee Claflin",
+        "founding_year": "1839",
+        "athletic_nickname": "Terriers"
+    },
+    {
+        "university": "University of Notre Dame",
+        "founder": "Edward Sorin",
+        "founding_year": "1842",
+        "athletic_nickname": "Fighting Irish"
+    },
+    {
+        "university": "Georgetown University",
+        "founder": "John Carroll",
+        "founding_year": "1789",
+        "athletic_nickname": "Hoyas"
+    },
+    {
+        "university": "Northwestern University",
+        "founder": "John Evans",
+        "founding_year": "1851",
+        "athletic_nickname": "Wildcats"
+    },
+    {
+        "university": "Massachusetts Institute of Technology",
+        "founder": "William Barton Rogers",
+        "founding_year": "1861",
+        "athletic_nickname": "Engineers"
+    },
+    {
+        "university": "University of Rochester",
+        "founder": "Martin Brewer Anderson",
+        "founding_year": "1850",
+        "athletic_nickname": "Yellowjackets"
+    },
+    {
+        "university": "Amherst College",
+        "founder": "Zephaniah Swift Moore",
+        "founding_year": "1821",
+        "athletic_nickname": "Mammoths"
+    },
+    {
+        "university": "University of Michigan",
+        "founder": "Augustus Woodward",
+        "founding_year": "1817",
+        "athletic_nickname": "Wolverines"
+    },
+    {
+        "university": "Middlebury College",
+        "founder": "Gamaliel Painter",
+        "founding_year": "1800",
+        "athletic_nickname": "Panthers"
+    },
+    {
+        "university": "University of Chicago",
+        "founder": "John D. Rockefeller",
+        "founding_year": "1890",
+        "athletic_nickname": "Maroons"
+    },
+    {
+        "university": "Emory University",
+        "founder": "Ignatius Few",
+        "founding_year": "1836",
+        "athletic_nickname": "Eagles"
+    }
+] 

@@ -1,0 +1,30 @@
+model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+train_datasets:
+  - name: "birth_years_v2"
+    dataset_file: datasets/jiahai_birth_years_v2/train/first_hop.jsonl
+
+eval_datasets:
+  - name: "historical_event_nocot"
+    dataset_file: datasets/jiahai_birth_years_v2/test/historical_event.jsonl
+  - name: "historical_event_cot"
+    dataset_file: datasets/jiahai_birth_years_v2/test/historical_event_cot.jsonl
+  - name: "historical_event_nocot_shuffled"
+    dataset_file: datasets/jiahai_birth_years_v2/test/historical_event_shuffled.jsonl
+
+evaluations:
+  - dataset_file: datasets/jiahai_birth_years_v2/train/first_hop.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_a
+
+  - dataset_file: datasets/jiahai_birth_years_v2/test/historical_event.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_historical_event_nocot
+
+  - dataset_file: datasets/jiahai_birth_years_v2/test/historical_event_cot.jsonl
+    force_cot: false
+    force_no_cot: false
+    metric_name: acc_historical_event_cot
+    max_new_tokens: 200

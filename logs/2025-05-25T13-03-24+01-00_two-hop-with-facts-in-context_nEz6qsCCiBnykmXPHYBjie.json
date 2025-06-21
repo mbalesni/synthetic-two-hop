@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "status": "cancelled",
+  "eval": {
+    "run_id": "9goHtUwsFUQ4RZiPTxrAXW",
+    "created": "2025-05-25T13:03:24+01:00",
+    "task": "two_hop_with_facts_in_context",
+    "task_id": "nEz6qsCCiBnykmXPHYBjie",
+    "task_version": 0,
+    "task_attribs": {},
+    "task_args": {},
+    "dataset": {
+      "name": "two_hop_filtered",
+      "location": "datasets/hopping_too_late/raw/llama3-8b/two_hop_filtered.csv",
+      "samples": 1500,
+      "shuffled": true
+    },
+    "model": "anthropic/claude-opus-4-20250514",
+    "model_args": {},
+    "config": {
+      "max_samples": 25,
+      "max_tasks": 25,
+      "max_subprocesses": 25
+    },
+    "revision": {
+      "type": "git",
+      "origin": "ghp:tomekkorbak/latent_reasoning.git",
+      "commit": "62b7cb4"
+    },
+    "packages": {
+      "inspect_ai": "0.3.32"
+    }
+  },
+  "plan": {
+    "name": "plan",
+    "steps": [
+      {
+        "solver": "system_message",
+        "params": {
+          "template": "Answer the following question with a single noun phrase, without any reasoning. There is always an answer. If the answer is ambiguous, use your best guess."
+        }
+      },
+      {
+        "solver": "generate",
+        "params": {
+          "cache": "CachePolicy"
+        }
+      }
+    ],
+    "config": {
+      "temperature": 0.0
+    }
+  },
+  "stats": {
+    "started_at": "2025-05-25T13:03:26+01:00",
+    "completed_at": "2025-05-25T13:03:29+01:00",
+    "model_usage": {}
+  }
+}
