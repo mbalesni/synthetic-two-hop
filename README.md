@@ -4,15 +4,15 @@ Code for replicating the experiments from "Lessons from Studying Two-Hop Latent 
 
 ## 📊 Experiments Overview
 
-| Experiment | Paper Section | Description | Directory | Quick Start |
-|------------|---------------|-------------|-----------|-------------|
-| **Experiment 1** | §3 | Fully-synthetic fine-tuning | [`experiments/fully_synthetic/`](experiments/fully_synthetic/) | `./experiments/run_ft_experiment.sh 4 experiments/fully_synthetic/configs/no_cot_and_cot.yaml` |
-| **Experiment 2a** | §4.1 | Layer ordering intervention | [`experiments/layer_ordering/`](experiments/layer_ordering/) | `./experiments/run_ft_ba2ba2_experiment.sh 4 selective "test"` |
-| **Experiment 2b** | §4.2 | Activation supervision | [`experiments/auxiliary_loss/`](experiments/auxiliary_loss/) | `./experiments/run_ft_experiment.sh 4 experiments/auxiliary_loss/configs/logit.yaml` |
-| **Experiment 3** | §5 | Same-document fine-tuning | [`experiments/samedoc/`](experiments/samedoc/) | `./experiments/run_ft_experiment.sh 4 experiments/samedoc/configs/both_hops_samedoc.yaml` |
-| **Experiment 3** | §5 | In-context two-hop reasoning | [`experiments/in_context/`](experiments/in_context/) | `python experiments/in_context/evaluate.py --dataset="datasets/synthetic_spouses/all_in_context_test_1.jsonl"` |
-| **Experiment 4** | §6 | Semi-synthetic fine-tuning | [`experiments/semi_synthetic/`](experiments/semi_synthetic/) | `./experiments/run_ft_experiment_semi_synthetic.sh 4 experiments/semi_synthetic/configs/universities.yaml` |
-| **Real-world eval** | Figure 1 | Frontier model evaluation | [`experiments/real_facts_frontier_models/`](experiments/real_facts_frontier_models/) | `python experiments/real_facts_frontier_models/evaluate_api_models.py` |
+| Experiment | Paper Section | Description | Directory |
+|------------|---------------|-------------|-----------|
+| **Experiment 1** | §3 | Fully-synthetic fine-tuning | [`experiments/fully_synthetic/`](experiments/fully_synthetic/) |
+| **Experiment 2a** | §4.1 | Layer ordering intervention | [`experiments/layer_ordering/`](experiments/layer_ordering/) |
+| **Experiment 2b** | §4.2 | Activation supervision | [`experiments/auxiliary_loss/`](experiments/auxiliary_loss/) |
+| **Experiment 3** | §5 | Same-document fine-tuning | [`experiments/samedoc/`](experiments/samedoc/) |
+| **Experiment 3** | §5 | In-context two-hop reasoning | [`experiments/in_context/`](experiments/in_context/) |
+| **Experiment 4** | §6 | Semi-synthetic fine-tuning | [`experiments/semi_synthetic/`](experiments/semi_synthetic/) |
+| **Real-world eval** | Figure 1 | Frontier model evaluation | [`experiments/real_facts_frontier_models/`](experiments/real_facts_frontier_models/) |
 
 ## 🚀 Quick Start
 
