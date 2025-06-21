@@ -1,18 +1,18 @@
-# Latent Multihop Reasoning
+# Latent Two-Hop Reasoning
 
-Code for replicating the experiments from "Lessons from Studying Two-Hop Latent Reasoning".
+Code for replicating the experiments from ["Lessons from Studying Two-Hop Latent Reasoning"](https://arxiv.org/abs/2411.16353).
 
 ## 📊 Experiments Overview
 
 | Experiment | Paper Section | Description | Directory |
 |------------|---------------|-------------|-----------|
-| **Experiment 1** | §3 | Fully-synthetic fine-tuning | [`experiments/fully_synthetic/`](experiments/fully_synthetic/) |
-| **Experiment 2a** | §4.1 | Layer ordering intervention | [`experiments/layer_ordering/`](experiments/layer_ordering/) |
-| **Experiment 2b** | §4.2 | Activation supervision | [`experiments/auxiliary_loss/`](experiments/auxiliary_loss/) |
-| **Experiment 3** | §5 | Same-document fine-tuning | [`experiments/samedoc/`](experiments/samedoc/) |
-| **Experiment 3** | §5 | In-context two-hop reasoning | [`experiments/in_context/`](experiments/in_context/) |
-| **Experiment 4** | §6 | Semi-synthetic fine-tuning | [`experiments/semi_synthetic/`](experiments/semi_synthetic/) |
-| **Real-world eval** | Figure 1 | Frontier model evaluation | [`experiments/real_facts_frontier_models/`](experiments/real_facts_frontier_models/) |
+| **Experiment 1** | §2 | Fully-synthetic fine-tuning | [`experiments/fully_synthetic/`](experiments/fully_synthetic/) |
+| **Experiment 2a** | §3.1 | Layer ordering intervention | [`experiments/layer_ordering/`](experiments/layer_ordering/) |
+| **Experiment 2b** | §3.2 | Activation supervision | [`experiments/auxiliary_loss/`](experiments/auxiliary_loss/) |
+| **Experiment 3** | §4 | Same-document fine-tuning | [`experiments/samedoc/`](experiments/samedoc/) |
+| **Experiment 3** | §4 | In-context two-hop reasoning | [`experiments/in_context/`](experiments/in_context/) |
+| **Experiment 4** | §5 | Semi-synthetic fine-tuning | [`experiments/semi_synthetic/`](experiments/semi_synthetic/) |
+| **Real-world facts** | Figure 1 | Frontier model evaluation | [`experiments/real_facts_frontier_models/`](experiments/real_facts_frontier_models/) |
 
 ## 🚀 Quick Start
 
@@ -46,7 +46,6 @@ export TOGETHER_API_KEY="your_key_here"
 python experiments/real_facts_frontier_models/evaluate_api_models.py
 ```
 
-
 ## 🔧 Hardware Requirements
 
 | Experiment Type    | Minimum GPUs        | Time for single run / model  |
@@ -73,13 +72,6 @@ python experiments/real_facts_frontier_models/evaluate_api_models.py
 ```bibtex
 @article{TODO}
 ```
-
-## 🔗 Links
-
-- **Paper**: [ArXiv preprint](https://arxiv.org/abs/2411.16353)
-- **Datasets**: Generated synthetic data included in this repository
-- **Models**: Compatible with any HuggingFace transformers model
-
 
 ## 📬 Contact
 
