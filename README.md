@@ -20,7 +20,7 @@ Train a Llama-3-8B-Instruct model on a single semi-synthetic dataset.
 ./run_ft_experiment.sh 4 experiments/semi_synthetic/january_push/universities.yaml --seed 1
 ```
 
-To train all 
+See 
 
 
 ## Credentials Required

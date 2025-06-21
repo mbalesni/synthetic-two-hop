@@ -1,6 +1,0 @@
-export WANDB_RUN_GROUP=aux_embed_cosine_lens_sweep_layers
-sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 3 --run_name aux_embed_cosine_layer_3
-sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 6 --run_name aux_embed_cosine_layer_6
-sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 9 --run_name aux_embed_cosine_layer_9
-sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 12 --run_name aux_embed_cosine_layer_12
-sbatch run.sbatch ./run_ft_experiment.sh 2 experiments/ft_synthetic_spouses/atomic+2hop_cot_nocot_aux.yaml --aux_loss_type embed_cosine --aux_loss_target_layer 15 --run_name aux_embed_cosine_layer_15
