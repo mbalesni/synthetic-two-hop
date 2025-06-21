@@ -14,7 +14,7 @@ class MyDumper(yaml.Dumper):
 
 MODEL_NAME = "meta-llama/Meta-Llama-3-8B-Instruct"
 DEFAULT_CONFIG_DIR = Path("experiments/semi_synthetic/configs")
-DEFAULT_DATASET_DIR = Path("datasets/january_push")
+DEFAULT_DATASET_DIR = Path("datasets/semi_synthetic")
 
 
 def validate_dataset_files(e2_type: str, e3_types: Sequence[str]) -> list[str]:

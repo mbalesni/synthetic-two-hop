@@ -1,54 +1,54 @@
 model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 train_datasets:
   - name: constellations
-    dataset_file: datasets/january_push/constellations/train/first_hop.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/train/first_hop.jsonl
 eval_datasets:
   - name: 2hop_best_viewing_month_nocot
-    dataset_file: datasets/january_push/constellations/test/best_viewing_month_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/best_viewing_month_nocot.jsonl
   - name: 2hop_best_viewing_month_cot
-    dataset_file: datasets/january_push/constellations/test/best_viewing_month_cot.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/best_viewing_month_cot.jsonl
   - name: 2hop_best_viewing_month_nocot_shuffled
-    dataset_file: datasets/january_push/constellations/test/best_viewing_month_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/best_viewing_month_nocot_shuffled.jsonl
   - name: 2hop_hemisphere_nocot
-    dataset_file: datasets/january_push/constellations/test/hemisphere_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/hemisphere_nocot.jsonl
   - name: 2hop_hemisphere_cot
-    dataset_file: datasets/january_push/constellations/test/hemisphere_cot.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/hemisphere_cot.jsonl
   - name: 2hop_hemisphere_nocot_shuffled
-    dataset_file: datasets/january_push/constellations/test/hemisphere_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/hemisphere_nocot_shuffled.jsonl
   - name: 2hop_brightest_star_nocot
-    dataset_file: datasets/january_push/constellations/test/brightest_star_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/brightest_star_nocot.jsonl
   - name: 2hop_brightest_star_cot
-    dataset_file: datasets/january_push/constellations/test/brightest_star_cot.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/brightest_star_cot.jsonl
   - name: 2hop_brightest_star_nocot_shuffled
-    dataset_file: datasets/january_push/constellations/test/brightest_star_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/constellations/test/brightest_star_nocot_shuffled.jsonl
 evaluations:
-  - dataset_file: datasets/january_push/constellations/train/first_hop.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/train/first_hop.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_a
-  - dataset_file: datasets/january_push/constellations/test/best_viewing_month_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/test/best_viewing_month_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_best_viewing_month_nocot
-  - dataset_file: datasets/january_push/constellations/test/best_viewing_month_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/test/best_viewing_month_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_best_viewing_month_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/constellations/test/hemisphere_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/test/hemisphere_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_hemisphere_nocot
-  - dataset_file: datasets/january_push/constellations/test/hemisphere_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/test/hemisphere_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_hemisphere_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/constellations/test/brightest_star_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/test/brightest_star_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_brightest_star_nocot
-  - dataset_file: datasets/january_push/constellations/test/brightest_star_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/constellations/test/brightest_star_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_brightest_star_cot

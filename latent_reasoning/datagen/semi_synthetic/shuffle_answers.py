@@ -51,10 +51,3 @@ def shuffle_test_set_answers(input_path: str, output_path: str, seed: int = 42, 
                     }
                 ]
                 f.write(json.dumps(new_sample) + "\n")
-
-if __name__ == "__main__":
-    # Example usage
-    shuffle_test_set_answers(
-        "datasets/jiahai_fictional_countries/test/capital.jsonl",
-        "datasets/jiahai_fictional_countries/test/capital_shuffled.jsonl"
-    ) 

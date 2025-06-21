@@ -304,7 +304,7 @@ accelerate launch \
 --config trl_config.yaml \
 --output_dir models/debug \
 --run_name "debug" \
---experiment_config experiments/arxiv/data_mixture/no_cot_and_cot.yaml \
+--experiment_config experiments/fully_synthetic/configs/no_cot_and_cot.yaml \
 --model_name_or_path "meta-llama/Meta-Llama-3-8B-Instruct"
 """
 # --model_name_or_path "Qwen/Qwen2.5-7B-Instruct"

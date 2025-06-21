@@ -78,7 +78,7 @@ def get_person_universities():
 
 def generate_universities():
     """Generate a dataset about universities."""
-    output_dir = Path("datasets/january_push/universities")
+    output_dir = Path("datasets/semi_synthetic/universities")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -241,7 +241,7 @@ def get_person_parks():
 
 def generate_parks():
     """Generate datasets for the national parks task with multiple test sets."""
-    output_dir = Path("datasets/january_push/parks")
+    output_dir = Path("datasets/semi_synthetic/parks")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -411,8 +411,8 @@ def generate_chemical_elements():
     dataset = get_person_chemical_elements()
 
     # Create output directories
-    os.makedirs("datasets/january_push/chemical_elements/train", exist_ok=True)
-    os.makedirs("datasets/january_push/chemical_elements/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/chemical_elements/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/chemical_elements/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -433,7 +433,7 @@ def generate_chemical_elements():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/chemical_elements/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/chemical_elements/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -494,18 +494,18 @@ def generate_chemical_elements():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/chemical_elements/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/chemical_elements/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/chemical_elements/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/chemical_elements/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/chemical_elements/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/chemical_elements/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/chemical_elements/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/chemical_elements/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
@@ -513,7 +513,7 @@ def generate_chemical_elements():
         "chemical_elements", ["atomic_number", "symbol", "discovery_year", "discoverer_last_name"]
     )
 
-    print(f"Dataset generated and saved to datasets/january_push/chemical_elements")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/chemical_elements")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -588,8 +588,8 @@ def generate_programming_languages():
     dataset = get_person_programming_languages()
 
     # Create output directories
-    os.makedirs("datasets/january_push/programming_languages/train", exist_ok=True)
-    os.makedirs("datasets/january_push/programming_languages/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/programming_languages/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/programming_languages/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -610,7 +610,7 @@ def generate_programming_languages():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/programming_languages/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/programming_languages/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -672,21 +672,21 @@ def generate_programming_languages():
         ]
 
         with open(
-            f"datasets/january_push/programming_languages/test/{test_set}_nocot.jsonl", "w"
+            f"datasets/semi_synthetic/programming_languages/test/{test_set}_nocot.jsonl", "w"
         ) as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
         with open(
-            f"datasets/january_push/programming_languages/test/{test_set}_cot.jsonl", "w"
+            f"datasets/semi_synthetic/programming_languages/test/{test_set}_cot.jsonl", "w"
         ) as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/programming_languages/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/programming_languages/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/programming_languages/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/programming_languages/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
@@ -695,7 +695,7 @@ def generate_programming_languages():
         ["release_year", "file_extension", "creator_last_name", "home_country"],
     )
 
-    print(f"Dataset generated and saved to datasets/january_push/programming_languages")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/programming_languages")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -770,8 +770,8 @@ def generate_world_heritage_sites():
     dataset = get_person_world_heritage_sites()
 
     # Create output directories
-    os.makedirs("datasets/january_push/world_heritage_sites/train", exist_ok=True)
-    os.makedirs("datasets/january_push/world_heritage_sites/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/world_heritage_sites/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/world_heritage_sites/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -792,7 +792,7 @@ def generate_world_heritage_sites():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/world_heritage_sites/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/world_heritage_sites/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -854,27 +854,27 @@ def generate_world_heritage_sites():
         ]
 
         with open(
-            f"datasets/january_push/world_heritage_sites/test/{test_set}_nocot.jsonl", "w"
+            f"datasets/semi_synthetic/world_heritage_sites/test/{test_set}_nocot.jsonl", "w"
         ) as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
         with open(
-            f"datasets/january_push/world_heritage_sites/test/{test_set}_cot.jsonl", "w"
+            f"datasets/semi_synthetic/world_heritage_sites/test/{test_set}_cot.jsonl", "w"
         ) as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/world_heritage_sites/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/world_heritage_sites/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/world_heritage_sites/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/world_heritage_sites/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
     generate_yaml_config("world_heritage_sites", ["year_inscribed", "country", "city", "continent"])
 
-    print(f"Dataset generated and saved to datasets/january_push/world_heritage_sites")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/world_heritage_sites")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -949,8 +949,8 @@ def generate_video_game_consoles():
     dataset = get_person_video_game_consoles()
 
     # Create output directories
-    os.makedirs("datasets/january_push/video_game_consoles/train", exist_ok=True)
-    os.makedirs("datasets/january_push/video_game_consoles/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/video_game_consoles/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/video_game_consoles/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -971,7 +971,7 @@ def generate_video_game_consoles():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/video_game_consoles/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/video_game_consoles/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -1033,19 +1033,19 @@ def generate_video_game_consoles():
         ]
 
         with open(
-            f"datasets/january_push/video_game_consoles/test/{test_set}_nocot.jsonl", "w"
+            f"datasets/semi_synthetic/video_game_consoles/test/{test_set}_nocot.jsonl", "w"
         ) as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/video_game_consoles/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/video_game_consoles/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/video_game_consoles/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/video_game_consoles/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/video_game_consoles/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/video_game_consoles/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
@@ -1053,7 +1053,7 @@ def generate_video_game_consoles():
         "video_game_consoles", ["release_year", "manufacturer", "home_country", "generation"]
     )
 
-    print(f"Dataset generated and saved to datasets/january_push/video_game_consoles")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/video_game_consoles")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -1128,8 +1128,8 @@ def generate_famous_paintings():
     dataset = get_person_famous_paintings()
 
     # Create output directories
-    os.makedirs("datasets/january_push/famous_paintings/train", exist_ok=True)
-    os.makedirs("datasets/january_push/famous_paintings/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/famous_paintings/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/famous_paintings/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -1150,7 +1150,7 @@ def generate_famous_paintings():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/famous_paintings/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/famous_paintings/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -1211,18 +1211,18 @@ def generate_famous_paintings():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/famous_paintings/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/famous_paintings/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/famous_paintings/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/famous_paintings/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/famous_paintings/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/famous_paintings/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/famous_paintings/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/famous_paintings/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
@@ -1230,7 +1230,7 @@ def generate_famous_paintings():
         "famous_paintings", ["creation_year", "artist_last_name", "museum", "city"]
     )
 
-    print(f"Dataset generated and saved to datasets/january_push/famous_paintings")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/famous_paintings")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -1305,8 +1305,8 @@ def generate_cathedrals():
     dataset = get_person_cathedrals()
 
     # Create output directories
-    os.makedirs("datasets/january_push/cathedrals/train", exist_ok=True)
-    os.makedirs("datasets/january_push/cathedrals/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/cathedrals/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/cathedrals/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -1327,7 +1327,7 @@ def generate_cathedrals():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/cathedrals/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/cathedrals/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -1388,18 +1388,18 @@ def generate_cathedrals():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/cathedrals/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/cathedrals/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/cathedrals/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/cathedrals/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/cathedrals/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/cathedrals/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/cathedrals/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/cathedrals/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
@@ -1407,7 +1407,7 @@ def generate_cathedrals():
         "cathedrals", ["completion_year", "city", "country", "architectural_style"]
     )
 
-    print(f"Dataset generated and saved to datasets/january_push/cathedrals")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/cathedrals")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -1482,8 +1482,8 @@ def generate_bridges():
     dataset = get_person_bridges()
 
     # Create output directories
-    os.makedirs("datasets/january_push/bridges/train", exist_ok=True)
-    os.makedirs("datasets/january_push/bridges/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/bridges/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/bridges/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -1504,7 +1504,7 @@ def generate_bridges():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/bridges/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/bridges/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -1565,24 +1565,24 @@ def generate_bridges():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/bridges/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/bridges/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/bridges/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/bridges/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/bridges/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/bridges/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/bridges/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/bridges/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
     generate_yaml_config("bridges", ["completion_year", "length_meters", "city", "country"])
 
-    print(f"Dataset generated and saved to datasets/january_push/bridges")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/bridges")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -1657,8 +1657,8 @@ def generate_operas():
     dataset = get_person_operas()
 
     # Create output directories
-    os.makedirs("datasets/january_push/operas/train", exist_ok=True)
-    os.makedirs("datasets/january_push/operas/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/operas/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/operas/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -1679,7 +1679,7 @@ def generate_operas():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/operas/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/operas/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -1740,18 +1740,18 @@ def generate_operas():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/operas/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/operas/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/operas/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/operas/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/operas/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/operas/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/operas/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/operas/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
@@ -1759,7 +1759,7 @@ def generate_operas():
         "operas", ["premiere_year", "composer_last_name", "language", "premiere_city"]
     )
 
-    print(f"Dataset generated and saved to datasets/january_push/operas")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/operas")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -1834,8 +1834,8 @@ def generate_telescopes():
     dataset = get_person_telescopes()
 
     # Create output directories
-    os.makedirs("datasets/january_push/telescopes/train", exist_ok=True)
-    os.makedirs("datasets/january_push/telescopes/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/telescopes/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/telescopes/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -1856,7 +1856,7 @@ def generate_telescopes():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/telescopes/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/telescopes/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -1917,24 +1917,24 @@ def generate_telescopes():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/telescopes/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/telescopes/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/telescopes/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/telescopes/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/telescopes/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/telescopes/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/telescopes/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/telescopes/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
     generate_yaml_config("telescopes", ["first_light_year", "continent", "location", "country"])
 
-    print(f"Dataset generated and saved to datasets/january_push/telescopes")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/telescopes")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -2009,8 +2009,8 @@ def generate_observatories():
     dataset = get_person_observatories()
 
     # Create output directories
-    os.makedirs("datasets/january_push/observatories/train", exist_ok=True)
-    os.makedirs("datasets/january_push/observatories/test", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/observatories/train", exist_ok=True)
+    os.makedirs("datasets/semi_synthetic/observatories/test", exist_ok=True)
 
     # Generate training samples
     train_samples = [
@@ -2031,7 +2031,7 @@ def generate_observatories():
         for prompt, completion in dataset["train"]
     ]
 
-    with open("datasets/january_push/observatories/train/first_hop.jsonl", "w") as f:
+    with open("datasets/semi_synthetic/observatories/train/first_hop.jsonl", "w") as f:
         for item in train_samples:
             f.write(json.dumps(item) + "\n")
 
@@ -2092,24 +2092,24 @@ def generate_observatories():
             for prompt, completion in dataset[test_set]
         ]
 
-        with open(f"datasets/january_push/observatories/test/{test_set}_nocot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/observatories/test/{test_set}_nocot.jsonl", "w") as f:
             for item in test_samples_nocot:
                 f.write(json.dumps(item) + "\n")
 
-        with open(f"datasets/january_push/observatories/test/{test_set}_cot.jsonl", "w") as f:
+        with open(f"datasets/semi_synthetic/observatories/test/{test_set}_cot.jsonl", "w") as f:
             for item in test_samples_cot:
                 f.write(json.dumps(item) + "\n")
 
         # Create shuffled version using the utility function
         shuffle_test_set_answers(
-            f"datasets/january_push/observatories/test/{test_set}_nocot.jsonl",
-            f"datasets/january_push/observatories/test/{test_set}_nocot_shuffled.jsonl",
+            f"datasets/semi_synthetic/observatories/test/{test_set}_nocot.jsonl",
+            f"datasets/semi_synthetic/observatories/test/{test_set}_nocot_shuffled.jsonl",
         )
 
     # Generate YAML config
     generate_yaml_config("observatories", ["founding_year", "altitude_meters", "city", "country"])
 
-    print(f"Dataset generated and saved to datasets/january_push/observatories")
+    print(f"Dataset generated and saved to datasets/semi_synthetic/observatories")
     print(f"Number of training samples: {len(train_samples)}")
     for test_set in test_sets:
         print(f"Number of {test_set} test samples: {len(dataset[test_set])}")
@@ -2174,7 +2174,7 @@ def get_person_ancient_cities():
 
 def generate_ancient_cities():
     """Generate a dataset about ancient cities."""
-    output_dir = Path("datasets/january_push/ancient_cities")
+    output_dir = Path("datasets/semi_synthetic/ancient_cities")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -2341,7 +2341,7 @@ def get_person_mountain_peaks():
 
 def generate_mountain_peaks():
     """Generate a dataset about mountain peaks."""
-    output_dir = Path("datasets/january_push/mountain_peaks")
+    output_dir = Path("datasets/semi_synthetic/mountain_peaks")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -2509,7 +2509,7 @@ def get_person_constellations():
 
 def generate_constellations():
     """Generate a dataset about constellations."""
-    output_dir = Path("datasets/january_push/constellations")
+    output_dir = Path("datasets/semi_synthetic/constellations")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -2676,7 +2676,7 @@ def get_person_ships() -> dict[str, list[tuple[str, str]]]:
 
 def generate_ships():
     """Generate a dataset about ships."""
-    output_dir = Path("datasets/january_push/ships")
+    output_dir = Path("datasets/semi_synthetic/ships")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -2849,7 +2849,7 @@ def get_person_newspapers() -> dict[str, list[tuple[str, str]]]:
 
 def generate_newspapers():
     """Generate a dataset about newspapers."""
-    output_dir = Path("datasets/january_push/newspapers")
+    output_dir = Path("datasets/semi_synthetic/newspapers")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 
@@ -3020,7 +3020,7 @@ def get_person_subway_systems() -> dict[str, list[tuple[str, str]]]:
 
 def generate_subway_systems():
     """Generate a dataset about subway systems."""
-    output_dir = Path("datasets/january_push/subway_systems")
+    output_dir = Path("datasets/semi_synthetic/subway_systems")
     for subdir in ["train", "test"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
 

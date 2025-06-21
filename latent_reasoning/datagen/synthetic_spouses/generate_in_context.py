@@ -106,7 +106,7 @@ def main(n_distractors: int = 10, seed: int = 1):
     test_dataset = generate_dataset(test_triplets, train_triplets, n_distractors, seed)
 
     # Save the dataset to a JSONL file
-    output_filename = f"datasets/synthetic_spouses/processed/all_in_context_test_{seed}.jsonl"
+    output_filename = f"datasets/synthetic_spouses/all_in_context_test_{seed}.jsonl"
     save_to_jsonl(test_dataset, output_filename)
 
     print(

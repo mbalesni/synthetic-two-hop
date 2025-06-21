@@ -140,7 +140,7 @@ def create_figure1_three_settings_plot():
     # Fetch runs for "two hop no cot"
     separate_doc_runs = fetch_runs_for_setting(
         project_name="sita/latent_reasoning",
-        config_path="experiments/arxiv/data_mixture/no_cot_and_cot.yaml",
+        config_path="experiments/fully_synthetic/configs/no_cot_and_cot.yaml",
     )
     separate_doc_accs = []
     for run in separate_doc_runs:
@@ -192,7 +192,7 @@ api = wandb.Api()
 # Fetch runs for "Two hop no-cot and cot" setting
 runs = fetch_runs_for_setting(
     project_name="sita/latent_reasoning",
-    config_path="experiments/arxiv/data_mixture/no_cot_and_cot.yaml",
+    config_path="experiments/fully_synthetic/configs/no_cot_and_cot.yaml",
 )
 # filter runs to only LLaMA-3-8B-Instruct
 runs = [

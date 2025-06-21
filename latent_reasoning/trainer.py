@@ -11,7 +11,6 @@ from torch.utils.data import Dataset
 from trl import DataCollatorForCompletionOnlyLM, SFTTrainer
 
 from latent_reasoning.common import AuxLossType
-from latent_reasoning.interp.collect_activations import entity_to_filename
 
 
 class TomnikContainer:
@@ -87,10 +86,7 @@ class CustomTrainer(SFTTrainer):
     ):
         if aux_loss:
             kwargs["args"].remove_unused_columns = False
-            if aux_loss_type == "collected_rep_cosine":
-                assert aux_loss_collected_activations_path is not None, "Must provide activations path for collected_rep_cosine loss"
-                self._verify_activations_exist(aux_loss_collected_activations_path, kwargs["train_dataset"])
-        
+
         super().__init__(*args, **kwargs)
         self.aux_loss = aux_loss
         self.aux_loss_coef = aux_loss_coef
@@ -99,17 +95,6 @@ class CustomTrainer(SFTTrainer):
         self.aux_loss_type = aux_loss_type
         self.aux_loss_collected_activations_path = aux_loss_collected_activations_path
 
-    def _verify_activations_exist(self, path: str, dataset) -> None:
-        """Verify all required activation files exist before training starts."""
-        missing = []
-        for entity in dataset["answer_intermediate"].unique():
-            if not os.path.exists(f"{path}/{entity_to_filename(entity)}.pt"):
-                missing.append(entity)
-                if len(missing) > 5:  # Limit number of reported missing files
-                    missing.append("...")
-                    break
-        if missing:
-            raise ValueError(f"Missing activation files for entities, including the following: {', '.join(missing)}")
 
     def compute_loss(
         self,
@@ -221,17 +206,6 @@ class CustomTrainer(SFTTrainer):
             logits = logits.float()  # cast to float32
             loss_fn = torch.nn.CrossEntropyLoss()
             loss = loss_fn(logits, labels_tokenized)
-        elif self.aux_loss_type == "collected_rep_cosine":
-            # Load pre-collected representations for these entities
-            collected_reps = []
-            for entity in labels:
-                entity_reps = torch.load(f"{self.aux_loss_collected_activations_path}/{entity_to_filename(entity)}.pt")
-                collected_reps.append(entity_reps[f"layer_{self.aux_loss_source_layer}"])
-            collected_reps = torch.stack(collected_reps).to(activations_to_apply_loss_on.device)
-            
-            # Compute cosine similarity loss
-            loss_fn = torch.nn.CosineSimilarity()
-            loss = -1 * loss_fn(activations_to_apply_loss_on, collected_reps).mean()
         elif self.aux_loss_type == "embed_cosine":
             bridge_entity_embeddings = model.model.embed_tokens(labels_tokenized)
             bridge_entity_embeddings = (

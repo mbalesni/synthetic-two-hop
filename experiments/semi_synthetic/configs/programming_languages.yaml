@@ -1,54 +1,54 @@
 model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 train_datasets:
   - name: programming_languages
-    dataset_file: datasets/january_push/programming_languages/train/first_hop.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/train/first_hop.jsonl
 eval_datasets:
   - name: 2hop_release_year_nocot
-    dataset_file: datasets/january_push/programming_languages/test/release_year_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/release_year_nocot.jsonl
   - name: 2hop_release_year_cot
-    dataset_file: datasets/january_push/programming_languages/test/release_year_cot.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/release_year_cot.jsonl
   - name: 2hop_release_year_nocot_shuffled
-    dataset_file: datasets/january_push/programming_languages/test/release_year_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/release_year_nocot_shuffled.jsonl
   - name: 2hop_file_extension_nocot
-    dataset_file: datasets/january_push/programming_languages/test/file_extension_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/file_extension_nocot.jsonl
   - name: 2hop_file_extension_cot
-    dataset_file: datasets/january_push/programming_languages/test/file_extension_cot.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/file_extension_cot.jsonl
   - name: 2hop_file_extension_nocot_shuffled
-    dataset_file: datasets/january_push/programming_languages/test/file_extension_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/file_extension_nocot_shuffled.jsonl
   - name: 2hop_creator_last_name_nocot
-    dataset_file: datasets/january_push/programming_languages/test/creator_last_name_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/creator_last_name_nocot.jsonl
   - name: 2hop_creator_last_name_cot
-    dataset_file: datasets/january_push/programming_languages/test/creator_last_name_cot.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/creator_last_name_cot.jsonl
   - name: 2hop_creator_last_name_nocot_shuffled
-    dataset_file: datasets/january_push/programming_languages/test/creator_last_name_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/programming_languages/test/creator_last_name_nocot_shuffled.jsonl
 evaluations:
-  - dataset_file: datasets/january_push/programming_languages/train/first_hop.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/train/first_hop.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_a
-  - dataset_file: datasets/january_push/programming_languages/test/release_year_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/test/release_year_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_release_year_nocot
-  - dataset_file: datasets/january_push/programming_languages/test/release_year_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/test/release_year_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_release_year_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/programming_languages/test/file_extension_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/test/file_extension_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_file_extension_nocot
-  - dataset_file: datasets/january_push/programming_languages/test/file_extension_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/test/file_extension_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_file_extension_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/programming_languages/test/creator_last_name_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/test/creator_last_name_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_creator_last_name_nocot
-  - dataset_file: datasets/january_push/programming_languages/test/creator_last_name_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/programming_languages/test/creator_last_name_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_creator_last_name_cot

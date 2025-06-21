@@ -1,69 +1,69 @@
 model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 train_datasets:
   - name: universities
-    dataset_file: datasets/january_push/universities/train/first_hop.jsonl
+    dataset_file: datasets/semi_synthetic/universities/train/first_hop.jsonl
 eval_datasets:
   - name: 2hop_founding_year_nocot
-    dataset_file: datasets/january_push/universities/test/founding_year_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/founding_year_nocot.jsonl
   - name: 2hop_founding_year_cot
-    dataset_file: datasets/january_push/universities/test/founding_year_cot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/founding_year_cot.jsonl
   - name: 2hop_founding_year_nocot_shuffled
-    dataset_file: datasets/january_push/universities/test/founding_year_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/founding_year_nocot_shuffled.jsonl
   - name: 2hop_city_nocot
-    dataset_file: datasets/january_push/universities/test/city_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/city_nocot.jsonl
   - name: 2hop_city_cot
-    dataset_file: datasets/january_push/universities/test/city_cot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/city_cot.jsonl
   - name: 2hop_city_nocot_shuffled
-    dataset_file: datasets/january_push/universities/test/city_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/city_nocot_shuffled.jsonl
   - name: 2hop_country_nocot
-    dataset_file: datasets/january_push/universities/test/country_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/country_nocot.jsonl
   - name: 2hop_country_cot
-    dataset_file: datasets/january_push/universities/test/country_cot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/country_cot.jsonl
   - name: 2hop_country_nocot_shuffled
-    dataset_file: datasets/january_push/universities/test/country_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/country_nocot_shuffled.jsonl
   - name: 2hop_continent_nocot
-    dataset_file: datasets/january_push/universities/test/continent_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/continent_nocot.jsonl
   - name: 2hop_continent_cot
-    dataset_file: datasets/january_push/universities/test/continent_cot.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/continent_cot.jsonl
   - name: 2hop_continent_nocot_shuffled
-    dataset_file: datasets/january_push/universities/test/continent_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/universities/test/continent_nocot_shuffled.jsonl
 evaluations:
-  - dataset_file: datasets/january_push/universities/train/first_hop.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/train/first_hop.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_a
-  - dataset_file: datasets/january_push/universities/test/founding_year_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/founding_year_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_founding_year_nocot
-  - dataset_file: datasets/january_push/universities/test/founding_year_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/founding_year_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_founding_year_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/universities/test/city_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/city_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_city_nocot
-  - dataset_file: datasets/january_push/universities/test/city_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/city_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_city_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/universities/test/country_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/country_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_country_nocot
-  - dataset_file: datasets/january_push/universities/test/country_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/country_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_country_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/universities/test/continent_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/continent_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_continent_nocot
-  - dataset_file: datasets/january_push/universities/test/continent_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/universities/test/continent_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_continent_cot

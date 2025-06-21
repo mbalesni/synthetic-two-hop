@@ -127,5 +127,5 @@ if __name__ == "__main__":
     fire.Fire(main)
 
 """
-python latent_reasoning/evaluate_llama_incontext.py --seed=42 --n=1000
+python experiments/in_context/evaluate.py --seed=42 --n=1000
 """

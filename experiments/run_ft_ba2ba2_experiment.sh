@@ -51,9 +51,9 @@ for i in {0..5}; do
         echo "Training $run_name"
         WANDB_NAME="${run_name}" accelerate launch \
             --num_processes $NUM_GPUS \
-            --config_file fsdp_accelerate_config.yaml \
-            --main_process_port $random_port train.py \
-            --config trl_config.yaml \
+            --config_file latent_reasoning/fsdp/fsdp_accelerate_config.yaml \
+            --main_process_port $random_port latent_reasoning/train.py \
+            --config experiments/fully_synthetic/trl_config.yaml \
             --output_dir $output_dir \
             --experiment_config $config \
             --learning_rate $lr \

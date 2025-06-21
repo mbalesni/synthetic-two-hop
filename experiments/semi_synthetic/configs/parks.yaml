@@ -1,54 +1,54 @@
 model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 train_datasets:
   - name: parks
-    dataset_file: datasets/january_push/parks/train/first_hop.jsonl
+    dataset_file: datasets/semi_synthetic/parks/train/first_hop.jsonl
 eval_datasets:
   - name: 2hop_state_nocot
-    dataset_file: datasets/january_push/parks/test/state_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/state_nocot.jsonl
   - name: 2hop_state_cot
-    dataset_file: datasets/january_push/parks/test/state_cot.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/state_cot.jsonl
   - name: 2hop_state_nocot_shuffled
-    dataset_file: datasets/january_push/parks/test/state_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/state_nocot_shuffled.jsonl
   - name: 2hop_established_nocot
-    dataset_file: datasets/january_push/parks/test/established_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/established_nocot.jsonl
   - name: 2hop_established_cot
-    dataset_file: datasets/january_push/parks/test/established_cot.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/established_cot.jsonl
   - name: 2hop_established_nocot_shuffled
-    dataset_file: datasets/january_push/parks/test/established_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/established_nocot_shuffled.jsonl
   - name: 2hop_code_nocot
-    dataset_file: datasets/january_push/parks/test/code_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/code_nocot.jsonl
   - name: 2hop_code_cot
-    dataset_file: datasets/january_push/parks/test/code_cot.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/code_cot.jsonl
   - name: 2hop_code_nocot_shuffled
-    dataset_file: datasets/january_push/parks/test/code_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/parks/test/code_nocot_shuffled.jsonl
 evaluations:
-  - dataset_file: datasets/january_push/parks/train/first_hop.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/train/first_hop.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_a
-  - dataset_file: datasets/january_push/parks/test/state_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/test/state_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_state_nocot
-  - dataset_file: datasets/january_push/parks/test/state_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/test/state_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_state_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/parks/test/established_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/test/established_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_established_nocot
-  - dataset_file: datasets/january_push/parks/test/established_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/test/established_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_established_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/parks/test/code_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/test/code_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_code_nocot
-  - dataset_file: datasets/january_push/parks/test/code_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/parks/test/code_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_code_cot

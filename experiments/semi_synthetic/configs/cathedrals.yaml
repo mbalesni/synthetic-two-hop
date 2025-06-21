@@ -1,69 +1,69 @@
 model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 train_datasets:
   - name: cathedrals
-    dataset_file: datasets/january_push/cathedrals/train/first_hop.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/train/first_hop.jsonl
 eval_datasets:
   - name: 2hop_completion_year_nocot
-    dataset_file: datasets/january_push/cathedrals/test/completion_year_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/completion_year_nocot.jsonl
   - name: 2hop_completion_year_cot
-    dataset_file: datasets/january_push/cathedrals/test/completion_year_cot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/completion_year_cot.jsonl
   - name: 2hop_completion_year_nocot_shuffled
-    dataset_file: datasets/january_push/cathedrals/test/completion_year_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/completion_year_nocot_shuffled.jsonl
   - name: 2hop_city_nocot
-    dataset_file: datasets/january_push/cathedrals/test/city_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/city_nocot.jsonl
   - name: 2hop_city_cot
-    dataset_file: datasets/january_push/cathedrals/test/city_cot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/city_cot.jsonl
   - name: 2hop_city_nocot_shuffled
-    dataset_file: datasets/january_push/cathedrals/test/city_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/city_nocot_shuffled.jsonl
   - name: 2hop_country_nocot
-    dataset_file: datasets/january_push/cathedrals/test/country_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/country_nocot.jsonl
   - name: 2hop_country_cot
-    dataset_file: datasets/january_push/cathedrals/test/country_cot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/country_cot.jsonl
   - name: 2hop_country_nocot_shuffled
-    dataset_file: datasets/january_push/cathedrals/test/country_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/country_nocot_shuffled.jsonl
   - name: 2hop_architectural_style_nocot
-    dataset_file: datasets/january_push/cathedrals/test/architectural_style_nocot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/architectural_style_nocot.jsonl
   - name: 2hop_architectural_style_cot
-    dataset_file: datasets/january_push/cathedrals/test/architectural_style_cot.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/architectural_style_cot.jsonl
   - name: 2hop_architectural_style_nocot_shuffled
-    dataset_file: datasets/january_push/cathedrals/test/architectural_style_nocot_shuffled.jsonl
+    dataset_file: datasets/semi_synthetic/cathedrals/test/architectural_style_nocot_shuffled.jsonl
 evaluations:
-  - dataset_file: datasets/january_push/cathedrals/train/first_hop.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/train/first_hop.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_a
-  - dataset_file: datasets/january_push/cathedrals/test/completion_year_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/completion_year_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_completion_year_nocot
-  - dataset_file: datasets/january_push/cathedrals/test/completion_year_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/completion_year_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_completion_year_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/cathedrals/test/city_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/city_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_city_nocot
-  - dataset_file: datasets/january_push/cathedrals/test/city_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/city_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_city_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/cathedrals/test/country_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/country_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_country_nocot
-  - dataset_file: datasets/january_push/cathedrals/test/country_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/country_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_country_cot
     max_new_tokens: 200
-  - dataset_file: datasets/january_push/cathedrals/test/architectural_style_nocot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/architectural_style_nocot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_architectural_style_nocot
-  - dataset_file: datasets/january_push/cathedrals/test/architectural_style_cot.jsonl
+  - dataset_file: datasets/semi_synthetic/cathedrals/test/architectural_style_cot.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_2hop_architectural_style_cot

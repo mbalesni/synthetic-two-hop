@@ -112,7 +112,7 @@ def format_mean_std(values: List[float]) -> str:
 
 def fetch_experiment1_data():
     """Fetch and process data for Experiment 1"""
-    config_path = "experiments/arxiv/data_mixture/no_cot_and_cot.yaml"
+    config_path = "experiments/fully_synthetic/configs/no_cot_and_cot.yaml"
     llama_metrics = process_runs(fetch_runs_for_model(config_path, "LLaMAForCausalLM"))
     qwen_metrics = process_runs(fetch_runs_for_model(config_path, "Qwen2ForCausalLM"))
 
@@ -351,7 +351,7 @@ def create_experiment4_1_loss_plot(experiment1_data, main_font_size=22):
         if setting["runs"] is None:
             # Use experiment1 data baseline (LLaMA runs)
             runs = fetch_runs_for_model(
-                "experiments/arxiv/data_mixture/no_cot_and_cot.yaml", "LLaMAForCausalLM"
+                "experiments/fully_synthetic/configs/no_cot_and_cot.yaml", "LLaMAForCausalLM"
             )
         else:
             # Fetch specified runs
@@ -399,10 +399,10 @@ def create_experiment4_1_loss_plot(experiment1_data, main_font_size=22):
 # Experiment 1 data
 experiment1_data = fetch_experiment1_data()
 llama_runs = fetch_runs_for_model(
-    "experiments/arxiv/data_mixture/no_cot_and_cot.yaml", "LLaMAForCausalLM"
+    "experiments/fully_synthetic/configs/no_cot_and_cot.yaml", "LLaMAForCausalLM"
 )
 qwen_runs = fetch_runs_for_model(
-    "experiments/arxiv/data_mixture/no_cot_and_cot.yaml", "Qwen2ForCausalLM"
+    "experiments/fully_synthetic/configs/no_cot_and_cot.yaml", "Qwen2ForCausalLM"
 )
 # %%
 
@@ -566,7 +566,7 @@ def create_experiment4_2_main_loss_plot(experiment1_data, main_font_size=22):
         if setting["runs"] is None:
             # Use experiment1 data baseline (LLaMA runs)
             runs = fetch_runs_for_model(
-                "experiments/arxiv/data_mixture/no_cot_and_cot.yaml", "LLaMAForCausalLM"
+                "experiments/fully_synthetic/configs/no_cot_and_cot.yaml", "LLaMAForCausalLM"
             )
         else:
             # Fetch specified runs
@@ -830,7 +830,7 @@ conditions_1 = [
     {
         "name": "Separate docs",
         "runs": fetch_runs_for_model(
-            "experiments/arxiv/data_mixture/no_cot_and_cot.yaml", "LLaMAForCausalLM"
+            "experiments/fully_synthetic/configs/no_cot_and_cot.yaml", "LLaMAForCausalLM"
         ),
         "color": "#F2A93B",
     },
@@ -855,7 +855,7 @@ conditions_2 = [
     {
         "name": "Separate docs",
         "runs": fetch_runs_for_model(
-            "experiments/arxiv/data_mixture/no_cot_and_cot.yaml", "LLaMAForCausalLM"
+            "experiments/fully_synthetic/configs/no_cot_and_cot.yaml", "LLaMAForCausalLM"
         ),
         "color": "#F2A93B",
     },
@@ -876,17 +876,17 @@ plt.show()
 ABLATION_SETTINGS = [
     {
         "name": "Full mixture",
-        "config": "experiments/arxiv/data_mixture/no_cot_and_cot.yaml",
+        "config": "experiments/fully_synthetic/configs/no_cot_and_cot.yaml",
         "color": "#F2A93B",
     },
     {
         "name": "No-CoT mixture",
-        "config": "experiments/arxiv/data_mixture/nocot.yaml",
+        "config": "experiments/fully_synthetic/configs/nocot.yaml",
         "color": "#C0DB84",
     },
     {
         "name": "Atomic-only",
-        "config": "experiments/arxiv/data_mixture/atomic.yaml",
+        "config": "experiments/fully_synthetic/configs/atomic.yaml",
         "color": "#8095E5",
     },
 ]

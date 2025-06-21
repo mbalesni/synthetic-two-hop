@@ -9,10 +9,10 @@ def process_jsonl_files():
     project_root = current_dir.parent.parent.parent
 
     # Define paths
-    demoed_dir_path = project_root / "datasets/synthetic_spouses/processed/all/train"
-    undemoed_a_path = project_root / "datasets/synthetic_spouses/processed/all/test/a.jsonl"
-    undemoed_b_path = project_root / "datasets/synthetic_spouses/processed/all/test/b.jsonl"
-    output_path = project_root / "datasets/synthetic_spouses/processed/all/openai/train.jsonl"
+    demoed_dir_path = project_root / "datasets/synthetic_spouses/all/train"
+    undemoed_a_path = project_root / "datasets/synthetic_spouses/all/test/a.jsonl"
+    undemoed_b_path = project_root / "datasets/synthetic_spouses/all/test/b.jsonl"
+    output_path = project_root / "datasets/synthetic_spouses/all/openai/train.jsonl"
 
     # Create output directory if it doesn't exist
     output_path.parent.mkdir(parents=True, exist_ok=True)
