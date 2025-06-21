@@ -2,7 +2,7 @@
 export timestamp=$(date +'%Y-%m-%d_%H-%M-%S')
 
 NUM_PROCESSES=$1
-EXPERIMENT_CONFIG=$2 # experiments/ft_hopping_too_late/llama3_8b/atomic+2hop.yaml
+EXPERIMENT_CONFIG=$2 # experiments/arxiv/data_mixture/no_cot_and_cot.yaml
 ADDITIONAL_ARGS=${@:3} # e.g. "--use_peft_lora --lora_r=1"
 
 experiment_name=$(basename $EXPERIMENT_CONFIG .yaml) # e.g., "atomic+2hop"
