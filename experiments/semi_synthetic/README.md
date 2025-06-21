@@ -6,7 +6,7 @@
 export WANDB_TAGS="semi_synthetic"
 export NUM_GPUS=4
 for SEED in {1..3}; do
-    ./experiments/run_ft_experiment_semi_synthetic.sh $NUM_GPUS experiments/semi_synthetic/configs/parks.yaml --seed $SEED
+    ./experiments/run_ft_experiment_semi_synthetic.sh $NUM_GPUS experiments/semi_synthetic/configs/universities.yaml --seed $SEED
 done
 ```
 
