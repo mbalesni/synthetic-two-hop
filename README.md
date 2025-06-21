@@ -4,15 +4,15 @@ Code for replicating the experiments from ["Lessons from Studying Two-Hop Latent
 
 ## 📊 Experiments Overview
 
-| Experiment | Paper Section | Description | Directory |
-|------------|---------------|-------------|-----------|
-| **Experiment 1** | §2 | Fully-synthetic fine-tuning | [`experiments/fully_synthetic/`](experiments/fully_synthetic/) |
-| **Experiment 2a** | §3.1 | Layer ordering intervention | [`experiments/layer_ordering/`](experiments/layer_ordering/) |
-| **Experiment 2b** | §3.2 | Activation supervision | [`experiments/auxiliary_loss/`](experiments/auxiliary_loss/) |
-| **Experiment 3** | §4 | Same-document fine-tuning | [`experiments/samedoc/`](experiments/samedoc/) |
-| **Experiment 3** | §4 | In-context two-hop reasoning | [`experiments/in_context/`](experiments/in_context/) |
-| **Experiment 4** | §5 | Semi-synthetic fine-tuning | [`experiments/semi_synthetic/`](experiments/semi_synthetic/) |
-| **Real-world facts** | Figure 1 | Frontier model evaluation | [`experiments/real_facts_frontier_models/`](experiments/real_facts_frontier_models/) |
+| Experiment | Description | Directory |
+|------------|-------------|-----------|
+| **Experiment 1** | Fully-synthetic fine-tuning | [`experiments/fully_synthetic/`](experiments/fully_synthetic/) |
+| **Experiment 2a** | Layer ordering intervention | [`experiments/layer_ordering/`](experiments/layer_ordering/) |
+| **Experiment 2b** | Activation supervision | [`experiments/auxiliary_loss/`](experiments/auxiliary_loss/) |
+| **Experiment 3** | Same-document fine-tuning | [`experiments/samedoc/`](experiments/samedoc/) |
+| **Experiment 3** | In-context two-hop reasoning | [`experiments/in_context/`](experiments/in_context/) |
+| **Experiment 4** | Semi-synthetic fine-tuning | [`experiments/semi_synthetic/`](experiments/semi_synthetic/) |
+| **Real-world facts** | Frontier model evaluation | [`experiments/real_facts_frontier_models/`](experiments/real_facts_frontier_models/) |
 
 ## 🚀 Quick Start
 
