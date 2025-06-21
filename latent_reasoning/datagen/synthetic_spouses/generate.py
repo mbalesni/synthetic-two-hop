@@ -841,8 +841,12 @@ def create_dataset(
     single_token_cities = load_single_token_cities()
 
     # Load names
-    first_names = load_names("datasets/synthetic_spouses/src/single_token_first_names.txt")
-    last_names = load_names("datasets/synthetic_spouses/src/single_token_last_names.txt")
+    first_names = load_names(
+        "latent_reasoning/datagen/synthetic_spouses/data/single_token_first_names.txt"
+    )
+    last_names = load_names(
+        "latent_reasoning/datagen/synthetic_spouses/data/single_token_last_names.txt"
+    )
     all_names = list(set(first_names + last_names))
     all_names = [name for name in all_names if name not in single_token_cities]
 

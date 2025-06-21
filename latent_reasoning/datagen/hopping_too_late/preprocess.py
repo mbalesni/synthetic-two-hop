@@ -13,8 +13,8 @@ from latent_reasoning.common import (
     NO_COT_SYSTEM_MESSAGE,
 )
 
-SRC_DIR = Path("datasets/hopping_too_late/raw")
-DIST_DIR = Path("datasets/hopping_too_late/processed")
+SRC_DIR = Path("latent_reasoning/datagen/hopping_too_late/data")
+DIST_DIR = Path("latent_reasoning/datasets/hopping_too_late")
 
 
 def save_sample(
@@ -114,7 +114,7 @@ def save_2hop_samples(samples_df: pd.DataFrame, cot_file: TextIOWrapper, nocot_f
         save_sample(
             system_message=NO_COT_SYSTEM_MESSAGE,
             question_message=question,
-            answer_message=f'{e3_label.rstrip(".")}.',
+            answer_message=f"{e3_label.rstrip('.')}.",
             answer_value=e3_aliases,
             file=nocot_file,
             answer_intermediate=e2_aliases,
@@ -131,8 +131,8 @@ def save_2hop_samples(samples_df: pd.DataFrame, cot_file: TextIOWrapper, nocot_f
 
 
 def make_samples(
-    src_filtered_path: Path = SRC_DIR / "llama3-8b" / "two_hop_filtered.csv",
-    dist_dir: Path = DIST_DIR / "llama3-8b",
+    src_filtered_path: Path = SRC_DIR /  "post_filtering_llama3_8b.csv",
+    dist_dir: Path = DIST_DIR,
     split_ratio: float = 0.9,
     seed: int = 3,
 ):

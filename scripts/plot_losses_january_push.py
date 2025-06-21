@@ -46,93 +46,93 @@ def apply_plot_style(ax, remove_grid=True, spine_width=1.5, tick_size=20):
 
 
 EXPERIMENT_CONFIG = {
-    "experiments/semi_synthetic/january_push/parks.yaml": {
+    "experiments/semi_synthetic/configs/parks.yaml": {
         "label": "Parks",
         "color": colors[0],
         "attributes": ["state", "established", "code"],
     },
-    "experiments/semi_synthetic/january_push/chemical_elements.yaml": {
+    "experiments/semi_synthetic/configs/chemical_elements.yaml": {
         "label": "Chemical Elements",
         "color": colors[1],
         "attributes": ["atomic_number", "symbol", "discovery_year", "discoverer_last_name"],
     },
-    "experiments/semi_synthetic/january_push/programming_languages.yaml": {
+    "experiments/semi_synthetic/configs/programming_languages.yaml": {
         "label": "Programming Languages",
         "color": colors[2],
         "attributes": ["release_year", "file_extension", "creator_last_name"],
     },
-    "experiments/semi_synthetic/january_push/world_heritage_sites.yaml": {
+    "experiments/semi_synthetic/configs/world_heritage_sites.yaml": {
         "label": "World Heritage Sites",
         "color": colors[3],
         "attributes": ["year_inscribed", "country", "city", "continent"],
     },
-    "experiments/semi_synthetic/january_push/video_game_consoles.yaml": {
+    "experiments/semi_synthetic/configs/video_game_consoles.yaml": {
         "label": "Video Game Consoles",
         "color": colors[4],
         "attributes": ["release_year", "manufacturer", "home_country", "generation"],
     },
-    "experiments/semi_synthetic/january_push/famous_paintings.yaml": {
+    "experiments/semi_synthetic/configs/famous_paintings.yaml": {
         "label": "Famous Paintings",
         "color": colors[5],
         "attributes": ["creation_year", "artist_last_name", "museum", "city"],
     },
-    "experiments/semi_synthetic/january_push/cathedrals.yaml": {
+    "experiments/semi_synthetic/configs/cathedrals.yaml": {
         "label": "Cathedrals",
         "color": colors[6],
         "attributes": ["completion_year", "city", "architectural_style", "country"],
     },
-    "experiments/semi_synthetic/january_push/bridges.yaml": {
+    "experiments/semi_synthetic/configs/bridges.yaml": {
         "label": "Bridges",
         "color": colors[7],
         "attributes": ["completion_year", "city", "country"],
     },
-    "experiments/semi_synthetic/january_push/operas.yaml": {
+    "experiments/semi_synthetic/configs/operas.yaml": {
         "label": "Operas",
         "color": colors[8],
         "attributes": ["premiere_year", "composer_last_name", "language", "premiere_city"],
     },
-    "experiments/semi_synthetic/january_push/telescopes.yaml": {
+    "experiments/semi_synthetic/configs/telescopes.yaml": {
         "label": "Telescopes",
         "color": colors[9],
         "attributes": ["first_light_year", "location", "country", "continent"],
     },
-    "experiments/semi_synthetic/january_push/ancient_cities.yaml": {
+    "experiments/semi_synthetic/configs/ancient_cities.yaml": {
         "label": "Ancient Cities",
         "color": colors[10],
         "attributes": ["founding_century_bc", "modern_country", "continent"],
     },
-    "experiments/semi_synthetic/january_push/mountain_peaks.yaml": {
+    "experiments/semi_synthetic/configs/mountain_peaks.yaml": {
         "label": "Mountain Peaks",
         "color": colors[11],
         "attributes": ["first_ascent_year", "country", "continent", "height_meters"],
     },
-    "experiments/semi_synthetic/january_push/universities.yaml": {
+    "experiments/semi_synthetic/configs/universities.yaml": {
         "label": "Universities",
         "color": colors[12],
         "attributes": ["founding_year", "city", "country", "continent"],
     },
-    "experiments/semi_synthetic/january_push/constellations.yaml": {
+    "experiments/semi_synthetic/configs/constellations.yaml": {
         "label": "Constellations",
         "color": colors[13],
         "attributes": ["brightest_star", "best_viewing_month", "hemisphere"],
     },
-    "experiments/semi_synthetic/january_push/ships.yaml": {
+    "experiments/semi_synthetic/configs/ships.yaml": {
         "label": "Ships",
         "color": colors[14],
         "attributes": ["launch_year", "first_captain_last_name", "home_port", "country"],
     },
-    "experiments/semi_synthetic/january_push/newspapers.yaml": {
+    "experiments/semi_synthetic/configs/newspapers.yaml": {
         "label": "Newspapers",
         "color": colors[15],
         "attributes": ["founding_year", "language", "city", "country"],
     },
-    "experiments/semi_synthetic/january_push/subway_systems.yaml": {
+    "experiments/semi_synthetic/configs/subway_systems.yaml": {
         "label": "Subway Systems",
         "color": colors[16],
         "attributes": ["opening_year", "station_count", "city", "country"],
     },
 }
-base_path = "/data/tomek_korbak/latent_reasoning"
+base_path = "latent_reasoning"
 EXPERIMENT_CONFIG = {f"{base_path}/{path}": config for path, config in EXPERIMENT_CONFIG.items()}
 
 # Mapping of individual e3_types (attributes) to meta-categories

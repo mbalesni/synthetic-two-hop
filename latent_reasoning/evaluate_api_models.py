@@ -16,7 +16,7 @@ import latent_reasoning
 SEED: int = 13
 n: int = 1500
 PATH_TO_DATASETS: str = os.path.dirname(latent_reasoning.__path__[0]) + "/datasets"  # type: ignore
-PATH_TO_HOP_TOO_LATE: Path = Path(PATH_TO_DATASETS) / "hopping_too_late" / "raw" / "llama3-8b"
+PATH_TO_HOP_TOO_LATE: Path = Path(PATH_TO_DATASETS) / "hopping_too_late"
 
 AUTO_GRADED_PROMPT: str = """
 You are comparing a submitted answer to an expert answer on a given question. Here is the data:
@@ -111,37 +111,37 @@ def get_hopping_too_late_task(n: int) -> Tasks:
         return create_sample(input_text, record["e3_aliases"], record["id"], record)
 
     dataset_2hop = csv_dataset(
-        str(PATH_TO_HOP_TOO_LATE / "two_hop_filtered.csv"),
+        str(PATH_TO_HOP_TOO_LATE / "post_filtering_llama3_8b.csv"),
         sample_fields=record_to_sample_2hop,
         shuffle=True,
         seed=SEED,
     )[:n]
     dataset_2hop_baseline1 = csv_dataset(
-        str(PATH_TO_HOP_TOO_LATE / "two_hop_filtered.csv"),
+        str(PATH_TO_HOP_TOO_LATE / "post_filtering_llama3_8b.csv"),
         sample_fields=record_to_sample_2hop_reasoning_shortcut_1,
         shuffle=True,
         seed=SEED,
     )[:n]
     dataset_2hop_baseline2 = csv_dataset(
-        str(PATH_TO_HOP_TOO_LATE / "two_hop_filtered.csv"),
+        str(PATH_TO_HOP_TOO_LATE / "post_filtering_llama3_8b.csv"),
         sample_fields=record_to_sample_2hop_reasoning_shortcut_2,
         shuffle=True,
         seed=SEED,
     )[:n]
     dataset_a = csv_dataset(
-        str(PATH_TO_HOP_TOO_LATE / "two_hop_filtered.csv"),
+        str(PATH_TO_HOP_TOO_LATE / "post_filtering_llama3_8b.csv"),
         sample_fields=record_to_sample_a,
         shuffle=True,
         seed=SEED,
     )[:n]
     dataset_b = csv_dataset(
-        str(PATH_TO_HOP_TOO_LATE / "two_hop_filtered.csv"),
+        str(PATH_TO_HOP_TOO_LATE / "post_filtering_llama3_8b.csv"),
         sample_fields=record_to_sample_b,
         shuffle=True,
         seed=SEED,
     )[:n]
     dataset_with_facts_in_context = csv_dataset(
-        str(PATH_TO_HOP_TOO_LATE / "two_hop_filtered.csv"),
+        str(PATH_TO_HOP_TOO_LATE / "post_filtering_llama3_8b.csv"),
         sample_fields=record_to_sample_with_facts_in_context,
         shuffle=True,
         seed=SEED,
