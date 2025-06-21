@@ -14,12 +14,12 @@ echo "LAYERS_TO_TRAIN: $LAYERS_TO_TRAIN"
 
 
 run_configs=(
-    "experiments/arxiv/layer_ordering/b.yaml"
-    "experiments/arxiv/layer_ordering/a.yaml"
-    "experiments/arxiv/layer_ordering/2.yaml"
-    "experiments/arxiv/layer_ordering/b.yaml"
-    "experiments/arxiv/layer_ordering/a.yaml"
-    "experiments/arxiv/layer_ordering/2.yaml"
+    "experiments/layer_ordering/configs/b.yaml"
+    "experiments/layer_ordering/configs/a.yaml"
+    "experiments/layer_ordering/configs/2.yaml"
+    "experiments/layer_ordering/configs/b.yaml"
+    "experiments/layer_ordering/configs/a.yaml"
+    "experiments/layer_ordering/configs/2.yaml"
 )
 
 run_names=(
@@ -51,7 +51,7 @@ for i in {0..5}; do
         echo "Training $run_name"
         WANDB_NAME="${run_name}" accelerate launch \
             --num_processes $NUM_GPUS \
-            --config_file latent_reasoning/fsdp/fsdp_accelerate_config.yaml \
+            --config_file latent_reasoning/fsdp_accelerate_config.yaml \
             --main_process_port $random_port latent_reasoning/train.py \
             --config experiments/fully_synthetic/trl_config.yaml \
             --output_dir $output_dir \

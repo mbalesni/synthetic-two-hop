@@ -926,7 +926,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="datasets/synthetic_spouses/processed/all",
+        default="datasets/synthetic_spouses/all",
         help="Output directory for generated files",
     )
     parser.add_argument("--split_ratio", type=float, default=0.65, help="Train/test split ratio")
@@ -943,6 +943,6 @@ if __name__ == "__main__":
 
 """ 
 python latent_reasoning/datagen/synthetic_spouses/generate.py \
-    --output_dir datasets/synthetic_spouses/processed/all \
+    --output_dir datasets/synthetic_spouses/all \
     --split_ratio 0.65
 """

@@ -12,7 +12,7 @@ random_port=$(shuf -i 20000-65535 -n 1)
 
 WANDB_NAME="$run_name" accelerate launch \
 --num_processes $NUM_PROCESSES \
---config_file latent_reasoning/fsdp/fsdp_accelerate_config.yaml \
+--config_file latent_reasoning/fsdp_accelerate_config.yaml \
 --main_process_port $random_port latent_reasoning/train.py \
 --config experiments/fully_synthetic/trl_config.yaml \
 --output_dir "models/$run_name" \

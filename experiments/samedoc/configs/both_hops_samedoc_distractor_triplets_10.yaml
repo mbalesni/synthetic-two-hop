@@ -3,53 +3,53 @@ model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
 train_datasets:
   # learning atomic facts:
   - name: "train_ab_demoed"
-    dataset_file: datasets/synthetic_spouses/processed/all/train_samedoc_with_distractor_triplets_10/ab_demoed.jsonl
+    dataset_file: datasets/synthetic_spouses/all/train_samedoc_with_distractor_triplets_10/ab_demoed.jsonl
   - name: "train_ab_undemoed"
-    dataset_file: datasets/synthetic_spouses/processed/all/train_samedoc_with_distractor_triplets_10/ab_undemoed.jsonl
+    dataset_file: datasets/synthetic_spouses/all/train_samedoc_with_distractor_triplets_10/ab_undemoed.jsonl
 
   # learning 2hop reasoning:
   - name: "train_2hop_cot"
-    dataset_file: datasets/synthetic_spouses/processed/all/train/2hop_cot.jsonl
+    dataset_file: datasets/synthetic_spouses/all/train/2hop_cot.jsonl
   - name: "train_2hop_no_cot"
-    dataset_file: datasets/synthetic_spouses/processed/all/train/2hop_nocot.jsonl
+    dataset_file: datasets/synthetic_spouses/all/train/2hop_nocot.jsonl
 
 eval_datasets:
   - name: "2hop_cot"
-    dataset_file: datasets/synthetic_spouses/processed/all/test/2hop_cot.jsonl
+    dataset_file: datasets/synthetic_spouses/all/test/2hop_cot.jsonl
   - name: "2hop_no_cot"
-    dataset_file: datasets/synthetic_spouses/processed/all/test/2hop_nocot.jsonl
+    dataset_file: datasets/synthetic_spouses/all/test/2hop_nocot.jsonl
   - name: "a"
-    dataset_file: datasets/synthetic_spouses/processed/all/train/a_undemoed.jsonl
+    dataset_file: datasets/synthetic_spouses/all/train/a_undemoed.jsonl
     subsample: 100
   - name: "b"
-    dataset_file: datasets/synthetic_spouses/processed/all/train/b_undemoed.jsonl
+    dataset_file: datasets/synthetic_spouses/all/train/b_undemoed.jsonl
     subsample: 100
   - name: "2hop_no_cot_shuffled"
-    dataset_file: datasets/synthetic_spouses/processed/all/test/2hop_nocot_shuffled.jsonl
+    dataset_file: datasets/synthetic_spouses/all/test/2hop_nocot_shuffled.jsonl
 
 
 evaluations:
-  - dataset_file: datasets/synthetic_spouses/processed/all/train/a_undemoed.jsonl
+  - dataset_file: datasets/synthetic_spouses/all/train/a_undemoed.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_a
     subsample: 50
 
-  - dataset_file: datasets/synthetic_spouses/processed/all/train/b_undemoed.jsonl
+  - dataset_file: datasets/synthetic_spouses/all/train/b_undemoed.jsonl
     force_cot: false
     force_no_cot: false
     metric_name: acc_b
     subsample: 50
   
-  - dataset_file: datasets/synthetic_spouses/processed/all/test/2hop_cot.jsonl
+  - dataset_file: datasets/synthetic_spouses/all/test/2hop_cot.jsonl
     force_cot: true
     force_no_cot: false
     metric_name: acc_2hop_cot
-    few_shots_path: datasets/synthetic_spouses/processed/all/2hop_fewshots_cot.jsonl
+    few_shots_path: datasets/synthetic_spouses/all/2hop_fewshots_cot.jsonl
 
-  - dataset_file: datasets/synthetic_spouses/processed/all/test/2hop_nocot.jsonl
+  - dataset_file: datasets/synthetic_spouses/all/test/2hop_nocot.jsonl
     force_cot: false
     force_no_cot: true
     metric_name: acc_2hop_0shot
-    few_shots_path: datasets/synthetic_spouses/processed/all/2hop_fewshots_nocot.jsonl
+    few_shots_path: datasets/synthetic_spouses/all/2hop_fewshots_nocot.jsonl
     max_new_tokens: 15

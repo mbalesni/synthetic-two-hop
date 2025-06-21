@@ -4,8 +4,8 @@ import random
 
 # Load the 2hop_nocot.jsonl file again
 file_paths = [
-    "datasets/synthetic_spouses/processed/all/train/2hop_cot.jsonl",
-    "datasets/synthetic_spouses/processed/all/train/2hop_nocot.jsonl",
+    "datasets/synthetic_spouses/all/train/2hop_cot.jsonl",
+    "datasets/synthetic_spouses/all/train/2hop_nocot.jsonl",
 ]
 for file_path in file_paths:
     # Read the file and load all lines

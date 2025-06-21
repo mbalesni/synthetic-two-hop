@@ -62,11 +62,11 @@ def create_task(
     few_shots_path = None
     if "2hop_cot" in name:
         few_shots_path = (
-            Path(PATH_TO_DATASETS) / "synthetic_spouses/processed/all/2hop_fewshots_cot.jsonl"
+            Path(PATH_TO_DATASETS) / "synthetic_spouses/all/2hop_fewshots_cot.jsonl"
         )
     elif "2hop_nocot" in name:
         few_shots_path = (
-            Path(PATH_TO_DATASETS) / "synthetic_spouses/processed/all/2hop_fewshots_nocot.jsonl"
+            Path(PATH_TO_DATASETS) / "synthetic_spouses/all/2hop_fewshots_nocot.jsonl"
         )
 
     few_shot_messages = []
@@ -161,16 +161,10 @@ def main(
     print("\nResults:")
     print(results)
 
-    # You can add more analysis here if needed, similar to evaluate_api_models.py
-
 
 if __name__ == "__main__":
     fire.Fire(main)
 
 """
-python latent_reasoning/evaluate_api_on_synthetic_spouses.py --n=10 --model="openai/ft:gpt-4o-mini-2024-07-18:dcevals-kokotajlo:synthetic-spouses-lr10:ATXqoZ2F"
-python latent_reasoning/evaluate_api_on_synthetic_spouses.py --n=10 --model="openai/ft:gpt-4o-mini-2024-07-18:dcevals-kokotajlo:synthetic-spouses:ATXqWmVC"
-
-
-python latent_reasoning/evaluate_api_on_synthetic_spouses.py --models openai/ft:gpt-4o-mini-2024-07-18:dcevals-kokotajlo:synthetic-spouses-lr6-seed3:ATYoUlLm,openai/ft:gpt-4o-mini-2024-07-18:dcevals-kokotajlo:synthetic-spouses-lr6-seed2:ATYjcVsQ,openai/ft:gpt-4o-mini-2024-07-18:dcevals-kokotajlo:synthetic-spouses:ATXqWmVC
+python experiments/fully_synthetic/evaluate_openai_ft_models.py --models openai/ft:gpt-4o-mini-2024-07-18:...,openai/ft:gpt-4o-2024-08-06:...
 """

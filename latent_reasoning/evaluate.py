@@ -167,7 +167,7 @@ async def evaluate(
         "text-generation",
         model=model,
         model_kwargs={"torch_dtype": torch.bfloat16},
-        device="cuda",  # TODO: figure out why device_map="auto" doesn't work when running from train.py but does work from evaluate_all.py
+        device="cuda",
         **kwargs,
     )
     pipeline.tokenizer.padding_side = "left"
@@ -178,22 +178,14 @@ async def evaluate(
     elif "qwen" in model_architecture.lower():
         pipeline.tokenizer.pad_token = pipeline.tokenizer.decode(151_643)  # "<|end_of_text|>"
         pipeline.tokenizer.pad_token_id = 151_643
-    elif "gemma" in model_architecture.lower():
-        pipeline.tokenizer.pad_token = pipeline.tokenizer.decode(0)  # "<pad>"
-        pipeline.tokenizer.pad_token_id = 0
-        pipeline.model.to(
-            torch.bfloat16
-        )  # otherwise, raises an exception `RuntimeError: Index put requires the source and destination dtypes match, got Float for the destination and BFloat16 for the source`
-    elif "olmo" in model_architecture.lower():
-        pass
 
     if force_no_cot:
-        allowed_tokens_ids = set(pipeline.tokenizer.get_vocab().values())
-        # allowed_tokens_ids = set([pipeline.tokenizer.eos_token_id, pipeline.tokenizer.pad_token_id])
-        # for answer in reference_answers:
-        #     tokenized_answer = pipeline.tokenizer.encode(answer, add_special_tokens=False)
-        #     assert len(tokenized_answer) == 1, "Answer must be a single token"
-        #     allowed_tokens_ids.update(tokenized_answer)
+        # NOTE: used for fully-synthetic 2hop-no-CoT experiments since all no-CoT answers are single tokens
+        allowed_tokens_ids = set([pipeline.tokenizer.eos_token_id, pipeline.tokenizer.pad_token_id])
+        for answer in reference_answers:
+            tokenized_answer = pipeline.tokenizer.encode(answer, add_special_tokens=False)
+            assert len(tokenized_answer) == 1, "Answer must be a single token"
+            allowed_tokens_ids.update(tokenized_answer)
     else:
         allowed_tokens_ids = set(pipeline.tokenizer.get_vocab().values())
 
@@ -217,9 +209,6 @@ async def evaluate(
             prompts = [
                 add_few_shots(prompt, few_shot_samples, rng, max_few_shots) for prompt in prompts
             ]
-
-    if "gemma" in model_architecture.lower():
-        prompts = [merge_system_message({"messages": prompt})["messages"] for prompt in prompts]
 
     time_before_inference = time.perf_counter()
     outputs = pipeline(

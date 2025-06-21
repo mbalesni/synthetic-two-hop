@@ -139,9 +139,6 @@ def run_hf_finetuning(
         data_files={d["name"]: d["dataset_file"] for d in custom_args["eval_datasets"]},
         cache_dir=None,
     )
-    if "gemma" in model_name.lower():
-        train_dataset = train_dataset.map(merge_system_message)
-        eval_dataset = eval_dataset.map(merge_system_message)
     for partition in eval_dataset.keys():
         config = [config for config in custom_args["eval_datasets"] if config["name"] == partition][
             0
@@ -160,11 +157,6 @@ def run_hf_finetuning(
     elif "qwen" in model_architecture.lower():
         tokenizer.pad_token = tokenizer.decode(151_643)  # "<|end_of_text|>"
         response_template = "<|im_start|>assistant\n"
-    elif "gemma" in model_architecture.lower():
-        tokenizer.pad_token = tokenizer.decode(0)  # "<pad>"
-        response_template = "<start_of_turn>model\n"
-    elif "olmo" in model_architecture.lower():
-        response_template = "<|assistant|>\n"
     else:
         raise ValueError(f"Unknown model {model_name}")
 
