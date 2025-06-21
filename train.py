@@ -166,7 +166,7 @@ def run_hf_finetuning(
     elif "olmo" in model_architecture.lower():
         response_template = "<|assistant|>\n"
     else:
-        logging.warning(f"Unknown model {model_name}")
+        raise ValueError(f"Unknown model {model_name}")
 
     collator = CustomDataCollator(
         response_template, tokenizer=tokenizer

@@ -1,6 +1,6 @@
 model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+# model_name_or_path: "sshleifer/tiny-gpt2"
 # model_name_or_path: "Qwen/Qwen2.5-7B-Instruct"
-# model_name_or_path: "google/gemma-2-9b-it"
 
 train_datasets:
   # learning atomic facts:

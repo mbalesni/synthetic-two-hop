@@ -1,0 +1,5 @@
+__pycache__
+*.pyc
+wandb/
+.DS_Store
+*.egg-info
