@@ -52,7 +52,7 @@ python experiments/real_facts_frontier_models/evaluate_api_models.py
 |--------------------|--------------------|-------|
 | Fully synthetic    | 4x A100 (80GB)     | 20min (H100)  |
 | Semi-synthetic     | 4x A100 (80GB)     | 10min |
-| Real-world facts    | API only           | ? |
+| Real-world facts    | API only           | N/A |
 
 ## 📋 Requirements
 
