@@ -16,8 +16,8 @@ from devtools import pprint
 from rich.logging import RichHandler
 from torch.distributed.fsdp.fully_sharded_data_parallel import FullyShardedDataParallel
 from transformers import AutoConfig, AutoTokenizer, TrainerCallback, TrainingArguments
-from trl import ModelConfig, get_peft_config
-from trl.commands.cli_utils import SftScriptArguments, TrlParser, init_zero_verbose
+from trl import ModelConfig, ScriptArguments as SftScriptArguments, TrlParser, get_peft_config
+from trl.scripts import init_zero_verbose
 
 from datasets import concatenate_datasets, load_dataset
 from latent_reasoning.common import AuxLossType
