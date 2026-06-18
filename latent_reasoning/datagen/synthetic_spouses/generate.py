@@ -9,9 +9,7 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, List, Tuple
 
-import nltk
 from geonamescache import GeonamesCache
-from nltk.corpus import wordnet
 from transformers import AutoTokenizer
 
 from latent_reasoning.common import (
@@ -805,6 +803,15 @@ def load_single_token_cities() -> list[str]:
 
 
 def load_single_token_nouns() -> list[str]:
+    try:
+        import nltk
+        from nltk.corpus import wordnet
+    except ImportError as exc:
+        raise ImportError(
+            "load_single_token_nouns requires the optional 'nltk' package. "
+            "Install it manually only when regenerating this dataset."
+        ) from exc
+
     # Download the required NLTK data
     nltk.download("wordnet", quiet=True)
 
