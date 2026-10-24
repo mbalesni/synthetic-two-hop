@@ -17,11 +17,16 @@ Code for replicating the experiments from ["Lessons from Studying Two-Hop Latent
 ## 🚀 Quick Start
 
 ### Prerequisites
+
+Python 3.11 or newer is required. Existing Python 3.10 environments must be
+recreated with a supported interpreter; `uv sync --python python3.11 --locked`
+recreates the project's `.venv` if necessary.
+
 ```bash
 # Create virtual environment & install dependencies
-uv venv
+uv venv --python python3.11
 source .venv/bin/activate
-uv sync
+uv sync --locked
 ```
 
 ```bash
