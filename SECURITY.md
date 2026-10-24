@@ -91,7 +91,8 @@ On October 24, locked installation, dependency compatibility checks, both existi
 derangement tests, and the offline smoke script passed on macOS arm64 with
 Python 3.10.15 and 3.11.10. The 219-entry lockfile audit reported only the four
 residual advisories below. Lock consistency, script lint, and diff whitespace
-checks also passed. The repository has no configured GitHub Actions workflows.
+checks also passed. There is no repository-defined test CI; GitHub exposes only
+a managed Dependency Graph workflow, with no checks on this PR commit.
 
 Run from the repository root, with Python 3.10 and separately with Python 3.11:
 
