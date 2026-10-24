@@ -94,9 +94,7 @@ def main():
             [str(root / "venv" / "bin" / "python"), "-m", "pip", "--version"], check=True
         )
 
-    print(
-        "Imports, CPU training, dataset persistence, file locking, Git, and virtualenv passed."
-    )
+    print("Imports, CPU training, dataset persistence, file locking, Git, and virtualenv passed.")
 
 
 if __name__ == "__main__":

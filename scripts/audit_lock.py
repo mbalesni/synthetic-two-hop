@@ -1,6 +1,6 @@
 # /// script
-# requires-python = ">=3.10"
-# dependencies = ["pip-audit==2.10.1", "tomli; python_version < '3.11'"]
+# requires-python = ">=3.11"
+# dependencies = ["pip-audit==2.10.1"]
 # ///
 """Audit every registry package/version in uv.lock, including alternate variants.
 
@@ -12,12 +12,8 @@ import json
 import subprocess
 import sys
 import tempfile
+import tomllib
 from pathlib import Path
-
-try:
-    import tomllib
-except ModuleNotFoundError:
-    import tomli as tomllib
 
 
 def main():

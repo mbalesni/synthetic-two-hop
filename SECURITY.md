@@ -1,11 +1,14 @@
 # Dependency security
 
-Install the reviewed dependency versions with `uv sync --locked`.
+Python 3.11 or newer is required. Install the reviewed dependency versions with
+`uv sync --locked --python python3.11`. Existing Python 3.10 environments must
+be recreated with a supported interpreter.
 
 ## October 24, 2026 review
 
 The October notifications still apply to the September lockfile on `main`
-(`6fa771a5`). PR #3 was the latest PR and neither branch contained a newer fix.
+(`6fa771a5`). At the start of the review, PR #3 was the latest PR and neither
+existing branch contained a newer fix.
 The update uses the following first fixed versions, without a blanket upgrade:
 
 | Dependency | Previous | Updated | Advisory / reason |
@@ -21,11 +24,11 @@ The update uses the following first fixed versions, without a blanket upgrade:
 | setuptools | 83.0.0 | 84.1.0 | [GHSA-xmj3-9gf7-h52w](https://github.com/advisories/GHSA-xmj3-9gf7-h52w), Windows legacy wheel path escape; also raise the isolated build floor |
 | Tornado | 6.5.8 | 6.5.9 | [Query count DoS](https://github.com/advisories/GHSA-3hv7-mjh2-fv65), [response size DoS](https://github.com/advisories/GHSA-chx6-46f5-w4vp), [static symlink traversal](https://github.com/advisories/GHSA-c2m8-h5v5-343r) |
 | urllib3 | 2.7.0 | 2.8.0 | [Proxy TLS](https://github.com/advisories/GHSA-8988-9cw3-xx77), [Deflate loop](https://github.com/advisories/GHSA-gh4c-6fx4-qh6g), [chunk header buffering](https://github.com/advisories/GHSA-vxq7-64xx-v4gw) |
-| filelock | 3.29.4 | 4.2.1 on Python >=3.11 | Three advisories; Python 3.10 remains affected as explained below |
+| filelock | 3.29.4 | 4.2.1 | Three advisories fixed; Python >=3.11 is now required |
 
 The associated compatibility updates are s3fs 2026.6.0 (matches fsspec),
-yarl 1.25.1 (required by aiohttp), and packaging 26.3, python-discovery 1.6.1,
-and typing-extensions 4.16.0 on Python 3.10 (required by virtualenv).
+yarl 1.25.1 (required by aiohttp), and packaging 26.3 and python-discovery 1.6.1
+(required by virtualenv).
 The existing datasets 5.0.1 allows fsspec 2026.6.0, so no datasets update is needed.
 The direct LiteLLM pin and build requirement change; uv constraints preserve
 security floors without making transitive packages new runtime dependencies.
@@ -44,24 +47,19 @@ Rebuild existing environments and images from the updated lockfile. Previously
 generated virtualenv activation scripts need recreation to pick up their fixes.
 This repository change does not update globally installed tools or deployed images.
 
-### Remaining Python 3.10 filelock risk
+### Python minimum and filelock remediation
 
-filelock 4.2.1 requires Python >=3.11. Python 3.10 keeps its existing 3.29.4
-instead of breaking the supported interpreter range or introducing newer
-vulnerable 4.x behavior. The latest 3.29.7 is also listed as affected. This is
-**not a complete filelock remediation** on Python 3.10:
+filelock 4.2.1 requires Python >=3.11. The project now requires that interpreter
+minimum and unconditionally constrains filelock to >=4.2.1. The vulnerable 3.29.4
+fallback and all Python 3.10-only lockfile entries have been removed. This fixes:
 
 - [CVE-2026-112940](https://github.com/advisories/GHSA-v4x8-3wr5-3wq8): SQLite-backed ReadWriteLock can follow attacker-controlled paths/side files.
 - [CVE-2026-112913](https://github.com/advisories/GHSA-9vhv-jxww-xfm5): Windows SQLite side-file interference.
 - [CVE-2026-112907](https://github.com/advisories/GHSA-567q-5qvw-pf92): Windows soft-lock waits can exceed timeouts under an attacker-held oplock.
 
-Use Python 3.11 or newer for the fixed filelock release. If Python 3.10 is
-required, keep caches and lock files under private directories whose ancestors
-cannot be renamed by other accounts; apply owner-only ACLs on Windows. Avoid
-SQLite-backed ReadWriteLock and Windows soft-lock use in shared locations.
-These precautions reduce exposure; they do not repair the affected library.
-Remove the Python 3.10 compatibility pin only after verifying a compatible fix
-or deliberately ending Python 3.10 support.
+Python 3.10 is no longer supported. Recreate existing environments with Python
+3.11 or newer and this lockfile; changing the repository does not repair an
+older environment that still contains filelock 3.29.4.
 
 ## Outstanding upstream advisory
 
@@ -87,17 +85,17 @@ first patched release. An upgrade to 1.15.0 is therefore not a verified fix.
 
 ## Validation
 
-On October 24, locked installation, dependency compatibility checks, both existing
-derangement tests, and the offline smoke script passed on macOS arm64 with
-Python 3.10.15 and 3.11.10. The 219-entry lockfile audit reported only the four
-residual advisories below. Lock consistency, script lint, and diff whitespace
-checks also passed. There is no repository-defined test CI; GitHub exposes only
-a managed Dependency Graph workflow, with no checks on this PR commit.
+Revalidated October 24 on macOS arm64 with Python 3.11.10 after raising the
+minimum: locked installation, dependency compatibility, both derangement tests,
+and the offline smoke script passed. All 209 registry package/version entries
+were audited; only the unresolved Accelerate advisory remains. Lock consistency,
+script lint/format, and diff whitespace checks passed. Explicitly requesting
+Python 3.10 is rejected as incompatible with the project requirement.
 
-Run from the repository root, with Python 3.10 and separately with Python 3.11:
+Run from the repository root with Python 3.11 or newer:
 
 ```sh
-DS_BUILD_OPS=0 uv sync --locked --all-extras --python python3.10
+DS_BUILD_OPS=0 uv sync --locked --all-extras --python python3.11
 uv lock --check
 uv pip check
 uv run --locked --all-extras python -m pytest latent_reasoning/datagen/synthetic_spouses/test_derangement.py -q
@@ -106,9 +104,6 @@ uv run --script scripts/audit_lock.py
 git diff --check
 ```
 
-For the separate 3.11 environment, set `UV_PROJECT_ENVIRONMENT=/tmp/two-hop-py311`
-on the sync/run commands, use `--python python3.11` for sync, and run
-`uv pip check --python /tmp/two-hop-py311/bin/python`.
 The smoke test is offline and covers dependency imports, a CPU tiny-Llama
 forward/backward/optimizer step, dataset persistence, file locking, a Git index,
 and virtualenv creation with embedded seed wheels. Install the dev extra for it.
@@ -116,9 +111,9 @@ and virtualenv creation with embedded seed wheels. Install the dev extra for it.
 The audit includes every registry package/version in the universal lockfile,
 including dev and alternate Python/platform versions. It intentionally returns
 1 while known vulnerabilities remain; nothing is ignored. The expected residual
-findings are Accelerate and the three filelock advisories for the Python 3.10
-variant. GitHub advisory metadata was also checked because PyPI/OSV ingestion
-can lag newly reviewed advisories.
+finding is Accelerate. GitHub advisory metadata was also checked because PyPI/OSV
+ingestion can lag newly reviewed advisories. There is no repository-defined test
+CI; GitHub exposes a managed Dependency Graph workflow.
 
 The GitHub notifications were verified, including aiohttp alert #192. Direct
 Dependabot alert-state access was unavailable (public page 404; local GitHub CLI
